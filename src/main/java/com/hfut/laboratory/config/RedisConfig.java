@@ -70,7 +70,11 @@ public class RedisConfig {
             stringBuilder.append(method.getName());
             stringBuilder.append("[");
             for (Object obj : objects) {
-                stringBuilder.append(obj.toString());
+                if(obj==null){
+                    stringBuilder.append("");
+                }else {
+                    stringBuilder.append(obj.toString());
+                }
             }
             stringBuilder.append("]");
 
