@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hfut.laboratory.mapper.SalaryMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.hfut.laboratory.pojo.Salary">
+        <id column="id" property="id" />
+        <result column="user_id" property="userId" />
+        <result column="pro_royalty" property="proRoyalty" />
+        <result column="card_royalty" property="cardRoyalty" />
+        <result column="base_salary" property="baseSalary" />
+        <result column="other_bonus" property="otherBonus" />
+        <result column="deduct_salary" property="deductSalary" />
+        <result column="sum_salary" property="sumSalary" />
+        <result column="settle_date" property="settleDate" />
+        <result column="remark" property="remark" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, user_id, pro_royalty, card_royalty, base_salary, other_bonus, deduct_salary, sum_salary, settle_date, remark
+    </sql>
+
+</mapper>

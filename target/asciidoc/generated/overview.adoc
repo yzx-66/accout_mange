@@ -1,0 +1,42 @@
+= 后台url接口文档
+
+
+[[_overview]]
+== Overview
+详细信息……
+
+
+=== Version information
+[%hardbreaks]
+__Version__ : 1.0
+
+
+=== Contact information
+[%hardbreaks]
+__Contact__ : yzx
+__Contact Email__ : 1915321657@qq.com
+
+
+=== URI scheme
+[%hardbreaks]
+__Host__ : localhost:8080
+__BasePath__ : /
+
+
+=== Tags
+
+* record-busness-controller : Record Busness Controller
+* 优惠卡相关接口 : Coupon Card Controller
+* 员工相关接口 : Staff Controller
+* 客户相关接口 : Customer Controller
+* 收费项目的相关接口 : Project Controller
+* 权限相关接口（只有root可以访问） : Permission Controller
+* 消费记录相关接口 : Records Consumption Controller
+* 系统用户的相关接口（只有root和boss可以访问） : User Controller
+* 系统相关接口 : System Controller
+* 营业额登记相关接口（只有root和boss可以访问） : Records Turnover Controller
+* 薪水的相关接口 : Salary Controller
+* 角色管理（只有root权限可访问） : Role Controller
+
+
+

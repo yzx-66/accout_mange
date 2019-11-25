@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hfut.laboratory.mapper.RecordsTurnoverMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.hfut.laboratory.pojo.RecordsTurnover">
+        <id column="id" property="id" />
+        <result column="date" property="date" />
+        <result column="money_income" property="moneyIncome" />
+        <result column="money_outcome" property="moneyOutcome" />
+        <result column="card_reduce" property="cardReduce" />
+        <result column="balance_reduce" property="balanceReduce" />
+        <result column="sum_income" property="sumIncome" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, date, money_income, money_outcome, card_reduce, balance_reduce, sum_income
+    </sql>
+
+</mapper>
