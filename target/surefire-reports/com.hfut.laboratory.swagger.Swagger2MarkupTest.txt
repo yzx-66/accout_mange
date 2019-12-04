@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.hfut.laboratory.swagger.Swagger2MarkupTest
--------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.96 s - in com.hfut.laboratory.swagger.Swagger2MarkupTest

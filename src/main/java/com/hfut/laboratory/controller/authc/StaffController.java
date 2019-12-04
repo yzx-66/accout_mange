@@ -112,5 +112,11 @@ public class StaffController {
     }
 
 
-
+    //TODO
+    @DeleteMapping("/job/{id}")
+    @ApiOperation("删除员工做的事")
+    public ApiResponse deleteStaffJob(@PathVariable Integer id){
+        boolean res=recordBusinessService.removeById(id);
+        return res ? ApiResponse.ok() : ApiResponse.serverError();
+    }
 }

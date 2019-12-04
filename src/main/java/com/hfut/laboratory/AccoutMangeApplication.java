@@ -14,5 +14,4 @@ public class AccoutMangeApplication {
     public static void main(String[] args) {
         SpringApplication.run(AccoutMangeApplication.class);
     }
-
 }

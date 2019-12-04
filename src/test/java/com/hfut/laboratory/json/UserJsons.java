@@ -28,7 +28,6 @@ public class UserJsons {
         //userVo.setEntryTime(LocalDateTime.now());
         Role role=new Role();
         role.setId(1);
-        userVo.setRole(role);
 
         System.out.println(JsonUtils.serialize(userVo));
     }

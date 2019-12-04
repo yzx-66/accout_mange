@@ -54,15 +54,7 @@ public class Salary implements Serializable {
      */
     private Float baseSalary;
 
-    /**
-     * 其他奖金
-     */
-    private Float otherBonus;
-
-    /**
-     * 扣除的钱
-     */
-    private Float deductSalary;
+    private Float proAdd;
 
     /**
      * 总的工资

@@ -17,20 +17,8 @@ import java.math.BigDecimal;
 public class SetSalaryVo {
 
     private Integer staffId;
-    /**
-     * 底薪
-     */
-    private Float baseSalary;
 
-    /**
-     * 其他奖金
-     */
-    private Float otherBonus;
-
-    /**
-     * 扣除的钱
-     */
-    private Float deductSalary;
+    private Float change;
 
     private String remark;
 }

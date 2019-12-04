@@ -15,9 +15,6 @@ public class SalaryJsons {
     @Test
     public void serializeSetSalaryVo(){
         SetSalaryVo setSalaryVo=SetSalaryVo.builder()
-                .baseSalary(2000f)
-                .deductSalary(100f)
-                .otherBonus(200f)
                 .remark("扣除100 奖金200")
                 .staffId(5)
                 .build();

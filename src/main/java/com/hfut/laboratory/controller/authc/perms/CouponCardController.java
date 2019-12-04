@@ -121,6 +121,9 @@ public class CouponCardController {
     @ApiOperation("添加优惠卡（需要权限：[card_add]）")
     @ApiImplicitParam(name = "card",value = "优惠卡的json对象")
     public ApiResponse<Void> insertCouponCard(@RequestBody CouponCard card){
+        if(card.getName()==null || card.getStartTime()==null || card.getEndTime()==null || card.getPrice()==null){
+            return ApiResponse.selfError(ReturnCode.NEED_PARAM);
+        }
         boolean res = couponCardService.save(card);
         return res ? ApiResponse.created():ApiResponse.serverError();
     }
@@ -129,6 +132,9 @@ public class CouponCardController {
     @ApiOperation("修改优惠卡（需要权限：[card_edit]）")
     @ApiImplicitParam(name = "card",value = "优惠卡的json对象")
     public ApiResponse<Void> updateCouponCard(@RequestBody CouponCard card){
+        if(card.getId()==null || card.getName()==null || card.getStartTime()==null || card.getEndTime()==null || card.getPrice()==null){
+            return ApiResponse.selfError(ReturnCode.NEED_PARAM);
+        }
         if(!isCardExist(card.getId())){
             return ApiResponse.selfError(ReturnCode.CARD_NOT_EXIST);
         }
@@ -142,6 +148,9 @@ public class CouponCardController {
     @ApiImplicitParam(name = "cardDetailVo",value = "传递card_pro的项目信息")
     @Transactional
     public ApiResponse<Void> updateCouponCardDetail(@RequestBody CardDetailVo cardDetailVo){
+        if(cardDetailVo.getCardId()==null || cardDetailVo.getProDetails()==null){
+            return ApiResponse.selfError(ReturnCode.NEED_PARAM);
+        }
         if(!isCardExist(cardDetailVo.getCardId())){
             return ApiResponse.selfError(ReturnCode.CARD_NOT_EXIST);
         }
@@ -176,6 +185,7 @@ public class CouponCardController {
             res2 = couponCardService.removeById(id);
         }catch (Exception e){
             log.info(this.getClass().getName()+"deleteCouponCard:error");
+            TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
             return ApiResponse.selfError(ReturnCode.DELETE_FALI_Foreign_KEY);
         }
 

@@ -26,10 +26,9 @@ public class ReturnSalaryVo extends Salary {
         this.setProSum(salary.getProSum());
         this.setMakeMoneyIncome(salary.getMakeMoneyIncome());
         this.setBaseSalary(salary.getBaseSalary());
-        this.setDeductSalary(salary.getDeductSalary());
-        this.setOtherBonus(salary.getOtherBonus());
         this.setSumSalary(salary.getSumSalary());
         this.setSettleDate(salary.getSettleDate());
+        this.setProAdd(salary.getProAdd());
     }
 
 }

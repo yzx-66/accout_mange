@@ -12,6 +12,7 @@ import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.transaction.interceptor.TransactionAspectSupport;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -66,6 +67,7 @@ public class PermissionController {
             res= permissionService.remove(QueryWapperUtils.getInWapper("id", new Integer[]{id}));
         }catch (Exception e){
             log.info(this.getClass().getName()+"deletePermission:error");
+            TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
             return ApiResponse.selfError(ReturnCode.DELETE_FALI_Foreign_KEY);
         }
         return res ? ApiResponse.ok(): ApiResponse.serverError();

@@ -48,5 +48,6 @@ public class User implements Serializable {
      */
     private Integer status;
 
+    private Float baseSalary;
 
 }

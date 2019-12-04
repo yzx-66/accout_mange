@@ -21,6 +21,7 @@ public enum ReturnCode {
     SALARY_NOT_EXITST("2004","薪水不存在"),
     CUSTOMER_CARD_NOT_EXITST("2005","客户优惠卡不存在"),
     CONSUM_NOT_EXITST("2006","客户优惠卡不存在"),
+    USER_NOT_EXITST("2007","用户不存在"),
 
     CUSTOMER_FREEZE("3001","客户被冻结 无法操作"),
     CUSTOMER_CARD_NOT_ENOUGH("3002","客户优惠卡次数不足"),

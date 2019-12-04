@@ -14,10 +14,10 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class UserVo extends User {
 
-    private Role role;
+    private Integer roleId;
 
-    public UserVo(User user,Role role){
-        this.role=role;
+    public UserVo(User user,Integer roleId){
+        this.roleId=roleId;
         this.setId(user.getId());
         this.setName(user.getName());
         this.setEntryTime(user.getEntryTime());
@@ -25,5 +25,6 @@ public class UserVo extends User {
         this.setPhone(user.getPhone());
         this.setSex(user.getSex());
         this.setStatus(user.getStatus());
+        this.setBaseSalary(user.getBaseSalary());
     }
 }

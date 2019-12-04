@@ -129,6 +129,7 @@ public class RoleController {
         try {
             res2 = roleService.removeById(id);
         }catch (Exception e){
+            TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
             return ApiResponse.selfError(ReturnCode.DELETE_FALI_Foreign_KEY);
         }
 

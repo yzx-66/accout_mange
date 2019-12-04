@@ -15,6 +15,7 @@ import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.transaction.interceptor.TransactionAspectSupport;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -73,6 +74,9 @@ public class ProjectController {
     @ApiOperation("添加收费项目（需要权限：[pro_add]）")
     @ApiImplicitParam(name = "project",value = "收费项目的json对象")
     public ApiResponse<Void> insertProject(@RequestBody Project project){
+        if(project.getPercentage()==null || project.getPrice()==null ||project.getName()==null){
+            return ApiResponse.selfError(ReturnCode.NEED_PARAM);
+        }
         boolean res=projectService.save(project);
         return res ? ApiResponse.created():ApiResponse.serverError();
     }
@@ -81,9 +85,13 @@ public class ProjectController {
     @ApiOperation("修改收费项目（需要权限：[pro_edit]）")
     @ApiImplicitParam(name = "project",value = "收费项目的json对象")
     public ApiResponse<Void> updateProject(@RequestBody Project project){
+        if(project.getId()==null || project.getPercentage()==null || project.getPrice()==null ||project.getName()==null){
+            return ApiResponse.selfError(ReturnCode.NEED_PARAM);
+        }
         if(projectService.getById(project.getId())==null){
             return ApiResponse.selfError(ReturnCode.PROJECT_NOT_EXITST);
         }
+
 
         boolean res=projectService.updateById(project);
         return res ? ApiResponse.ok():ApiResponse.serverError();
@@ -98,6 +106,7 @@ public class ProjectController {
             res=projectService.removeById(id);
         }catch (Exception e){
             log.info(this.getClass().getName()+"deleteProject:error");
+            TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
             return ApiResponse.selfError(ReturnCode.DELETE_FALI_Foreign_KEY);
         }
         return res ? ApiResponse.ok():ApiResponse.serverError();

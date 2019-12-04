@@ -3,6 +3,7 @@ package com.hfut.laboratory.controller.authc.perms;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.hfut.laboratory.constants.TimeFormatConstants;
 import com.hfut.laboratory.pojo.RecordsConsumption;
 import com.hfut.laboratory.pojo.Salary;
 import com.hfut.laboratory.enums.ConsumeTypeEnum;
@@ -10,6 +11,7 @@ import com.hfut.laboratory.enums.ReturnCode;
 import com.hfut.laboratory.enums.PayTypeEnum;
 import com.hfut.laboratory.pojo.*;
 import com.hfut.laboratory.service.*;
+import com.hfut.laboratory.util.TimeConvertUtils;
 import com.hfut.laboratory.vo.ApiResponse;
 import com.hfut.laboratory.vo.PageResult;
 import com.hfut.laboratory.vo.salary.ReturnSalaryVo;
@@ -19,10 +21,16 @@ import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -39,6 +47,9 @@ public class SalaryController {
 
     @Autowired
     private UserService userService;
+
+    @Value("${salary.salaryPath}")
+    private String salaryPath;
 
     @GetMapping("/list")
     @ApiOperation("查询进一个月发过的薪水列表")
@@ -93,61 +104,41 @@ public class SalaryController {
         return ApiResponse.ok(new PageResult<>(getReturnSalaryVoList(salaryIPage.getRecords()),salaryIPage.getTotal(),salaryIPage.getSize()));
     }
 
-    @PostMapping("/add")
-    @ApiOperation("结算员工薪水 需要权限[salay_edit]")
-    @ApiImplicitParam(name = "salaryVo",value = "设置员工薪水基本信息的对象")
-    public ApiResponse<Void> InsertSalary(@RequestBody SetSalaryVo salaryVo) {
-        Salary salary = new Salary();
-        salary.setUserId(salaryVo.getStaffId());
-        salary.setBaseSalary(salaryVo.getBaseSalary());
-        salary.setDeductSalary(salaryVo.getDeductSalary());
-        salary.setOtherBonus(salaryVo.getOtherBonus());
-        salary.setRemark(salaryVo.getRemark());
-        salary.setSettleDate(LocalDateTime.now());
-
-        QueryWrapper<RecordsConsumption> consumptionQqueryWrapper = new QueryWrapper();
-        // TODO lt
-        consumptionQqueryWrapper.lt("pay_time", LocalDateTime.now())
-                .and(wapper -> wapper.ge("pay_time", LocalDateTime.now().minusMonths(1)))
-                .and(wapper -> wapper.in("user_id", salaryVo.getStaffId()));
-        List<RecordsConsumption> recordsConsumptionList = recordsConsumptionService.list(consumptionQqueryWrapper);
-
-        Float cardSum=0.0f,proSum=0.0f, makeMoneyIncome=0.0f;
-        for(RecordsConsumption consum:recordsConsumptionList){
-            if(consum.getConsumType()== ConsumeTypeEnum.PROJECT.getType()){
-                proSum+=consum.getPrice();
-            }else if(consum.getConsumType()==ConsumeTypeEnum.MAKE_CARD.getType()){
-                cardSum+=consum.getPrice();
-            }
-
-            if(consum.getPayType()==PayTypeEnum.USE_MONEY.getType()){
-                makeMoneyIncome+=consum.getPrice();
-            }
+    //TODO
+    @PostMapping("/set")
+    @ApiOperation("设置结算薪水的时间")
+    @ApiImplicitParam(name = "salaryTime",value = "结算时间")
+    public ApiResponse setSalayTime(@RequestParam LocalDateTime salaryTime) throws IOException {
+        File file=new File(salaryPath);
+        if(!file.exists()){
+            file.createNewFile();
         }
-
-        salary.setCardSum(cardSum);
-        salary.setProSum(proSum);
-        salary.setMakeMoneyIncome(makeMoneyIncome);
-        salary.setSumSalary(salary.getBaseSalary()+salary.getOtherBonus()+makeMoneyIncome-salary.getDeductSalary());
-        boolean res = salaryService.saveOrUpdate(salary);
-
-        return res ? ApiResponse.created() : ApiResponse.serverError();
+        BufferedWriter bufferedWriter=new BufferedWriter(new FileWriter(file,false));
+        LocalDateTime resTime = TimeConvertUtils.convertTo_yMd(salaryTime);
+        String content = resTime.format(DateTimeFormatter.ofPattern(TimeFormatConstants.DEFAULT_DATE_TIME_FORMAT));
+        bufferedWriter.write(content);
+        bufferedWriter.close();
+        return ApiResponse.ok();
     }
 
     @PutMapping("/edit/{id}")
     @ApiOperation("修改员工薪水 需要权限[salay_del]")
     @ApiImplicitParam(name = "salaryVo",value = "设置员工薪水基本信息的对象")
     public ApiResponse<Void> updateSalary(@PathVariable Integer id,
-                                            @RequestBody SetSalaryVo salaryVo){
+                                          @RequestBody SetSalaryVo salaryVo){
+        if(salaryVo.getStaffId()==null || salaryVo.getChange()==null){
+            return ApiResponse.selfError(ReturnCode.NEED_PARAM);
+        }
+        if(userService.getById(salaryVo.getStaffId())==null){
+            return ApiResponse.selfError(ReturnCode.USER_NOT_EXITST);
+        }
         Salary salary=salaryService.getById(id);
         if(salary==null){
             return ApiResponse.selfError(ReturnCode.SALARY_NOT_EXITST);
         }
 
-        salary.setBaseSalary(salaryVo.getBaseSalary());
-        salary.setDeductSalary(salaryVo.getDeductSalary());
-        salary.setOtherBonus(salaryVo.getOtherBonus());
         salary.setRemark(salaryVo.getRemark());
+        salary.setSumSalary(salary.getSumSalary()+salaryVo.getChange());
         salary.setSettleDate(LocalDateTime.now());
 
         boolean res=salaryService.updateById(salary);

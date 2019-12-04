@@ -58,6 +58,10 @@ public class CustomerController {
     private RecordsConsumptionService recordsConsumptionService;
     @Autowired
     private RecordBusinessService recordBusinessService;
+    @Autowired
+    private UserService userService;
+    @Autowired
+    private CouponCardService couponCardService;
 
     @GetMapping("/list")
     @ApiOperation("获取客户列表")
@@ -164,6 +168,9 @@ public class CustomerController {
     @ApiOperation("添加客户 不可添加余额 必须走充值")
     @ApiImplicitParam(name = "customer",value = "客户的json对象")
     public ApiResponse<Void> insertCustomer(@RequestBody Customer customer){
+        if(customer.getName()==null || customer.getPhone()==null){
+            return ApiResponse.selfError(ReturnCode.NEED_PARAM);
+        }
         customer.setRegisteTime(LocalDateTime.now());
         customer.setStatus(1);
         customer.setBalance(0.0f);
@@ -215,6 +222,15 @@ public class CustomerController {
         }
         if(isFreeze(id)){
             return ApiResponse.selfError(ReturnCode.CUSTOMER_FREEZE);
+        }
+        if(makeCardVo.getStaffId()==null || makeCardVo.getPayType()==null){
+            return ApiResponse.selfError(ReturnCode.NEED_PARAM);
+        }
+        if(userService.getById(makeCardVo.getCardId())==null){
+            return ApiResponse.selfError(ReturnCode.USER_NOT_EXITST);
+        }
+        if(couponCardService.getById(makeCardVo.getCardId())==null){
+            return ApiResponse.selfError(ReturnCode.CARD_NOT_EXIST);
         }
 
         boolean res1=true,res2=true,res3=true,res4=true,res5=true;
@@ -296,6 +312,16 @@ public class CustomerController {
         if(isFreeze(id)){
             return ApiResponse.selfError(ReturnCode.CUSTOMER_FREEZE);
         }
+        if(editCardVo.getStaffId()==null || (editCardVo.getTimes()>0 && editCardVo.getPayType()==null)){
+            return ApiResponse.selfError(ReturnCode.NEED_PARAM);
+        }
+        if(projectService.getById(editCardVo.getProjectId())==null){
+            return ApiResponse.selfError(ReturnCode.PROJECT_NOT_EXITST);
+        }
+        if(userService.getById(editCardVo.getStaffId())==null){
+            return ApiResponse.selfError(ReturnCode.USER_NOT_EXITST);
+        }
+
         boolean res1=true,res2=true,res3=true,res4=true;
 
         //如果使用优惠卡结算 判断是否过期
@@ -393,6 +419,13 @@ public class CustomerController {
         if(isFreeze(id)){
             return ApiResponse.selfError(ReturnCode.CUSTOMER_FREEZE);
         }
+        if(balanceVo.getStaffId()==null || (balanceVo.getChangeBalance()<0 && (balanceVo.getConsumType()==null || balanceVo.getPayType()==null))){
+            return ApiResponse.selfError(ReturnCode.NEED_PARAM);
+        }
+        if(userService.getById(balanceVo.getStaffId())==null){
+            return ApiResponse.selfError(ReturnCode.USER_NOT_EXITST);
+        }
+
         boolean res1=true,res2=true;
 
         //判断改变余额后余额是否>0
@@ -428,29 +461,35 @@ public class CustomerController {
     @ApiImplicitParam(name = "settleVo",value = "客户用现金结算的传递对象")
     @Transactional
     public ApiResponse<Void> settleCustomer(@RequestBody CustomerSettleVo settleVo){
+        if(settleVo.getStaffId()==null || settleVo.getProjectId()==null){
+            return ApiResponse.selfError(ReturnCode.NEED_PARAM);
+        }
+        if(projectService.getById(settleVo.getProjectId())==null){
+            return ApiResponse.selfError(ReturnCode.PROJECT_NOT_EXITST);
+        }
+        if(userService.getById(settleVo.getStaffId())==null){
+            return ApiResponse.selfError(ReturnCode.USER_NOT_EXITST);
+        }
         boolean res1=true,res2=true;
         Project project=null;
 
-        //如果不是会员 用现金支付
-        if(settleVo.getProjectId()!=null){
-            project=projectService.getById(settleVo.getProjectId());
-            RecordBusiness recordBusiness=RecordBusiness.builder()
-                    .date(LocalDateTime.now())
-                    .type(2)
-                    .thingId(settleVo.getProjectId())
-                    .userId(settleVo.getStaffId())
-                    .customerId(settleVo.getCustomerId())
-                    .build();
-            res1=recordBusinessService.save(recordBusiness);
-        }
+        project=projectService.getById(settleVo.getProjectId());
+        RecordBusiness recordBusiness=RecordBusiness.builder()
+                .date(LocalDateTime.now())
+                .type(2)
+                .thingId(settleVo.getProjectId())
+                .userId(settleVo.getStaffId())
+                .customerId(settleVo.getCustomerId())
+                .build();
+        res1=recordBusinessService.save(recordBusiness);
 
         RecordsConsumption recordsConsumption=RecordsConsumption.builder()
                 .customerId(settleVo.getCustomerId())
                 .userId(settleVo.getStaffId())
                 .payType(PayTypeEnum.USE_MONEY.getType())
                 .payTime(LocalDateTime.now())
-                .price(settleVo.getProjectId()!=null ? project.getPrice() : settleVo.getPrice())
-                .consumType(settleVo.getConsumType())
+                .price(settleVo.getPrice()==null ? project.getPrice() : settleVo.getPrice())
+                .consumType(ConsumeTypeEnum.PROJECT.getType())
                 .remark(settleVo.getRemark())
                 .isRecord(false)
                 .build();
@@ -474,6 +513,13 @@ public class CustomerController {
     @Transactional
     public ApiResponse<Void> returnCustmerCard(@PathVariable Integer id,
                                                   @RequestBody CustomerReturnCardVo returnCardVo){
+        if(returnCardVo.getStaffId()==null){
+            return ApiResponse.selfError(ReturnCode.NEED_PARAM);
+        }
+        if(userService.getById(returnCardVo.getStaffId())==null){
+            return ApiResponse.selfError(ReturnCode.USER_NOT_EXITST);
+        }
+
         CustomerCard customerCard=customerCardService.getById(returnCardVo.getCustomerCardId());
         if(customerCard==null){
             return ApiResponse.selfError(ReturnCode.CUSTOMER_CARD_NOT_EXITST);

@@ -78,7 +78,6 @@ public class UserController {
     @Cacheable(value = "getUserList",keyGenerator="simpleKeyGenerator")
     public ApiResponse<PageResult<UserVo>> getUserList(@RequestParam(required = false,defaultValue = "1") Integer current,
                                                           @RequestParam(required = false,defaultValue = "20") Integer size){
-        System.out.println("test!");
         List<UserVo> res=new ArrayList<>();
         Page<User> page=new Page<>(current,size);
         IPage<User> userIPage = userService.page(page, null);
@@ -87,7 +86,7 @@ public class UserController {
             //一个用户只可以有一个角色
             UserRole userRole = userRoleService.getOne(QueryWapperUtils.getInWapper("user_id", new Integer[]{user.getId()}));
             Role role=roleService.getById(userRole.getRoleId());
-            UserVo userVo=new UserVo(user,role);
+            UserVo userVo=new UserVo(user,role.getId());
             res.add(userVo);
         });
         return ApiResponse.ok(new PageResult<>(res,userIPage.getTotal(),userIPage.getSize()));
@@ -133,7 +132,7 @@ public class UserController {
         UserRole userRole = userRoleService.getOne(QueryWapperUtils.getInWapper("user_id", new Integer[]{user.getId()}));
         Role role=roleService.getById(userRole.getRoleId());
 
-        UserVo userVo=new UserVo(user,role);
+        UserVo userVo=new UserVo(user,role.getId());
         return ApiResponse.ok(userVo);
     }
 
@@ -142,23 +141,22 @@ public class UserController {
     @ApiImplicitParam(name = "userVo",value = "user的包装对象，其中role.id：1.root、2.boss、3.manger、4.staff")
     @Transactional //多个表添加 开启事务
     public ApiResponse<Void> insertUser(@RequestBody UserVo userVo, HttpServletRequest request){
-        Role role=userVo.getRole();
-        if(role.getId()==null){
+        if(userVo.getRoleId()==null || (userVo.getRoleId()!=1 && userVo.getBaseSalary()==null)){
             return ApiResponse.selfError(ReturnCode.NEED_PARAM);
         }
 
-        //设置角色id要大于自己的id才有权限
-        UserInfo userInfo= JwtTokenUtils.getUserInfoFromToken(request);
-        Integer thisRoleId=userRoleService.getOne(QueryWapperUtils.getInWapper("user_id",new Integer[]{userInfo.getId()})).getRoleId();
-        if(role.getId()<=thisRoleId){
-            return ApiResponse.authError();
-        }
+        //TODO 设置角色id要大于自己的id才有权限
+//        UserInfo userInfo= JwtTokenUtils.getUserInfoFromToken(request);
+//        Integer thisRoleId=userRoleService.getOne(QueryWapperUtils.getInWapper("user_id",new Integer[]{userInfo.getId()})).getRoleId();
+//        if(userVo.getRoleId()<=thisRoleId){
+//            return ApiResponse.authError();
+//        }
 
         userVo.setEntryTime(LocalDateTime.now());
         userVo.setPassword(CodecUtils.md5Hex(userVo.getPassword(),3));
         boolean res1 = userService.save(userVo);
 
-        UserRole userRole=UserRole.builder().roleId(role.getId()).userId(userVo.getId()).build();
+        UserRole userRole=UserRole.builder().roleId(userVo.getRoleId()).userId(userVo.getId()).build();
         boolean res2 = userRoleService.save(userRole);
 
         if(res1 && res2){
@@ -175,19 +173,22 @@ public class UserController {
     @ApiImplicitParam(name = "userVo",value = "user的包装对象 该对象包含id，如果不修改role，请不要传递role对象，如果传递其中roleId：1.root、2.boss、3.manger、4.staff")
     @Transactional
     public ApiResponse<Void> updateUser(@RequestBody UserVo userVo,HttpServletRequest request){
+        if(userVo.getRoleId()==null || (userVo.getRoleId()!=1 && userVo.getBaseSalary()==null)){
+            return ApiResponse.selfError(ReturnCode.NEED_PARAM);
+        }
         boolean res1=true, res2=true,res3=true;
-        Role role=userVo.getRole();
 
-        if(role!=null){
-            UserInfo userInfo= JwtTokenUtils.getUserInfoFromToken(request);
-            Integer thisRoleId=userRoleService.getOne(QueryWapperUtils.getInWapper("user_id",new Integer[]{userInfo.getId()})).getRoleId();
-            //设置角色id要大自己的id才有权限
-            if(role.getId()<=thisRoleId){
-                return ApiResponse.authError();
-            }
+        if(userVo.getRoleId()!=null){
+            //TODO
+//            UserInfo userInfo= JwtTokenUtils.getUserInfoFromToken(request);
+//            Integer thisRoleId=userRoleService.getOne(QueryWapperUtils.getInWapper("user_id",new Integer[]{userInfo.getId()})).getRoleId();
+//            //设置角色id要大自己的id才有权限
+//            if(userVo.getRoleId()<=thisRoleId){
+//                return ApiResponse.authError();
+//            }
 
             res2=userRoleService.remove(QueryWapperUtils.getInWapper("user_id",new Integer[]{userVo.getId()}));
-            UserRole userRole=UserRole.builder().roleId(role.getId()).userId(userVo.getId()).build();
+            UserRole userRole=UserRole.builder().roleId(userVo.getRoleId()).userId(userVo.getId()).build();
             res3 = userRoleService.save(userRole);
         }
 
@@ -214,6 +215,7 @@ public class UserController {
         try{
             res2 = userService.removeById(id);
         }catch (Exception e){
+            TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
             return ApiResponse.selfError(ReturnCode.DELETE_FALI_Foreign_KEY);
         }
 

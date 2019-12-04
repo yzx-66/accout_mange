@@ -72,9 +72,14 @@ public class RecordsConsumptionController {
     })
     @Cacheable(value = "getRecordsConsumptionList",keyGenerator="simpleKeyGenerator")
     public ApiResponse<PageResult<ReturnConsumVo>> getRecordsConsumptionList(@RequestParam(required = false,defaultValue = "1") Integer current,
-                                                                             @RequestParam(required = false,defaultValue = "20") Integer size){
+                                                                             @RequestParam(required = false,defaultValue = "20")Integer size,
+                                                                             @RequestParam(required = false,defaultValue = "true")boolean isDesc){
         Page<RecordsConsumption> page=new Page<>(current,size);
-        IPage<RecordsConsumption> recordsConsumptionIPage = recordsConsumptionService.page(page, null);
+        QueryWrapper queryWrapper=null;
+        if(isDesc){
+            queryWrapper=new QueryWrapper<>().orderByDesc("pay_time");
+        }
+        IPage<RecordsConsumption> recordsConsumptionIPage = recordsConsumptionService.page(page, queryWrapper);
         List<ReturnConsumVo> res = getReturnConsumVoList(recordsConsumptionIPage.getRecords());
         return ApiResponse.ok(new PageResult<>(res,recordsConsumptionIPage.getTotal(),recordsConsumptionIPage.getSize()));
     }
@@ -93,6 +98,7 @@ public class RecordsConsumptionController {
     @Cacheable(value = "QueryRecordsConsumptionList",keyGenerator="simpleKeyGenerator")
     public ApiResponse<PageResult<ReturnConsumVo>> QueryRecordsConsumptionList(@RequestParam(required = false,defaultValue = "1") Integer current,
                                                                                @RequestParam(required = false,defaultValue = "20") Integer size,
+                                                                               @RequestParam(required = false,defaultValue = "true")boolean isDesc,
                                                                                @RequestParam(required = false) LocalDateTime startTime,
                                                                                @RequestParam(required = false) LocalDateTime endTime,
                                                                                @RequestParam(required = false) Integer staffId,
@@ -121,6 +127,10 @@ public class RecordsConsumptionController {
         if(endTime!=null){
             queryWrapper.and(wapper->wapper.le("pay_time",endTime));
         }
+        if(isDesc){
+            queryWrapper.orderByDesc("pay_time");
+        }
+
 
         Page<RecordsConsumption> page=new Page<>(current,size);
         IPage<RecordsConsumption> recordsConsumptionIPage = recordsConsumptionService.page(page, queryWrapper);
@@ -132,9 +142,18 @@ public class RecordsConsumptionController {
     @ApiOperation("手动添加一些消费记录 会修改turnover（但consum_type不会添加到busness表 如果有这个需要 请通过CustomerController结算")
     @ApiImplicitParam(name = "consumVo",value = "添加或者修改的consum对象")
     public ApiResponse<Void> insertRecordsConsumption(@RequestBody AddOrEditConsumVo consumVo){
-        Customer customer = customerService.getOne(QueryWapperUtils.getInWapper("phone", new String[]{consumVo.getCustomerPhone()}));
-        if(customer==null){
-            return ApiResponse.selfError(ReturnCode.CUSTOMER_NOT_EXIST);
+        if(consumVo.getConsumType()==null || consumVo.getPrice()==null || consumVo.getPrice()==null || consumVo.getStaffId()==null ){
+            return ApiResponse.selfError(ReturnCode.NEED_PARAM);
+        }
+        if(userService.getById(consumVo.getStaffId())==null){
+            return ApiResponse.selfError(ReturnCode.USER_NOT_EXITST);
+        }
+        Customer customer=null;
+        if(consumVo.getCustomerPhone()!=null){
+             customer= customerService.getOne(QueryWapperUtils.getInWapper("phone", new String[]{consumVo.getCustomerPhone()}));
+            if(customer==null){
+                return ApiResponse.selfError(ReturnCode.CUSTOMER_NOT_EXIST);
+            }
         }
         RecordsConsumption recordsConsumption=RecordsConsumption.builder()
                 .consumType(consumVo.getConsumType())
@@ -142,7 +161,7 @@ public class RecordsConsumptionController {
                 .payType(consumVo.getPayType())
                 .price(consumVo.getPrice())
                 .userId(consumVo.getStaffId())
-                .customerId(customer.getId())
+                .customerId(customer!=null ? customer.getId() : null)
                 .remark(consumVo.getRemark())
                 .isRecord(false)
                 .build();
@@ -159,6 +178,12 @@ public class RecordsConsumptionController {
     @Transactional
     public ApiResponse<Void> updateRecordsConsumption(@PathVariable Integer id,
                                                          @RequestBody AddOrEditConsumVo consumVo){
+        if(consumVo.getConsumType()==null || consumVo.getPrice()==null || consumVo.getPrice()==null || consumVo.getStaffId()==null ){
+            return ApiResponse.selfError(ReturnCode.NEED_PARAM);
+        }
+        if(userService.getById(consumVo.getStaffId())==null){
+            return ApiResponse.selfError(ReturnCode.USER_NOT_EXITST);
+        }
         RecordsConsumption recordsConsumption = recordsConsumptionService.getById(id);
         if(recordsConsumption==null){
             return ApiResponse.selfError(ReturnCode.CONSUM_NOT_EXITST);

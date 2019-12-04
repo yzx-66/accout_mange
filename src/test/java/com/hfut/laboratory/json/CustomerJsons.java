@@ -165,7 +165,6 @@ public class CustomerJsons {
                 .price(20f)
                 .projectId(4)
                 .staffId(4)
-                .consumType(ConsumeTypeEnum.PROJECT.getType())
                 .remark("客户使用现金结算4号项目")
                 .build();
 
