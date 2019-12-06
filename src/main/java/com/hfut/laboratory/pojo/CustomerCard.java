@@ -29,6 +29,8 @@ public class CustomerCard implements Serializable {
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
 
+    private Integer userId;
+
     private Integer customerId;
 
     private Integer cardId;
@@ -36,6 +38,8 @@ public class CustomerCard implements Serializable {
     private LocalDateTime openingTime;
 
     private LocalDateTime deadTime;
+
+    private Float price;
 
     private String remarks;
 

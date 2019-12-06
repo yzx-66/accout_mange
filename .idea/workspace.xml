@@ -2,45 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a42bad7-9b52-469a-8618-50dcb70514aa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/task/SalaryTask.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/salary.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/asciidoc/snippets/greetingGet/curl-request.adoc" beforeDir="false" afterPath="$PROJECT_DIR$/build/asciidoc/snippets/greetingGet/curl-request.adoc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/asciidoc/snippets/greetingGet/http-request.adoc" beforeDir="false" afterPath="$PROJECT_DIR$/build/asciidoc/snippets/greetingGet/http-request.adoc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/asciidoc/snippets/greetingGet/http-response.adoc" beforeDir="false" afterPath="$PROJECT_DIR$/build/asciidoc/snippets/greetingGet/http-response.adoc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/asciidoc/snippets/greetingGet/httpie-request.adoc" beforeDir="false" afterPath="$PROJECT_DIR$/build/asciidoc/snippets/greetingGet/httpie-request.adoc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/asciidoc/snippets/greetingGet/request-body.adoc" beforeDir="false" afterPath="$PROJECT_DIR$/build/asciidoc/snippets/greetingGet/request-body.adoc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/asciidoc/snippets/greetingGet/response-body.adoc" beforeDir="false" afterPath="$PROJECT_DIR$/build/asciidoc/snippets/greetingGet/response-body.adoc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/config/RedisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/config/RedisConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/constants/UrlConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/constants/UrlConstants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/StaffController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/StaffController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/perms/CouponCardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/perms/CouponCardController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/perms/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/perms/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/perms/ProjectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/perms/ProjectController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/perms/RecordsConsumptionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/perms/RecordsConsumptionController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/perms/SalaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/perms/SalaryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/roles/boss/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/roles/boss/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/roles/root/PermissionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/roles/root/PermissionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/roles/root/RoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/roles/root/RoleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/enums/ReturnCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/enums/ReturnCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/pojo/Salary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/pojo/Salary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/pojo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/pojo/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/vo/customer/CustomerSettleVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/vo/customer/CustomerSettleVo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/vo/salary/ReturnSalaryVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/vo/salary/ReturnSalaryVo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/vo/salary/SetSalaryVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/vo/salary/SetSalaryVo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/vo/user/UserVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/vo/user/UserVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/pojo/CustomerCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/pojo/CustomerCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/task/SalaryTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/task/SalaryTask.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/hfut/laboratory/json/CustomerJsons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/hfut/laboratory/json/CustomerJsons.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/hfut/laboratory/json/SalaryJsons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/hfut/laboratory/json/SalaryJsons.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/hfut/laboratory/json/UserJsons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/hfut/laboratory/json/UserJsons.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/accout-mange-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/accout-mange-1.0-SNAPSHOT.jar.original" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/asciidoc/generated/definitions.adoc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/asciidoc/generated/overview.adoc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/asciidoc/generated/paths.adoc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/asciidoc/generated/security.adoc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/asciidoc/html/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/asciidoc/pdf/index.pdf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/hfut/laboratory/AccoutMangeApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hfut/laboratory/AccoutMangeApplication.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/hfut/laboratory/config/DateConvertConfig$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hfut/laboratory/config/DateConvertConfig$1.class" afterDir="false" />
@@ -49,6 +20,7 @@
       <change beforePath="$PROJECT_DIR$/target/classes/com/hfut/laboratory/config/DateConvertConfig$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hfut/laboratory/config/DateConvertConfig$4.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/hfut/laboratory/config/JwtConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hfut/laboratory/config/JwtConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/hfut/laboratory/config/RedisConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hfut/laboratory/config/RedisConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hfut/laboratory/constants/UrlConstants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hfut/laboratory/constants/UrlConstants.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/hfut/laboratory/controller/anon/SystemController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hfut/laboratory/controller/anon/SystemController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/hfut/laboratory/controller/authc/RecordBusnessController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hfut/laboratory/controller/authc/RecordBusnessController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/hfut/laboratory/controller/authc/StaffController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hfut/laboratory/controller/authc/StaffController.class" afterDir="false" />
@@ -156,403 +128,11 @@
       <change beforePath="$PROJECT_DIR$/target/classes/com/hfut/laboratory/vo/user/PasswordVo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hfut/laboratory/vo/user/PasswordVo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/hfut/laboratory/vo/user/UserQuery.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hfut/laboratory/vo/user/UserQuery.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/hfut/laboratory/vo/user/UserVo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hfut/laboratory/vo/user/UserVo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/accout-mange-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/accout-mange.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/build/asciidoc/snippets/greetingGet/curl-request.adoc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/build/asciidoc/snippets/greetingGet/http-request.adoc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/build/asciidoc/snippets/greetingGet/http-response.adoc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/build/asciidoc/snippets/greetingGet/httpie-request.adoc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/build/asciidoc/snippets/greetingGet/request-body.adoc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/build/asciidoc/snippets/greetingGet/response-body.adoc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/hs_err_pid5424.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/docs/asciidoc/index.adoc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/AccoutMangeApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/config/CorsConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/config/DateConvertConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/config/JwtConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/config/MybatisPlusConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/config/RedisConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/config/SwaggerConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/constants/JwtConstans.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/constants/TimeFormatConstants.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/constants/UrlConstants.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/controller/anon/SystemController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/controller/authc/RecordBusnessController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/controller/authc/StaffController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/controller/authc/perms/CouponCardController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/controller/authc/perms/CustomerController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/controller/authc/perms/ProjectController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/controller/authc/perms/RecordsConsumptionController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/controller/authc/perms/SalaryController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/controller/authc/roles/boss/RecordsTurnoverController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/controller/authc/roles/boss/UserController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/controller/authc/roles/root/PermissionController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/controller/authc/roles/root/RoleController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/dto/UserInfo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/enums/ConsumeTypeEnum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/enums/PayTypeEnum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/enums/ReturnCode.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/mapper/CouponCardDetailMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/mapper/CouponCardMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/mapper/CustomerCardMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/mapper/CustomerCardProjectMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/mapper/CustomerMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/mapper/PermissionMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/mapper/ProjectMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/mapper/RecordBusinessMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/mapper/RecordsConsumptionMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/mapper/RecordsTurnoverMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/mapper/RoleMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/mapper/RolePermissionMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/mapper/SalaryMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/mapper/UserMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/mapper/UserRoleMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/pojo/CouponCard.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/pojo/CouponCardDetail.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/pojo/Customer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/pojo/CustomerCard.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/pojo/CustomerCardProject.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/pojo/Permission.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/pojo/Project.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/pojo/RecordBusiness.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/pojo/RecordsConsumption.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/pojo/RecordsTurnover.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/pojo/Role.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/pojo/RolePermission.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/pojo/Salary.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/pojo/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/pojo/UserRole.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/service/CouponCardDetailService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/service/CouponCardService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/service/CustomerCardProjectService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/service/CustomerCardService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/service/CustomerService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/service/PermissionService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/service/ProjectService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/service/RecordBusinessService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/service/RecordsConsumptionService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/service/RecordsTurnoverService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/service/RolePermissionService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/service/RoleService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/service/SalaryService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/service/UserRoleService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/service/UserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/service/impl/CouponCardDetailServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/service/impl/CouponCardServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/service/impl/CustomerCardProjectServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/service/impl/CustomerCardServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/service/impl/CustomerServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/service/impl/PermissionServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/service/impl/ProjectServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/service/impl/RecordBusinessServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/service/impl/RecordsConsumptionServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/service/impl/RecordsTurnoverServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/service/impl/RolePermissionServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/service/impl/RoleServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/service/impl/SalaryServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/service/impl/UserRoleServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/service/impl/UserServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/shiro/config/JwtApplicationRunner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/shiro/config/ShiroConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/shiro/filter/JWTFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/shiro/filter/PermisstionOrAuthorizationFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/shiro/filter/RolesOrAuthorizationFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/shiro/matcher/UserCredentialsMatcher.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/shiro/realm/UserRealm.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/task/TurnoverTask.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/util/BeanUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/util/CodecUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/util/CookieUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/util/JsonUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/util/ObjectMapperUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/util/ObjectUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/util/QueryWapperUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/util/TimeConvertUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/util/jwt/JwtTokenUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/util/jwt/JwtUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/util/jwt/RsaUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/vo/ApiResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/vo/PageResult.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/vo/card/CardDetailVo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/vo/card/CardSimple.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/vo/card/CouponCardVo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/vo/customer/CustomerCardVo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/vo/customer/CustomerEditBalanceVo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/vo/customer/CustomerEditCardVo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/vo/customer/CustomerMakeCardVo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/vo/customer/CustomerReturnCardVo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/vo/customer/CustomerSettleVo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/vo/project/ProjectSimple.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/vo/record/AddOrEditConsumVo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/vo/record/ReturnConsumVo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/vo/role/RoleVo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/vo/salary/ReturnSalaryVo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/vo/salary/SetSalaryVo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/vo/staff/SimpleStaffVo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/vo/user/PasswordVo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/vo/user/UserQuery.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/java/com/hfut/laboratory/vo/user/UserVo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/resources/mappers/CouponCardDetailMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/resources/mappers/CouponCardMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/resources/mappers/CustomerCardMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/resources/mappers/CustomerCardProjectMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/resources/mappers/CustomerMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/resources/mappers/PermissionMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/resources/mappers/ProjectMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/resources/mappers/RecordBusinessMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/resources/mappers/RecordsConsumptionMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/resources/mappers/RecordsTurnoverMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/resources/mappers/RoleMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/resources/mappers/RolePermissionMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/resources/mappers/SalaryMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/resources/mappers/UserMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/resources/mappers/UserRoleMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/resources/rsa/rsa.pri" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/main/resources/rsa/rsa.pub" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/test/java/com/hfut/laboratory/json/CouponCardJsons.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/test/java/com/hfut/laboratory/json/CustomerJsons.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/test/java/com/hfut/laboratory/json/ProjectJsons.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/test/java/com/hfut/laboratory/json/RecordsJsons.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/test/java/com/hfut/laboratory/json/SalaryJsons.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/test/java/com/hfut/laboratory/json/StaffJsons.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/test/java/com/hfut/laboratory/json/UserJsons.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/test/java/com/hfut/laboratory/mysql/Generator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/test/java/com/hfut/laboratory/other/GeneratorJwtToken.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/test/java/com/hfut/laboratory/other/MybatisPlusTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/test/java/com/hfut/laboratory/other/OtherTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/src/test/java/com/hfut/laboratory/swagger/Swagger2MarkupTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/accout-mange-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/accout-mange-1.0-SNAPSHOT.jar.original" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/asciidoc/generated/definitions.adoc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/asciidoc/generated/overview.adoc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/asciidoc/generated/paths.adoc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/asciidoc/generated/security.adoc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/asciidoc/html/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/asciidoc/pdf/index.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/AccoutMangeApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/config/CorsConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/config/DateConvertConfig$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/config/DateConvertConfig$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/config/DateConvertConfig$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/config/DateConvertConfig$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/config/DateConvertConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/config/JwtConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/config/MybatisPlusConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/config/RedisConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/config/SwaggerConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/constants/JwtConstans.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/constants/TimeFormatConstants.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/constants/UrlConstants.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/controller/anon/SystemController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/controller/authc/RecordBusnessController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/controller/authc/StaffController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/controller/authc/perms/CouponCardController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/controller/authc/perms/CustomerController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/controller/authc/perms/ProjectController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/controller/authc/perms/RecordsConsumptionController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/controller/authc/perms/SalaryController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/controller/authc/roles/boss/RecordsTurnoverController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/controller/authc/roles/boss/UserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/controller/authc/roles/root/PermissionController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/controller/authc/roles/root/RoleController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/dto/UserInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/enums/ConsumeTypeEnum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/enums/PayTypeEnum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/enums/ReturnCode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/mapper/CouponCardDetailMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/mapper/CouponCardMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/mapper/CustomerCardMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/mapper/CustomerCardProjectMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/mapper/CustomerMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/mapper/PermissionMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/mapper/ProjectMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/mapper/RecordBusinessMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/mapper/RecordsConsumptionMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/mapper/RecordsTurnoverMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/mapper/RoleMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/mapper/RolePermissionMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/mapper/SalaryMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/mapper/UserMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/mapper/UserRoleMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/pojo/CouponCard$CouponCardBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/pojo/CouponCard.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/pojo/CouponCardDetail$CouponCardDetailBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/pojo/CouponCardDetail.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/pojo/Customer$CustomerBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/pojo/Customer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/pojo/CustomerCard$CustomerCardBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/pojo/CustomerCard.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/pojo/CustomerCardProject$CustomerCardProjectBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/pojo/CustomerCardProject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/pojo/Permission$PermissionBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/pojo/Permission.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/pojo/Project$ProjectBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/pojo/Project.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/pojo/RecordBusiness$RecordBusinessBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/pojo/RecordBusiness.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/pojo/RecordsConsumption$RecordsConsumptionBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/pojo/RecordsConsumption.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/pojo/RecordsTurnover$RecordsTurnoverBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/pojo/RecordsTurnover.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/pojo/Role$RoleBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/pojo/Role.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/pojo/RolePermission$RolePermissionBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/pojo/RolePermission.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/pojo/Salary$SalaryBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/pojo/Salary.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/pojo/User$UserBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/pojo/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/pojo/UserRole$UserRoleBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/pojo/UserRole.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/service/CouponCardDetailService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/service/CouponCardService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/service/CustomerCardProjectService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/service/CustomerCardService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/service/CustomerService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/service/PermissionService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/service/ProjectService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/service/RecordBusinessService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/service/RecordsConsumptionService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/service/RecordsTurnoverService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/service/RolePermissionService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/service/RoleService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/service/SalaryService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/service/UserRoleService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/service/UserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/service/impl/CouponCardDetailServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/service/impl/CouponCardServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/service/impl/CustomerCardProjectServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/service/impl/CustomerCardServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/service/impl/CustomerServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/service/impl/PermissionServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/service/impl/ProjectServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/service/impl/RecordBusinessServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/service/impl/RecordsConsumptionServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/service/impl/RecordsTurnoverServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/service/impl/RolePermissionServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/service/impl/RoleServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/service/impl/SalaryServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/service/impl/UserRoleServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/service/impl/UserServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/shiro/config/JwtApplicationRunner.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/shiro/config/ShiroConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/shiro/filter/JWTFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/shiro/filter/PermisstionOrAuthorizationFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/shiro/filter/RolesOrAuthorizationFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/shiro/matcher/UserCredentialsMatcher.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/shiro/realm/UserRealm.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/task/TurnoverTask.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/util/BeanUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/util/CodecUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/util/CookieUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/util/JsonUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/util/ObjectMapperUtils$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/util/ObjectMapperUtils$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/util/ObjectMapperUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/util/ObjectUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/util/QueryWapperUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/util/TimeConvertUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/util/jwt/JwtTokenUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/util/jwt/JwtUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/util/jwt/RsaUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/vo/ApiResponse$ApiResponseBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/vo/ApiResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/vo/PageResult$PageResultBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/vo/PageResult.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/vo/card/CardDetailVo$CardDetailVoBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/vo/card/CardDetailVo$ProDetail.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/vo/card/CardDetailVo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/vo/card/CardSimple$CardSimpleBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/vo/card/CardSimple.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/vo/card/CouponCardVo$Deatil$DeatilBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/vo/card/CouponCardVo$Deatil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/vo/card/CouponCardVo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/vo/customer/CustomerCardVo$Deatil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/vo/customer/CustomerCardVo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/vo/customer/CustomerEditBalanceVo$CustomerEditBalanceVoBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/vo/customer/CustomerEditBalanceVo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/vo/customer/CustomerEditCardVo$CustomerEditCardVoBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/vo/customer/CustomerEditCardVo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/vo/customer/CustomerMakeCardVo$CustomerMakeCardVoBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/vo/customer/CustomerMakeCardVo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/vo/customer/CustomerReturnCardVo$CustomerReturnCardVoBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/vo/customer/CustomerReturnCardVo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/vo/customer/CustomerSettleVo$CustomerSettleVoBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/vo/customer/CustomerSettleVo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/vo/project/ProjectSimple$ProjectSimpleBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/vo/project/ProjectSimple.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/vo/record/AddOrEditConsumVo$AddOrEditConsumVoBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/vo/record/AddOrEditConsumVo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/vo/record/ReturnConsumVo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/vo/role/RoleVo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/vo/salary/ReturnSalaryVo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/vo/salary/SetSalaryVo$SetSalaryVoBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/vo/salary/SetSalaryVo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/vo/staff/SimpleStaffVo$SimpleStaffVoBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/vo/staff/SimpleStaffVo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/vo/user/PasswordVo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/vo/user/UserQuery.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/com/hfut/laboratory/vo/user/UserVo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/mappers/CouponCardDetailMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/mappers/CouponCardMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/mappers/CustomerCardMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/mappers/CustomerCardProjectMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/mappers/CustomerMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/mappers/PermissionMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/mappers/ProjectMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/mappers/RecordBusinessMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/mappers/RecordsConsumptionMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/mappers/RecordsTurnoverMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/mappers/RoleMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/mappers/RolePermissionMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/mappers/SalaryMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/mappers/UserMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/mappers/UserRoleMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/rsa/rsa.pri" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/classes/rsa/rsa.pub" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/docker/accout-mange-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/surefire-reports/TEST-com.hfut.laboratory.other.MybatisPlusTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/surefire-reports/TEST-com.hfut.laboratory.other.OtherTests.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/surefire-reports/TEST-com.hfut.laboratory.swagger.Swagger2MarkupTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/surefire-reports/com.hfut.laboratory.other.MybatisPlusTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/surefire-reports/com.hfut.laboratory.other.OtherTests.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/surefire-reports/com.hfut.laboratory.swagger.Swagger2MarkupTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/swagger/swagger.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/test-classes/com/hfut/laboratory/json/CouponCardJsons.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/test-classes/com/hfut/laboratory/json/CustomerJsons.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/test-classes/com/hfut/laboratory/json/ProjectJsons.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/test-classes/com/hfut/laboratory/json/RecordsJsons.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/test-classes/com/hfut/laboratory/json/SalaryJsons.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/test-classes/com/hfut/laboratory/json/StaffJsons.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/test-classes/com/hfut/laboratory/json/UserJsons.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/test-classes/com/hfut/laboratory/mysql/Generator$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/test-classes/com/hfut/laboratory/mysql/Generator$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/test-classes/com/hfut/laboratory/mysql/Generator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/test-classes/com/hfut/laboratory/other/GeneratorJwtToken.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/test-classes/com/hfut/laboratory/other/MybatisPlusTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/test-classes/com/hfut/laboratory/other/OtherTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/target/test-classes/com/hfut/laboratory/swagger/Swagger2MarkupTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.hfut.laboratory.other.MybatisPlusTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.hfut.laboratory.other.OtherTests.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.hfut.laboratory.swagger.Swagger2MarkupTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.hfut.laboratory.other.MybatisPlusTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.hfut.laboratory.other.OtherTests.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.hfut.laboratory.swagger.Swagger2MarkupTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/swagger/swagger.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/hfut/laboratory/json/CustomerJsons.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/hfut/laboratory/json/CustomerJsons.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/hfut/laboratory/json/SalaryJsons.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/hfut/laboratory/json/SalaryJsons.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/hfut/laboratory/json/UserJsons.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/hfut/laboratory/json/UserJsons.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/hfut/laboratory/mysql/Generator$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/hfut/laboratory/mysql/Generator$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/hfut/laboratory/mysql/Generator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/hfut/laboratory/mysql/Generator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/image_info.json" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -568,53 +148,32 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/perms/CustomerController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/constants/UrlConstants.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-308">
-              <caret line="171" column="64" selection-start-line="171" selection-start-column="64" selection-end-line="171" selection-end-column="64" />
+            <state relative-caret-position="988">
+              <caret line="52" column="35" selection-start-line="52" selection-start-column="35" selection-end-line="52" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2964">
+              <caret line="156" selection-start-line="156" selection-end-line="156" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/AccoutMangeApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#515#516#0" expanded="true" />
+                <element signature="e#582#583#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/enums/ReturnCode.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/task/SalaryTask.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-984">
-              <caret line="45" selection-start-line="45" selection-end-line="45" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1140#1162#1" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/roles/boss/UserController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="177" column="9" lean-forward="true" selection-start-line="177" selection-start-column="9" selection-end-line="177" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/perms/ProjectController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-38">
-              <caret line="87" column="36" selection-start-line="87" selection-start-column="36" selection-end-line="87" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -622,53 +181,56 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/perms/SalaryController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="132" column="69" selection-start-line="132" selection-start-column="69" selection-end-line="132" selection-end-column="69" />
-              <folding>
-                <element signature="e#1782#1804#1" expanded="true" />
-              </folding>
+            <state relative-caret-position="1748">
+              <caret line="124" column="42" selection-start-line="124" selection-start-column="25" selection-end-line="124" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/perms/CouponCardController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/vo/card/CouponCardVo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-846">
-              <caret line="150" column="79" selection-start-line="150" selection-start-column="79" selection-end-line="150" selection-end-column="79" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="228">
+              <caret line="18" selection-start-line="18" selection-end-line="39" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/StaffController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/pojo/CouponCard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="103">
-              <caret line="114" column="6" selection-start-line="114" selection-start-column="6" selection-end-line="114" selection-end-column="6" />
+            <state relative-caret-position="722">
+              <caret line="44" column="32" selection-start-line="29" selection-start-column="3" selection-end-line="44" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/perms/RecordsConsumptionController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/task/TurnoverTask.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="150" column="31" lean-forward="true" selection-start-line="150" selection-start-column="31" selection-end-line="150" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="361">
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="248">
+              <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/config/RedisConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="124" column="5" selection-start-line="124" selection-start-column="5" selection-end-line="124" selection-end-column="5" />
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="114">
+                <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -749,6 +311,9 @@
       <replace>startTime</replace>
       <replace>endTime</replace>
     </replaceStrings>
+    <dirStrings>
+      <dir>C:\EXCS\IDEA_exc\accout-mange\src</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -756,9 +321,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/config/JwtConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/shiro/config/JwtApplicationRunner.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/hfut/laboratory/other/GeneratorJwtToken.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/shiro/filter/PermisstionOrAuthorizationFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/shiro/config/ShiroConfig.java" />
         <option value="$PROJECT_DIR$/Dockerfile" />
@@ -784,7 +346,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/RecordBusnessController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/vo/record/AddOrEditConsumVo.java" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/roles/root/PermissionController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/roles/root/RoleController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/vo/customer/CustomerSettleVo.java" />
@@ -793,20 +354,24 @@
         <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/vo/salary/SetSalaryVo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/roles/boss/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/pojo/Salary.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/StaffController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/vo/salary/ReturnSalaryVo.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/hfut/laboratory/json/CustomerJsons.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/hfut/laboratory/json/UserJsons.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/hfut/laboratory/json/SalaryJsons.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/task/SalaryTask.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/config/RedisConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/perms/ProjectController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/perms/CouponCardController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/enums/ReturnCode.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/perms/CustomerController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/perms/RecordsConsumptionController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/AccoutMangeApplication.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/task/SalaryTask.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/pojo/CustomerCard.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/perms/CustomerController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/perms/CouponCardController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/constants/UrlConstants.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/perms/SalaryController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/StaffController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -853,11 +418,6 @@
           <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
           <item name="docker" type="36feed69:MavenProjectsStructure$PluginNode" />
         </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="accout-mange" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
-        </path>
       </expand>
       <select />
     </treeState>
@@ -890,19 +450,6 @@
               <item name="accout-mange" type="b2602c69:ProjectViewProjectNode" />
               <item name="accout-mange" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="accout-mange" type="b2602c69:ProjectViewProjectNode" />
-              <item name="accout-mange" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
-              <item name="asciidoc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="accout-mange" type="b2602c69:ProjectViewProjectNode" />
-              <item name="accout-mange" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -919,78 +466,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="laboratory" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="accout-mange" type="b2602c69:ProjectViewProjectNode" />
-              <item name="accout-mange" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="laboratory" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="accout-mange" type="b2602c69:ProjectViewProjectNode" />
-              <item name="accout-mange" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="laboratory" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="anon" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="accout-mange" type="b2602c69:ProjectViewProjectNode" />
-              <item name="accout-mange" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="laboratory" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="authc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="accout-mange" type="b2602c69:ProjectViewProjectNode" />
-              <item name="accout-mange" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="laboratory" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="authc" type="462c0819:PsiDirectoryNode" />
-              <item name="perms" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="accout-mange" type="b2602c69:ProjectViewProjectNode" />
-              <item name="accout-mange" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="laboratory" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="authc" type="462c0819:PsiDirectoryNode" />
-              <item name="roles" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="accout-mange" type="b2602c69:ProjectViewProjectNode" />
-              <item name="accout-mange" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="laboratory" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="authc" type="462c0819:PsiDirectoryNode" />
-              <item name="roles" type="462c0819:PsiDirectoryNode" />
-              <item name="boss" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="accout-mange" type="b2602c69:ProjectViewProjectNode" />
-              <item name="accout-mange" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="laboratory" type="462c0819:PsiDirectoryNode" />
-              <item name="enums" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="accout-mange" type="b2602c69:ProjectViewProjectNode" />
@@ -998,27 +473,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="accout-mange" type="b2602c69:ProjectViewProjectNode" />
-              <item name="accout-mange" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="accout-mange" type="b2602c69:ProjectViewProjectNode" />
-              <item name="accout-mange" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="accout-mange" type="b2602c69:ProjectViewProjectNode" />
-              <item name="accout-mange" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="laboratory" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -1035,7 +489,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../wether" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../hssw2" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/Program Files/nodejs/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -1067,7 +521,23 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.AccoutMangeApplication">
+  <component name="RunManager" selected="JAR Application.accout-mange-1.0-SNAPSHOT.jar">
+    <configuration name="CouponCardJsons.serializeCardDetailVo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="accout-mange" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hfut.laboratory.json.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.hfut.laboratory.json" />
+      <option name="MAIN_CLASS_NAME" value="com.hfut.laboratory.json.CouponCardJsons" />
+      <option name="METHOD_NAME" value="serializeCardDetailVo" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CouponCardJsons.serializeCouponCard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="accout-mange" />
       <extension name="coverage">
@@ -1100,37 +570,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OtherTests.test05" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="accout-mange" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.hfut.laboratory.other.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.hfut.laboratory.other" />
-      <option name="MAIN_CLASS_NAME" value="com.hfut.laboratory.other.OtherTests" />
-      <option name="METHOD_NAME" value="test05" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Swagger2MarkupTest.createSpringfoxSwaggerJson" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="accout-mange" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.hfut.laboratory.swagger.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.hfut.laboratory.swagger" />
-      <option name="MAIN_CLASS_NAME" value="com.hfut.laboratory.swagger.Swagger2MarkupTest" />
-      <option name="METHOD_NAME" value="createSpringfoxSwaggerJson" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="accout-mange-1.0-SNAPSHOT.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/target/accout-mange-1.0-SNAPSHOT.jar" />
+      <method v="2" />
     </configuration>
     <configuration name="AccoutMangeApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="accout-mange" />
@@ -1146,19 +588,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JAR Application.accout-mange-1.0-SNAPSHOT.jar" />
       <item itemvalue="JUnit.GeneratorJwtToken.genRoot" />
-      <item itemvalue="JUnit.OtherTests.test05" />
-      <item itemvalue="JUnit.Swagger2MarkupTest.createSpringfoxSwaggerJson" />
       <item itemvalue="JUnit.CouponCardJsons.serializeCouponCard" />
+      <item itemvalue="JUnit.CouponCardJsons.serializeCardDetailVo" />
       <item itemvalue="Spring Boot.AccoutMangeApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JAR Application.accout-mange-1.0-SNAPSHOT.jar" />
+        <item itemvalue="JUnit.CouponCardJsons.serializeCardDetailVo" />
         <item itemvalue="Spring Boot.AccoutMangeApplication" />
         <item itemvalue="JUnit.CouponCardJsons.serializeCouponCard" />
         <item itemvalue="JUnit.GeneratorJwtToken.genRoot" />
-        <item itemvalue="JUnit.OtherTests.test05" />
-        <item itemvalue="JUnit.Swagger2MarkupTest.createSpringfoxSwaggerJson" />
       </list>
     </recent_temporary>
   </component>
@@ -1227,7 +669,10 @@
       <workItem from="1575308902994" duration="2751000" />
       <workItem from="1575348174211" duration="556000" />
       <workItem from="1575371128550" duration="6791000" />
-      <workItem from="1575458219018" duration="10868000" />
+      <workItem from="1575458219018" duration="15299000" />
+      <workItem from="1575534134849" duration="12779000" />
+      <workItem from="1575569603042" duration="632000" />
+      <workItem from="1575615729695" duration="7969000" />
     </task>
     <task id="LOCAL-00001" summary="修复redis做缓存的一个bug">
       <created>1574682967415</created>
@@ -1257,13 +702,17 @@
       <option name="project" value="LOCAL" />
       <updated>1574683588424</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="按照需求修改代码">
+      <created>1575470452247</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1575470452247</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Swagger2MarkupTest_createSpringfoxSwaggerJson - 2019.11.13 at 18h 14m 18s.xml">
-      <configuration name="Swagger2MarkupTest.createSpringfoxSwaggerJson" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="Swagger2MarkupTest_createSpringfoxSwaggerJson - 2019.11.13 at 18h 22m 17s.xml">
       <configuration name="Swagger2MarkupTest.createSpringfoxSwaggerJson" configurationId="JUnit" />
     </history-entry>
@@ -1291,9 +740,12 @@
     <history-entry file="CouponCardJsons_serializeCouponCard - 2019.12.03 at 21h 46m 24s.xml">
       <configuration name="CouponCardJsons.serializeCouponCard" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="CouponCardJsons_serializeCardDetailVo - 2019.12.05 at 19h 49m 30s.xml">
+      <configuration name="CouponCardJsons.serializeCardDetailVo" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="324074000" />
+    <option name="totallyTimeSpent" value="349885000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1305,10 +757,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4978903" visible="true" weight="0.25201073" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4978903" visible="true" weight="0.26206434" />
       <window_info id="Structure" order="1" sideWeight="0.5021097" side_tool="true" weight="0.23324397" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1318,14 +770,14 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.23055163" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.10056657" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49865952" visible="true" weight="0.21954674" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.04249292" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49865952" weight="0.43342775" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.25212464" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.09490085" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32956153" />
       <window_info anchor="bottom" id="GraphQL" order="8" weight="0.32956153" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32956153" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.04249292" />
       <window_info anchor="bottom" id="Docker" order="10" weight="0.27053824" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5013405" side_tool="true" weight="0.42291373" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.49008498" />
@@ -1336,7 +788,7 @@
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" weight="0.25938338" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.28485253" />
       <window_info anchor="right" id="PlantUML" order="4" />
       <window_info anchor="right" id="Palette" order="5" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
@@ -1391,80 +843,30 @@
     <MESSAGE value="修复redis做缓存的一个bug" />
     <MESSAGE value="提交代码" />
     <MESSAGE value="编辑描述" />
-    <option name="LAST_COMMIT_MESSAGE" value="编辑描述" />
+    <MESSAGE value="按照需求修改代码" />
+    <option name="LAST_COMMIT_MESSAGE" value="按照需求修改代码" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="SpringBootApplicationConfigurationType">
+        <watch expression="resTime.getDayOfMonth()" language="JAVA" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="watch">
+      <expression>
+        <expression-string>resTime.getDayOfMonth()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/vo/customer/CustomerCardVo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/mapper/CouponCardDetailMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/config/SwaggerConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/vo/record/AddOrEditConsumVo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-extension/3.0.5/mybatis-plus-extension-3.0.5-sources.jar!/com/baomidou/mybatisplus/extension/plugins/pagination/Page.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="82" column="11" selection-start-line="82" selection-start-column="11" selection-end-line="82" selection-end-column="11" />
-          <folding>
-            <element signature="e#1830#1831#0" expanded="true" />
-            <element signature="e#1868#1869#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.1.8.RELEASE/spring-core-5.1.8.RELEASE-sources.jar!/org/springframework/cglib/proxy/MethodProxy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="219" selection-start-line="219" selection-end-line="219" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/config/MybatisPlusConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/vo/customer/CustomerReturnCardVo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/enums/ConsumeTypeEnum.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
           <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3591">
-          <caret line="189" column="35" selection-start-line="189" selection-start-column="35" selection-end-line="189" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -1479,23 +881,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/hfut/laboratory/json/CouponCardJsons.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/vo/card/CouponCardVo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1541,44 +926,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/RecordBusnessController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="577">
-          <caret line="46" column="65" selection-start-line="46" selection-start-column="65" selection-end-line="46" selection-end-column="65" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/anon/SystemController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="47" column="12" lean-forward="true" selection-start-line="47" selection-start-column="12" selection-end-line="47" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/constants/TimeFormatConstants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="64" selection-start-line="9" selection-start-column="64" selection-end-line="9" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/task/TurnoverTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="48" column="28" lean-forward="true" selection-start-line="48" selection-start-column="28" selection-end-line="48" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/roles/boss/RecordsTurnoverController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="950">
-          <caret line="74" column="5" lean-forward="true" selection-start-line="74" selection-start-column="5" selection-end-line="74" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1600,13 +951,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-630">
           <caret line="483" column="19" selection-start-line="483" selection-start-column="19" selection-end-line="483" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/roles/root/RoleController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1399">
-          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1645,31 +989,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/AccoutMangeApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
-          <folding>
-            <element signature="e#515#516#0" expanded="true" />
-            <element signature="e#582#583#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="32" selection-start-line="32" selection-end-line="32" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/roles/root/PermissionController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/util/TimeConvertUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
@@ -1684,31 +1003,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/salary.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/shiro/config/ShiroConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="111">
           <caret line="83" column="10" selection-start-line="83" selection-start-column="10" selection-end-line="83" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/StaffController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="114" column="6" selection-start-line="114" selection-start-column="6" selection-end-line="114" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/task/SalaryTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-984">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1140#1162#1" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1726,20 +1024,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/perms/CustomerController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/roles/root/PermissionController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-308">
-          <caret line="171" column="64" selection-start-line="171" selection-start-column="64" selection-end-line="171" selection-end-column="64" />
+        <state relative-caret-position="152">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/roles/root/RoleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/RecordBusnessController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="46" column="65" selection-start-line="46" selection-start-column="65" selection-end-line="46" selection-end-column="65" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/perms/CouponCardController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/roles/boss/RecordsTurnoverController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-846">
-          <caret line="150" column="79" selection-start-line="150" selection-start-column="79" selection-end-line="150" selection-end-column="79" />
+        <state relative-caret-position="1121">
+          <caret line="74" column="5" selection-start-line="74" selection-start-column="5" selection-end-line="74" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1748,35 +1060,191 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/perms/RecordsConsumptionController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="150" column="31" lean-forward="true" selection-start-line="150" selection-start-column="31" selection-end-line="150" selection-end-column="31" />
+        <state relative-caret-position="2261">
+          <caret line="150" column="31" selection-start-line="150" selection-start-column="31" selection-end-line="150" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/pojo/CustomerCard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="31" column="27" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/vo/customer/CustomerMakeCardVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/perms/ProjectController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-38">
+        <state relative-caret-position="320">
           <caret line="87" column="36" selection-start-line="87" selection-start-column="36" selection-end-line="87" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/perms/SalaryController.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/hfut/laboratory/json/CouponCardJsons.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="132" column="69" selection-start-line="132" selection-start-column="69" selection-end-line="132" selection-end-column="69" />
+        <state relative-caret-position="304">
+          <caret line="34" column="5" lean-forward="true" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
           <folding>
-            <element signature="e#1782#1804#1" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/vo/card/CardDetailVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/constants/TimeFormatConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="64" selection-start-line="9" selection-start-column="64" selection-end-line="9" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/task/SalaryTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="46" column="34" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/salary.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="19" selection-start-column="19" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/constants/JwtConstans.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/roles/boss/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="177" column="9" lean-forward="true" selection-start-line="177" selection-start-column="9" selection-end-line="177" selection-end-column="9" />
+        <state relative-caret-position="107">
+          <caret line="147" column="10" selection-start-line="147" selection-start-column="10" selection-end-line="147" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/StaffController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="120" column="5" selection-start-line="120" selection-start-column="5" selection-end-line="120" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/perms/CustomerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6042">
+          <caret line="345" column="25" selection-start-line="345" selection-start-column="25" selection-end-line="345" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/perms/CouponCardController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2660">
+          <caret line="168" column="22" selection-start-line="168" selection-start-column="22" selection-end-line="168" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/constants/UrlConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="988">
+          <caret line="52" column="35" selection-start-line="52" selection-start-column="35" selection-end-line="52" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/AccoutMangeApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+          <folding>
+            <element signature="e#515#516#0" expanded="true" />
+            <element signature="e#582#583#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/perms/SalaryController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1748">
+          <caret line="124" column="42" selection-start-line="124" selection-start-column="25" selection-end-line="124" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/vo/card/CouponCardVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="18" selection-start-line="18" selection-end-line="39" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/pojo/CouponCard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="722">
+          <caret line="44" column="32" selection-start-line="29" selection-start-column="3" selection-end-line="44" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/task/TurnoverTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="114">
+            <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/spotify/docker-maven-plugin/1.0.0/docker-maven-plugin-1.0.0.jar!/META-INF/maven/plugin.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="115" column="8" selection-start-line="115" selection-start-column="8" selection-end-line="115" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2964">
+          <caret line="156" selection-start-line="156" selection-end-line="156" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
         </state>
       </provider>
     </entry>

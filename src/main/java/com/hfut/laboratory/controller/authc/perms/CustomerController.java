@@ -226,15 +226,18 @@ public class CustomerController {
         if(makeCardVo.getStaffId()==null || makeCardVo.getPayType()==null){
             return ApiResponse.selfError(ReturnCode.NEED_PARAM);
         }
-        if(userService.getById(makeCardVo.getCardId())==null){
+        if(userService.getById(makeCardVo.getStaffId())==null){
             return ApiResponse.selfError(ReturnCode.USER_NOT_EXITST);
         }
         if(couponCardService.getById(makeCardVo.getCardId())==null){
             return ApiResponse.selfError(ReturnCode.CARD_NOT_EXIST);
         }
-
         boolean res1=true,res2=true,res3=true,res4=true,res5=true;
 
+        CouponCard card=couponCardService.getById(makeCardVo.getCardId());
+        if(makeCardVo.getPrice()==null){
+            makeCardVo.setPrice(card.getPrice());
+        }
         //如果是余额支付
         if(makeCardVo.getPayType()== PayTypeEnum.REDUCE_BALANCE.getType()){
             Integer updateBalanceCode=changeBalance(id,-1 * makeCardVo.getPrice());
@@ -247,8 +250,10 @@ public class CustomerController {
         CustomerCard customerCard=CustomerCard.builder()
                 .cardId(makeCardVo.getCardId())
                 .customerId(id)
-                .openingTime(makeCardVo.getOpeningTime())
-                .deadTime(makeCardVo.getDeadTime())
+                .userId(makeCardVo.getStaffId())
+                .price(makeCardVo.getPrice())
+                .openingTime(LocalDateTime.now())
+                .deadTime(makeCardVo.getDeadTime()!=null ? makeCardVo.getDeadTime() : card.getEndTime())
                 .remarks(makeCardVo.getRemark())
                 .build();
        res2=customerCardService.save(customerCard);

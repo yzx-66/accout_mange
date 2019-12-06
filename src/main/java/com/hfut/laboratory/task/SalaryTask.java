@@ -56,7 +56,7 @@ public class SalaryTask {
         String content = bufferedReader.readLine();
         LocalDateTime resTime=LocalDateTime.parse(content, DateTimeFormatter.ofPattern(TimeFormatConstants.DEFAULT_DATE_TIME_FORMAT));
         LocalDateTime now= TimeConvertUtils.convertTo_yMd(LocalDateTime.now());
-        if(now.isBefore(resTime) || now.isAfter(resTime)){
+        if(resTime.getDayOfMonth()!=now.getDayOfMonth()){
             return;
         }
 

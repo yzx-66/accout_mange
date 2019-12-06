@@ -58,12 +58,14 @@ public class UrlConstants {
 
             "/customer/freeze/*:customer_freeze",
 
-            "/salary/add:salary_add",
+            "/salary/set:salary_set",
             "/salary/edit/*:salary_edit",
             "/salary/del/*:salary_del",
 
             "/consum/edit/*:consum_edit",
             "/consum/del/*:consum_del",
+
+            "/staff/job/*:job_del",
     };
 
 }

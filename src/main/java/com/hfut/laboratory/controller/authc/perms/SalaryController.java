@@ -106,7 +106,7 @@ public class SalaryController {
 
     //TODO
     @PostMapping("/set")
-    @ApiOperation("设置结算薪水的时间")
+    @ApiOperation("设置结算薪水的时间 需要权限[salay_set]")
     @ApiImplicitParam(name = "salaryTime",value = "结算时间")
     public ApiResponse setSalayTime(@RequestParam LocalDateTime salaryTime) throws IOException {
         File file=new File(salaryPath);
@@ -122,7 +122,7 @@ public class SalaryController {
     }
 
     @PutMapping("/edit/{id}")
-    @ApiOperation("修改员工薪水 需要权限[salay_del]")
+    @ApiOperation("修改员工薪水 需要权限[salay_edit]")
     @ApiImplicitParam(name = "salaryVo",value = "设置员工薪水基本信息的对象")
     public ApiResponse<Void> updateSalary(@PathVariable Integer id,
                                           @RequestBody SetSalaryVo salaryVo){

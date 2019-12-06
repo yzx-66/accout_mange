@@ -154,9 +154,10 @@ public class CouponCardController {
         if(!isCardExist(cardDetailVo.getCardId())){
             return ApiResponse.selfError(ReturnCode.CARD_NOT_EXIST);
         }
+        boolean res1=true,res2=true;
 
-        AtomicBoolean res= new AtomicBoolean(true);
-        cardDetailVo.getProDetails().forEach(pro->{
+        res1=couponCardDetailService.remove(QueryWapperUtils.getInWapper("card_id",new Integer[]{cardDetailVo.getCardId()}));
+        for(CardDetailVo.ProDetail pro:cardDetailVo.getProDetails()){
             CouponCardDetail couponCardDetail=CouponCardDetail.builder()
                     .cardId(cardDetailVo.getCardId())
                     .projectId(pro.getProjectId())
@@ -164,14 +165,18 @@ public class CouponCardController {
                     .times(pro.getTimes())
                     .build();
             if(!couponCardDetailService.save(couponCardDetail)){
-                log.info(this.getClass().getName()+"updateCouponCardDetail:error");
-                TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
-                res.set(false);
-                return;
+                res2=false;
+                break;
             }
-        });
+        }
 
-        return res.get()?ApiResponse.ok():ApiResponse.serverError();
+        if(res1 && res2){
+            return ApiResponse.ok();
+        }else {
+            log.info(this.getClass().getName()+"updateCouponCardDetail:error");
+            TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
+            return ApiResponse.serverError();
+        }
     }
 
     @DeleteMapping("/del/{id}")
