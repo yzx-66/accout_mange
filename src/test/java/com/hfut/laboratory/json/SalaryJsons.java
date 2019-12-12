@@ -16,7 +16,6 @@ public class SalaryJsons {
     public void serializeSetSalaryVo(){
         SetSalaryVo setSalaryVo=SetSalaryVo.builder()
                 .remark("扣除100 奖金200")
-                .staffId(5)
                 .build();
 
         System.out.println(JsonUtils.serialize(setSalaryVo));

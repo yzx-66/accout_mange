@@ -127,18 +127,19 @@ public class CustomerController {
         }
 
         List<CustomerCardVo> res=new ArrayList<>();
-        customerCardService.list(QueryWapperUtils.getInWapper("customer_id", new Integer[]{id})).forEach(c_card->{
+        customerCardService.list(QueryWapperUtils.getInWapper("customer_id", id)).forEach(c_card->{
             CustomerCard customerCard= (CustomerCard) c_card;
             List<CustomerCardVo.Deatil> deatils=new ArrayList<>();
 
-            customerCardProjectService.list(QueryWapperUtils.getInWapper("customer_card_id", new Integer[]{customerCard.getId()})).forEach(c_c_pro->{
+            customerCardProjectService.list(QueryWapperUtils.getInWapper("customer_card_id", customerCard.getId())).forEach(c_c_pro->{
                 CustomerCardProject customerCardProject= (CustomerCardProject) c_c_pro;
                 Project project=projectService.getById(customerCardProject.getProjectId());
                 CustomerCardVo.Deatil deatil=new CustomerCardVo.Deatil(project.getId(),project.getName(),customerCardProject.getResidualTimes());
                 deatils.add(deatil);
             });
 
-            CustomerCardVo customerCardVo=new CustomerCardVo(customerCard,deatils);
+            String cardName = couponCardService.getById(((CustomerCard) c_card).getCardId()).getName();
+            CustomerCardVo customerCardVo=new CustomerCardVo(customerCard,deatils,cardName);
             res.add(customerCardVo);
         });
 
@@ -235,9 +236,20 @@ public class CustomerController {
         boolean res1=true,res2=true,res3=true,res4=true,res5=true;
 
         CouponCard card=couponCardService.getById(makeCardVo.getCardId());
+        if(card.getStatus()==0){
+            return ApiResponse.selfError(ReturnCode.CARD_FREEZE);
+        }
+        List<CouponCardDetail> couponCardDetailList=couponCardDetailService.list(QueryWapperUtils.getInWapper("card_id", card.getId()));
+        for(CouponCardDetail cardDetail:couponCardDetailList){
+            Project project = projectService.getById(cardDetail.getProjectId());
+            if(project.getStatus()==0){
+                return ApiResponse.selfError(ReturnCode.PROJECT_FREEZE);
+            }
+        }
         if(makeCardVo.getPrice()==null){
             makeCardVo.setPrice(card.getPrice());
         }
+
         //如果是余额支付
         if(makeCardVo.getPayType()== PayTypeEnum.REDUCE_BALANCE.getType()){
             Integer updateBalanceCode=changeBalance(id,-1 * makeCardVo.getPrice());
@@ -258,7 +270,7 @@ public class CustomerController {
                 .build();
        res2=customerCardService.save(customerCard);
 
-        List<CouponCardDetail> cardDetailList = couponCardDetailService.list(QueryWapperUtils.getInWapper("card_id", new Integer[]{makeCardVo.getCardId()}));
+        List<CouponCardDetail> cardDetailList = couponCardDetailService.list(QueryWapperUtils.getInWapper("card_id", makeCardVo.getCardId()));
         for(CouponCardDetail couponCardDetail:cardDetailList){
             CustomerCardProject customerCardProject=CustomerCardProject.builder()
                     .customerCardId(customerCard.getId())
@@ -326,8 +338,14 @@ public class CustomerController {
         if(userService.getById(editCardVo.getStaffId())==null){
             return ApiResponse.selfError(ReturnCode.USER_NOT_EXITST);
         }
-
         boolean res1=true,res2=true,res3=true,res4=true;
+
+        //如果是用卡消费 那么消费金额要找到对应的project
+        //TODO
+        //if(editCardVo.getTimes()<0){
+            Project project = projectService.getById(editCardVo.getProjectId());
+            editCardVo.setPrice(project.getPrice() * Math.abs(editCardVo.getTimes()));
+        //}
 
         //如果使用优惠卡结算 判断是否过期
         if(editCardVo.getTimes()<0){
@@ -339,8 +357,8 @@ public class CustomerController {
         }
 
         QueryWrapper<CustomerCardProject> queryWrapper=new QueryWrapper<>();
-        queryWrapper.in("customer_card_id", new Integer[]{editCardVo.getCustomerCardId()});
-        queryWrapper.and(wapper->wapper.in("project_id", new Integer[]{editCardVo.getProjectId()}));
+        queryWrapper.in("customer_card_id",editCardVo.getCustomerCardId());
+        queryWrapper.and(wapper->wapper.in("project_id", editCardVo.getProjectId()));
         CustomerCardProject customerCardProject = customerCardProjectService.getOne(queryWrapper);
 
         //如果客户优惠卡的优惠项目不存在
@@ -366,18 +384,12 @@ public class CustomerController {
         customerCardProject.setResidualTimes(resTimes);
         res2=customerCardProjectService.updateById(customerCardProject);
 
-        //如果是用卡消费 那么消费金额要找到对应的project
-        Project project=null;
-        if(editCardVo.getTimes()<0){
-             project = projectService.getById(editCardVo.getProjectId());
-        }
-
         RecordsConsumption recordsConsumption=RecordsConsumption.builder()
                 .customerId(id)
                 .userId(editCardVo.getStaffId())
                 .payType(editCardVo.getTimes()<0 ? PayTypeEnum.REDUCE_CARD_TIMES.getType() :editCardVo.getPayType())
                 .payTime(LocalDateTime.now())
-                .price(editCardVo.getTimes()<0 ? project.getPrice()* Math.abs(editCardVo.getTimes()) : editCardVo.getPrice())
+                .price(editCardVo.getPrice())
                 .consumType(editCardVo.getTimes()<0 ? ConsumeTypeEnum.PROJECT.getType() : ConsumeTypeEnum.ADD_PROTIMES.getType() )
                 .remark(editCardVo.getRemark())
                 .isRecord(false)
@@ -462,11 +474,11 @@ public class CustomerController {
     }
 
     @PostMapping("/settle")
-    @ApiOperation("客户用现金结算")
-    @ApiImplicitParam(name = "settleVo",value = "客户用现金结算的传递对象")
+    @ApiOperation("客户结算")
+    @ApiImplicitParam(name = "settleVo",value = "客户用现金的传递对象")
     @Transactional
     public ApiResponse<Void> settleCustomer(@RequestBody CustomerSettleVo settleVo){
-        if(settleVo.getStaffId()==null || settleVo.getProjectId()==null){
+        if(settleVo.getStaffId()==null || settleVo.getProjectId()==null || settleVo.getPayType()==null){
             return ApiResponse.selfError(ReturnCode.NEED_PARAM);
         }
         if(projectService.getById(settleVo.getProjectId())==null){
@@ -475,10 +487,29 @@ public class CustomerController {
         if(userService.getById(settleVo.getStaffId())==null){
             return ApiResponse.selfError(ReturnCode.USER_NOT_EXITST);
         }
-        boolean res1=true,res2=true;
-        Project project=null;
+        if(settleVo.getPayType()==PayTypeEnum.REDUCE_BALANCE.getType() && settleVo.getCustomerId()==null){
+            return ApiResponse.selfError(ReturnCode.CUSTOMER_NOT_EXIST);
+        }
+        boolean res1=true,res2=true,res3=true;
 
+        Project project=null;
         project=projectService.getById(settleVo.getProjectId());
+        if(settleVo.getPrice()==null){
+            settleVo.setPrice(project.getPrice());
+        }
+
+        if(settleVo.getPayType()==PayTypeEnum.REDUCE_BALANCE.getType()){
+            Customer customer = customerService.getById(settleVo.getCustomerId());
+            if(customer==null){
+                return ApiResponse.selfError(ReturnCode.CUSTOMER_NOT_EXIST);
+            }
+            if(customer.getBalance()-settleVo.getPrice()<0){
+                return ApiResponse.selfError(ReturnCode.CUSTOMER_BALANCE_NOT_ENOUGH);
+            }
+            customer.setBalance(customer.getBalance()-settleVo.getPrice());
+            res1=customerService.updateById(customer);
+        }
+
         RecordBusiness recordBusiness=RecordBusiness.builder()
                 .date(LocalDateTime.now())
                 .type(2)
@@ -486,21 +517,21 @@ public class CustomerController {
                 .userId(settleVo.getStaffId())
                 .customerId(settleVo.getCustomerId())
                 .build();
-        res1=recordBusinessService.save(recordBusiness);
+        res2=recordBusinessService.save(recordBusiness);
 
         RecordsConsumption recordsConsumption=RecordsConsumption.builder()
                 .customerId(settleVo.getCustomerId())
                 .userId(settleVo.getStaffId())
-                .payType(PayTypeEnum.USE_MONEY.getType())
+                .payType(settleVo.getPayType())
                 .payTime(LocalDateTime.now())
-                .price(settleVo.getPrice()==null ? project.getPrice() : settleVo.getPrice())
+                .price(settleVo.getPrice())
                 .consumType(ConsumeTypeEnum.PROJECT.getType())
                 .remark(settleVo.getRemark())
                 .isRecord(false)
                 .build();
-        res2 = recordsConsumptionService.save(recordsConsumption);
+        res3 = recordsConsumptionService.save(recordsConsumption);
 
-        if(res1 && res2){
+        if(res1 && res2 && res3){
             return ApiResponse.ok();
         }else {
             log.info(this.getClass().getName()+"settleCustomer:error");
@@ -531,7 +562,7 @@ public class CustomerController {
         }
         boolean res1=true,res2=true,res3=true;
 
-        res1 = customerCardProjectService.remove(QueryWapperUtils.getInWapper("customer_card_id", new Integer[]{returnCardVo.getCustomerCardId()}));
+        res1 = customerCardProjectService.remove(QueryWapperUtils.getInWapper("customer_card_id", returnCardVo.getCustomerCardId()));
         res2 = customerCardService.removeById(returnCardVo.getCustomerCardId());
 
         RecordsConsumption recordsConsumption=RecordsConsumption.builder()
@@ -566,7 +597,7 @@ public class CustomerController {
         }
         boolean res1=true,res2=true;
 
-        res1 = customerCardProjectService.remove(QueryWapperUtils.getInWapper("customer_card_id", new Integer[]{cardId}));
+        res1 = customerCardProjectService.remove(QueryWapperUtils.getInWapper("customer_card_id", cardId));
         res2 = customerCardService.removeById(cardId);
 
         if(res1 && res2 ){
@@ -581,7 +612,7 @@ public class CustomerController {
     /**
      * 检查客户是否存在
      */
-    public boolean isCustomerExits(Integer cid){
+    private boolean isCustomerExits(Integer cid){
         return customerService.getById(cid)!=null;
     }
 
@@ -589,7 +620,7 @@ public class CustomerController {
      * changeBalance 有正有负
      * -1:余额为负、0：没有命中、1：操作成功
      */
-    public Integer changeBalance(Integer cid,Float changeBalance){
+    private Integer changeBalance(Integer cid,Float changeBalance){
         Customer customer = customerService.getById(cid);
         Float balance = customer.getBalance()+changeBalance;
         if(balance<0){
@@ -602,7 +633,7 @@ public class CustomerController {
     /**
      * 检查客户是否冻结 如果冻结则不可对卡、余额进行操作
      */
-    public boolean isFreeze(Integer cid){
+    private boolean isFreeze(Integer cid){
         Customer customer = customerService.getById(cid);
         return customer.getStatus()==0;
     }

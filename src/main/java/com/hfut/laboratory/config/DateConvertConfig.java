@@ -27,6 +27,25 @@ public class DateConvertConfig {
     /** 默认时间格式 */
     public static final String DEFAULT_TIME_FORMAT = "HH:mm:ss";
 
+
+    /**
+     * 演示：时间戳转化为Date
+     *
+     * 注入转换器Converter< , >
+     * 泛型的第一个参数是转换前的类型 泛型的第二个参数是转换后的类型
+     */
+/*
+    @Bean
+    public Converter<Long,Date> dateConverterByTimestap(){
+        return new Converter<Long, Date>() {
+            @Override
+            public Date convert(Long source) {
+                return new Date(source);
+            }
+        };
+    }
+*/
+
     /**
      * LocalDate转换器，用于转换RequestParam和PathVariable参数
      */
@@ -70,7 +89,7 @@ public class DateConvertConfig {
      * Date转换器，用于转换RequestParam和PathVariable参数
      */
     @Bean
-    public Converter<String, Date> dateConverter() {
+    public Converter<String, Date> dateConverterByFormate() {
         return new Converter<String,Date>(){
             @Override
             public Date convert(String source) {
@@ -83,7 +102,6 @@ public class DateConvertConfig {
             }
         };
     }
-
 
     /**
      * Json序列化和反序列化转换器，用于转换Post请求体中的json以及将我们的对象序列化为返回响应的json

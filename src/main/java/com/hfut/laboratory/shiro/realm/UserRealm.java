@@ -40,7 +40,7 @@ public class UserRealm extends AuthorizingRealm {
     @Override
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken authenticationToken) throws AuthenticationException {
         String userName = (String) authenticationToken.getPrincipal();
-        User user = userService.getOne(QueryWapperUtils.getInWapper("name",new String[]{userName}));
+        User user = userService.getOne(QueryWapperUtils.getInWapper("name",userName));
         if(user==null || StringUtils.isBlank(user.getPassword())){
             return null;
         }

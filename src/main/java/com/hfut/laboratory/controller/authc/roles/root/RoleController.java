@@ -103,7 +103,7 @@ public class RoleController {
     public ApiResponse<Void> updateRole(@PathVariable Integer id,
                                            @RequestParam List<Integer> permIds){
         Role role=roleService.getById(id);
-        rolePermissionService.remove(QueryWapperUtils.getInWapper("role_id",new Integer[]{role.getId()}));
+        rolePermissionService.remove(QueryWapperUtils.getInWapper("role_id",role.getId()));
 
         if(!(permIds==null || CollectionUtils.isEmpty(permIds))){
             for(Integer permId:permIds){
@@ -124,7 +124,7 @@ public class RoleController {
     @ApiImplicitParam(name = "id",value = "角色的id")
     @Transactional
     public ApiResponse<Void> deleteRole(@PathVariable Integer id){
-        boolean res1 = rolePermissionService.remove(QueryWapperUtils.getInWapper("role_id",new Integer[]{id}));
+        boolean res1 = rolePermissionService.remove(QueryWapperUtils.getInWapper("role_id",id));
         boolean res2=true;
         try {
             res2 = roleService.removeById(id);
@@ -144,7 +144,7 @@ public class RoleController {
 
     public RoleVo getRoleVo(Role role){
         List<Permission> permissionList=new ArrayList<>();
-        rolePermissionService.list(QueryWapperUtils.getInWapper("role_id",new Integer[]{role.getId()})).forEach(r_p->{
+        rolePermissionService.list(QueryWapperUtils.getInWapper("role_id",role.getId())).forEach(r_p->{
             RolePermission rolePermission= (RolePermission) r_p;
             permissionList.add(permissionService.getById(rolePermission.getPermissionId()));
         });

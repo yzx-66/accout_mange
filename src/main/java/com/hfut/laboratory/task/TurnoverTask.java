@@ -28,7 +28,7 @@ public class TurnoverTask {
     //TODO 生产环境： 0 0 0/2 * * ?
     @Scheduled(cron = "0 0/1 * * * ?")
     public void insertTurnover(){
-        recordsConsumptionService.list(QueryWapperUtils.getInWapper("is_record", new Integer[]{0})).forEach(consum->{
+        recordsConsumptionService.list(QueryWapperUtils.getInWapper("is_record", 0)).forEach(consum->{
             RecordsConsumption consumption= (RecordsConsumption) consum;
             LocalDateTime date= TimeConvertUtils.convertTo_yMd(consumption.getPayTime());
 

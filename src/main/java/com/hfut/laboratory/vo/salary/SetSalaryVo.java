@@ -16,8 +16,6 @@ import java.math.BigDecimal;
 @Builder
 public class SetSalaryVo {
 
-    private Integer staffId;
-
     private Float change;
 
     private String remark;

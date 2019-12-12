@@ -42,9 +42,14 @@ public class RecordsTurnoverController {
     })
     @Cacheable(value = "getRecordsTurnoverList",keyGenerator="simpleKeyGenerator")
     public ApiResponse<PageResult<RecordsTurnover>> getRecordsTurnoverList(@RequestParam(required = false,defaultValue = "1") Integer current,
-                                                                              @RequestParam(required = false,defaultValue = "20") Integer size){
+                                                                           @RequestParam(required = false,defaultValue = "20") Integer size,
+                                                                           @RequestParam(required = false,defaultValue = "true")boolean isDesc){
         Page<RecordsTurnover> page=new Page<>(current,size);
-        IPage<RecordsTurnover> recordsTurnoverIPage = recordsTurnoverService.page(page, null);
+        QueryWrapper queryWrapper=null;
+        if(isDesc){
+            queryWrapper=new QueryWrapper<>().orderByDesc("date");
+        }
+        IPage<RecordsTurnover> recordsTurnoverIPage = recordsTurnoverService.page(page, queryWrapper);
         return ApiResponse.ok(new PageResult<>(recordsTurnoverIPage.getRecords(),recordsTurnoverIPage.getTotal(),recordsTurnoverIPage.getSize()));
     }
 
@@ -59,9 +64,13 @@ public class RecordsTurnoverController {
     @Cacheable(value = "QueryRecordsTurnoverList",keyGenerator="simpleKeyGenerator")
     public ApiResponse<PageResult<RecordsTurnover>> QueryRecordsTurnoverList(@RequestParam(required = false,defaultValue = "1") Integer current,
                                                                              @RequestParam(required = false,defaultValue = "20") Integer size,
+                                                                             @RequestParam(required = false,defaultValue = "true")boolean isDesc,
                                                                              @RequestParam(required = false) LocalDateTime startTime,
                                                                              @RequestParam(required = false) LocalDateTime endTime){
         QueryWrapper<RecordsTurnover> queryWrapper=new QueryWrapper<>();
+        if(isDesc){
+            queryWrapper.orderByDesc("date");
+        }
         if(startTime!=null){
             queryWrapper.and(wapper->wapper.ge("date",startTime));
         }

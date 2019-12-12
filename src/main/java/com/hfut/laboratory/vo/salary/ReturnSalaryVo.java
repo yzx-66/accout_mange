@@ -29,6 +29,7 @@ public class ReturnSalaryVo extends Salary {
         this.setSumSalary(salary.getSumSalary());
         this.setSettleDate(salary.getSettleDate());
         this.setProAdd(salary.getProAdd());
+        this.setRemark(salary.getRemark());
     }
 
 }

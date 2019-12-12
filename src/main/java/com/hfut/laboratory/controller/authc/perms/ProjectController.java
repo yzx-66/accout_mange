@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.hfut.laboratory.enums.ReturnCode;
 import com.hfut.laboratory.pojo.Project;
 import com.hfut.laboratory.service.ProjectService;
+import com.hfut.laboratory.util.QueryWapperUtils;
 import com.hfut.laboratory.vo.ApiResponse;
 import com.hfut.laboratory.vo.PageResult;
 import com.hfut.laboratory.vo.project.ProjectSimple;
@@ -53,11 +54,21 @@ public class ProjectController {
     }
 
     @GetMapping("/simple/list")
-    @ApiOperation("获取收费项目列表id、name列表")
+    @ApiOperation("获取没有冻结的收费项目列表id、name列表")
     @Cacheable(value = "getProjectSimpleList",keyGenerator="simpleKeyGenerator")
     public ApiResponse<List<ProjectSimple>> getProjectSimpleList(){
         List<ProjectSimple> res=new ArrayList<>();
-        projectService.list(null).forEach(project -> res.add(new ProjectSimple(project.getId(),project.getName())));
+        projectService.list(QueryWapperUtils.getInWapper("status",1))
+                .forEach(project -> res.add(new ProjectSimple(((Project)project).getId(),((Project)project).getName())));
+        return ApiResponse.ok(res);
+    }
+
+    @GetMapping("/simple/all/list")
+    @ApiOperation("获取所有收费项目列表")
+    @Cacheable(value = "getAllProjectSimpleList",keyGenerator="simpleKeyGenerator")
+    public ApiResponse<List<ProjectSimple>> getAllProjectSimpleList(){
+        List<ProjectSimple> res=new ArrayList<>();
+        projectService.list(null).forEach(project -> res.add(new ProjectSimple(((Project)project).getId(),((Project)project).getName())));
         return ApiResponse.ok(res);
     }
 
@@ -70,6 +81,18 @@ public class ProjectController {
         return ApiResponse.ok(project);
     }
 
+    @PostMapping("/freeze/{id}")
+    @ApiOperation("冻结项目")
+    public ApiResponse<Void> freezeProject(@PathVariable Integer id){
+        Project project = projectService.getById(id);
+        if(project==null){
+            return ApiResponse.selfError(ReturnCode.PROJECT_NOT_EXITST);
+        }
+        project.setStatus(project.getStatus()==1 ? 0 : 1);
+        projectService.updateById(project);
+        return ApiResponse.ok();
+    }
+
     @PostMapping("/add")
     @ApiOperation("添加收费项目（需要权限：[pro_add]）")
     @ApiImplicitParam(name = "project",value = "收费项目的json对象")
@@ -78,6 +101,7 @@ public class ProjectController {
             return ApiResponse.selfError(ReturnCode.NEED_PARAM);
         }
         boolean res=projectService.save(project);
+        project.setStatus(1);
         return res ? ApiResponse.created():ApiResponse.serverError();
     }
 

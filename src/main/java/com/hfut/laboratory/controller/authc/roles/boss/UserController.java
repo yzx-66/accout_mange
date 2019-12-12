@@ -21,6 +21,7 @@ import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.transaction.annotation.Transactional;
@@ -84,7 +85,7 @@ public class UserController {
 
         userIPage.getRecords().forEach(user -> {
             //一个用户只可以有一个角色
-            UserRole userRole = userRoleService.getOne(QueryWapperUtils.getInWapper("user_id", new Integer[]{user.getId()}));
+            UserRole userRole = userRoleService.getOne(QueryWapperUtils.getInWapper("user_id", user.getId()));
             Role role=roleService.getById(userRole.getRoleId());
             UserVo userVo=new UserVo(user,role.getId());
             res.add(userVo);
@@ -104,7 +105,7 @@ public class UserController {
                                                          @RequestParam(required = false,defaultValue = "1") Integer current,
                                                          @RequestParam(required = false,defaultValue = "20") Integer size){
         Page<UserRole> page=new Page<>();
-        IPage<UserRole> userRoleIPage = userRoleService.page(page, QueryWapperUtils.getInWapper("role_id", new Integer[]{rid}));
+        IPage<UserRole> userRoleIPage = userRoleService.page(page, QueryWapperUtils.getInWapper("role_id", rid));
 
         List<User> res=new ArrayList<>();
         userRoleIPage.getRecords().forEach(u_r->{
@@ -129,7 +130,7 @@ public class UserController {
     @Cacheable(value = "getUserAndRoleById",keyGenerator="simpleKeyGenerator")
     public ApiResponse<UserVo> getUserAndRoleById(@PathVariable Integer id){
         User user=userService.getById(id);
-        UserRole userRole = userRoleService.getOne(QueryWapperUtils.getInWapper("user_id", new Integer[]{user.getId()}));
+        UserRole userRole = userRoleService.getOne(QueryWapperUtils.getInWapper("user_id", user.getId()));
         Role role=roleService.getById(userRole.getRoleId());
 
         UserVo userVo=new UserVo(user,role.getId());
@@ -141,13 +142,14 @@ public class UserController {
     @ApiImplicitParam(name = "userVo",value = "user的包装对象，其中role.id：1.root、2.boss、3.manger、4.staff")
     @Transactional //多个表添加 开启事务
     public ApiResponse<Void> insertUser(@RequestBody UserVo userVo, HttpServletRequest request){
-        if(userVo.getRoleId()==null || (userVo.getRoleId()!=1 && userVo.getBaseSalary()==null)){
+        if(StringUtils.isBlank(userVo.getName()) || StringUtils.isBlank(userVo.getPassword()) || StringUtils.isBlank(userVo.getPhone()) ||
+                userVo.getRoleId()==null || (userVo.getRoleId()!=1 && userVo.getBaseSalary()==null)){
             return ApiResponse.selfError(ReturnCode.NEED_PARAM);
         }
 
         //TODO 设置角色id要大于自己的id才有权限
 //        UserInfo userInfo= JwtTokenUtils.getUserInfoFromToken(request);
-//        Integer thisRoleId=userRoleService.getOne(QueryWapperUtils.getInWapper("user_id",new Integer[]{userInfo.getId()})).getRoleId();
+//        Integer thisRoleId=userRoleService.getOne(QueryWapperUtils.getInWapper("user_id",userInfo.getId())).getRoleId();
 //        if(userVo.getRoleId()<=thisRoleId){
 //            return ApiResponse.authError();
 //        }
@@ -173,7 +175,8 @@ public class UserController {
     @ApiImplicitParam(name = "userVo",value = "user的包装对象 该对象包含id，如果不修改role，请不要传递role对象，如果传递其中roleId：1.root、2.boss、3.manger、4.staff")
     @Transactional
     public ApiResponse<Void> updateUser(@RequestBody UserVo userVo,HttpServletRequest request){
-        if(userVo.getRoleId()==null || (userVo.getRoleId()!=1 && userVo.getBaseSalary()==null)){
+        if(StringUtils.isBlank(userVo.getName()) || StringUtils.isBlank(userVo.getPassword()) || StringUtils.isBlank(userVo.getPhone()) ||
+                userVo.getRoleId()==null || (userVo.getRoleId()!=1 && userVo.getBaseSalary()==null)){
             return ApiResponse.selfError(ReturnCode.NEED_PARAM);
         }
         boolean res1=true, res2=true,res3=true;
@@ -181,13 +184,13 @@ public class UserController {
         if(userVo.getRoleId()!=null){
             //TODO
 //            UserInfo userInfo= JwtTokenUtils.getUserInfoFromToken(request);
-//            Integer thisRoleId=userRoleService.getOne(QueryWapperUtils.getInWapper("user_id",new Integer[]{userInfo.getId()})).getRoleId();
+//            Integer thisRoleId=userRoleService.getOne(QueryWapperUtils.getInWapper("user_id",userInfo.getId())).getRoleId();
 //            //设置角色id要大自己的id才有权限
 //            if(userVo.getRoleId()<=thisRoleId){
 //                return ApiResponse.authError();
 //            }
 
-            res2=userRoleService.remove(QueryWapperUtils.getInWapper("user_id",new Integer[]{userVo.getId()}));
+            res2=userRoleService.remove(QueryWapperUtils.getInWapper("user_id",userVo.getId()));
             UserRole userRole=UserRole.builder().roleId(userVo.getRoleId()).userId(userVo.getId()).build();
             res3 = userRoleService.save(userRole);
         }
@@ -210,7 +213,7 @@ public class UserController {
     @ApiImplicitParam(name = "id",value = "要删除的用户id")
     @Transactional
     public ApiResponse<Void> deleteUser(@PathVariable Integer id ){
-        boolean res1=userRoleService.remove(QueryWapperUtils.getInWapper("user_id",new Integer[]{id}));
+        boolean res1=userRoleService.remove(QueryWapperUtils.getInWapper("user_id",id));
         boolean res2=true;
         try{
             res2 = userService.removeById(id);

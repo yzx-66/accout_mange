@@ -67,6 +67,4 @@ public class Salary implements Serializable {
     private LocalDateTime settleDate;
 
     private String remark;
-
-
 }

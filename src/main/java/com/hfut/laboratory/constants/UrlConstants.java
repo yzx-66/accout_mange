@@ -51,6 +51,7 @@ public class UrlConstants {
             "/card/edit:card_edit",
             "/card/edit_pro:card_edit",
             "/card/del/*:card_del",
+            "/card/freeze/*:card_freeze",
 
             "/project/add:pro_add",
             "/project/edit:pro_edit",

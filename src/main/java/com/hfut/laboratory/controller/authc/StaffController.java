@@ -43,7 +43,7 @@ public class StaffController {
     @ApiOperation("获取在职员工（boss、manger、staff）id、name列表")
     @Cacheable(value = "getStaffList",keyGenerator="simpleKeyGenerator")
     public ApiResponse<List<SimpleStaffVo>> getStaffList(){
-        List<UserRole> roleList = userRoleService.list(QueryWapperUtils.getInWapper("role_id", new Integer[]{2, 3, 4}));
+        List<UserRole> roleList = userRoleService.list(QueryWapperUtils.getInWapper("role_id", 2, 3, 4));
 
         List<SimpleStaffVo> res=new ArrayList<>();
         roleList.forEach(u_r->{
@@ -112,9 +112,8 @@ public class StaffController {
     }
 
 
-    //TODO
     @DeleteMapping("/job/{id}")
-    @ApiOperation("删除员工做的事  需要权限[pro_del]")
+    @ApiOperation("删除员工做的事  需要权限[job_del]")
     public ApiResponse deleteStaffJob(@PathVariable Integer id){
         boolean res=recordBusinessService.removeById(id);
         return res ? ApiResponse.ok() : ApiResponse.serverError();

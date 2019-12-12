@@ -22,9 +22,9 @@ public class MybatisPlusTest {
         user.setId(5);
         user.setName("test000");
         //修改结果>=1 返回ture
-        System.out.println(userService.update(user, QueryWapperUtils.getInWapper("name",new String[]{"test000"})));
+        System.out.println(userService.update(user, QueryWapperUtils.getInWapper("name","test000")));
         //删除结果>=0 返回ture
-        System.out.println(userService.remove(QueryWapperUtils.getInWapper("name",new String[]{"test000"})));
+        System.out.println(userService.remove(QueryWapperUtils.getInWapper("name","test000")));
     }
 
     @Test
@@ -36,6 +36,6 @@ public class MybatisPlusTest {
     public void testQueryWapperUtils(){
         User user=new User();
         user.setName("test01");
-        userService.update(user, QueryWapperUtils.getInWapper("name",new String[]{"test01"}));
+        userService.update(user, QueryWapperUtils.getInWapper("name","test01"));
     }
 }

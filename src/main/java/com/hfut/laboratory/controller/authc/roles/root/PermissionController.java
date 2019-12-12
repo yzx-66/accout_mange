@@ -64,7 +64,7 @@ public class PermissionController {
     public ApiResponse<Void> deletePermission(@PathVariable Integer id){
         boolean res =true;
         try {
-            res= permissionService.remove(QueryWapperUtils.getInWapper("id", new Integer[]{id}));
+            res= permissionService.remove(QueryWapperUtils.getInWapper("id", id));
         }catch (Exception e){
             log.info(this.getClass().getName()+"deletePermission:error");
             TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();

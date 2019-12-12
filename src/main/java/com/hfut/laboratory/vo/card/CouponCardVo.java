@@ -36,6 +36,7 @@ public class CouponCardVo extends CouponCard {
         this.setIntroduction(card.getIntroduction());
         this.setName(card.getName());
         this.setPercentage(card.getPercentage());
+        this.setStatus(card.getStatus());
         this.setPrice(card.getPrice());
     }
 }

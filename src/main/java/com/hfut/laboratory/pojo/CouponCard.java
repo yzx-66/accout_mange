@@ -42,7 +42,8 @@ public class CouponCard implements Serializable {
 
     private LocalDateTime endTime;
 
-    private String introduction;
+    private Integer status;
 
+    private String introduction;
 
 }

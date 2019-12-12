@@ -25,9 +25,11 @@ public class CustomerCardVo extends CustomerCard {
     }
 
     private List<Deatil> deatils;
+    private String cardName;
 
-    public CustomerCardVo(CustomerCard card,List<Deatil> deatils){
+    public CustomerCardVo(CustomerCard card,List<Deatil> deatils,String cardName){
         this.deatils=deatils;
+        this.cardName=cardName;
         this.setId(card.getId());
         this.setCardId(card.getCardId());
         this.setCustomerId(card.getCustomerId());

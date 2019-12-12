@@ -22,12 +22,17 @@ public enum ReturnCode {
     CUSTOMER_CARD_NOT_EXITST("2005","客户优惠卡不存在"),
     CONSUM_NOT_EXITST("2006","客户优惠卡不存在"),
     USER_NOT_EXITST("2007","用户不存在"),
+    SALARY_TIME_NOT_EXIST("2008","出账时间不存在"),
 
     CUSTOMER_FREEZE("3001","客户被冻结 无法操作"),
     CUSTOMER_CARD_NOT_ENOUGH("3002","客户优惠卡次数不足"),
     CUSTOMER_BALANCE_NOT_ENOUGH("3003","客户余额不足"),
     CUSTOMER_CARD_DEAD("3004","客户的优惠卡已经过期"),
-    CUSTOMER_CARD_ALREADLY_EXITES("3005","客户优惠卡已经存在");
+    CUSTOMER_CARD_ALREADLY_EXITES("3005","客户优惠卡已经存在"),
+
+    PROJECT_FREEZE("4001","项目被冻结 无法使用"),
+    CARD_FREEZE("4002","优惠卡被冻结 无法使用"),
+    ;
 
     private String code;
     private String msg;

@@ -38,14 +38,14 @@ public class JwtTokenUtils {
         if(userSign instanceof Integer){
             user=userService.getById((Serializable) userSign);
         }else if(userSign instanceof String){
-            user=userService.getOne(QueryWapperUtils.getInWapper("name",new String[]{(String) userSign}));
+            user=userService.getOne(QueryWapperUtils.getInWapper("name",(String) userSign));
         }else {
             log.info(JwtTokenUtils.class.getName()+"setJwtToken:error");
             return;
         }
 
         UserInfo userInfo=new UserInfo(user.getId(),user.getName());
-        int roleId=userRoleService.getOne(QueryWapperUtils.getInWapper("user_id",new Integer[]{user.getId()})).getRoleId();
+        int roleId=userRoleService.getOne(QueryWapperUtils.getInWapper("user_id",user.getId())).getRoleId();
 
         //新生成token
         int expireTime=roleId==4? jwtConfig.getExpireMinutes(): jwtConfig.getAdminExpireMinutes();
@@ -91,7 +91,7 @@ public class JwtTokenUtils {
         }
         User user=userService.getById(userInfo.getId());
 
-        userRoleService.list(QueryWapperUtils.getInWapper("user_id",new Integer[]{user.getId()})).forEach(u_r->{
+        userRoleService.list(QueryWapperUtils.getInWapper("user_id",user.getId())).forEach(u_r->{
             UserRole userRole= (UserRole) u_r;
             Role role = roleService.getById(userRole.getRoleId());
             roles.add(role.getName());
@@ -114,11 +114,11 @@ public class JwtTokenUtils {
         }
         User user=userService.getById(userInfo.getId());
 
-        userRoleService.list(QueryWapperUtils.getInWapper("user_id",new Integer[]{user.getId()})).forEach(u_r->{
+        userRoleService.list(QueryWapperUtils.getInWapper("user_id",user.getId())).forEach(u_r->{
             UserRole userRole= (UserRole) u_r;
             Role role = roleService.getById(userRole.getRoleId());
 
-            rolePermissionService.list(QueryWapperUtils.getInWapper("role_id", new Integer[]{role.getId()})).forEach(r_p->{
+            rolePermissionService.list(QueryWapperUtils.getInWapper("role_id", role.getId())).forEach(r_p->{
                 RolePermission rolePermission= (RolePermission) r_p;
                 Permission permission = permissionService.getById(rolePermission.getPermissionId());
                 perms.add(permission.getName());

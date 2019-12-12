@@ -20,15 +20,13 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.*;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -52,19 +50,21 @@ public class SalaryController {
     private String salaryPath;
 
     @GetMapping("/list")
-    @ApiOperation("查询进一个月发过的薪水列表")
+    @ApiOperation("查询薪水列表")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "current",value = "当前页"),
             @ApiImplicitParam(name = "size",value = "需要数据的条数limit")
     })
     @Cacheable(value = "getSalaryList",keyGenerator="simpleKeyGenerator")
     public ApiResponse<PageResult<ReturnSalaryVo>> getSalaryList(@RequestParam(required = false,defaultValue = "1") Integer current,
-                                                                 @RequestParam(required = false,defaultValue = "20") Integer size){
+                                                                 @RequestParam(required = false,defaultValue = "20") Integer size,
+                                                                 @RequestParam(required = false,defaultValue = "true")boolean isDesc){
         Page<Salary> page=new Page<>(current,size);
-        QueryWrapper<Salary> queryWrapper=new QueryWrapper<>();
-        queryWrapper.lt("settle_date",LocalDateTime.now())
-                .and(wapper->wapper.ge("settle_date",LocalDateTime.now().minusMonths(1)));
-        IPage<Salary> salaryIPage = salaryService.page(page, queryWrapper);
+        QueryWrapper queryWrapper=null;
+        if(isDesc){
+            queryWrapper=new QueryWrapper<>().orderByDesc("settle_date");
+        }
+        IPage<Salary> salaryIPage = salaryService.page(page,queryWrapper);
 
         return ApiResponse.ok(new PageResult<>(getReturnSalaryVoList(salaryIPage.getRecords()),salaryIPage.getTotal(),salaryIPage.getSize()));
     }
@@ -81,12 +81,16 @@ public class SalaryController {
     @Cacheable(value = "QuerySalaryList",keyGenerator="simpleKeyGenerator")
     public ApiResponse<PageResult<ReturnSalaryVo>> QuerySalaryList(@RequestParam(required = false,defaultValue = "1") Integer current,
                                                                    @RequestParam(required = false,defaultValue = "20") Integer size,
+                                                                   @RequestParam(required = false,defaultValue = "true")boolean isDesc,
                                                                    @RequestParam(required = false) LocalDateTime startTime,
                                                                    @RequestParam(required = false) LocalDateTime endTime,
                                                                    @RequestParam(required = false) Integer staffId
                                                                    ){
 
         QueryWrapper<Salary> queryWrapper=new QueryWrapper<>();
+        if(isDesc){
+            queryWrapper.orderByDesc("settle_date");
+        }
         if(staffId!=null){
             queryWrapper.and(wapper->wapper.in("user_id",staffId));
         }
@@ -104,7 +108,29 @@ public class SalaryController {
         return ApiResponse.ok(new PageResult<>(getReturnSalaryVoList(salaryIPage.getRecords()),salaryIPage.getTotal(),salaryIPage.getSize()));
     }
 
-    //TODO
+    @GetMapping("/salary_time")
+    @ApiOperation("获取出账时间")
+    public ApiResponse<LocalDateTime> getsalaryTime() throws IOException {
+        File file=new File(salaryPath);
+        if(!file.exists()){
+           return ApiResponse.selfError(ReturnCode.SALARY_TIME_NOT_EXIST);
+        }
+
+        LocalDateTime resTime;
+        try(BufferedReader bufferedReader=new BufferedReader(new FileReader(file))){
+            String content = bufferedReader.readLine();
+            resTime=LocalDateTime.parse(content, DateTimeFormatter.ofPattern(TimeFormatConstants.DEFAULT_DATE_TIME_FORMAT));
+        }catch (Exception e){
+            return ApiResponse.selfError(ReturnCode.SALARY_TIME_NOT_EXIST);
+        }
+
+        String salaryMonth=LocalDateTime.now().getMonth().getValue() >=10 ? ""+LocalDateTime.now().getMonth().getValue() : "0"+LocalDateTime.now().getMonth().getValue();
+        String salaryDay=resTime.getDayOfMonth() >=10 ? ""+resTime.getDayOfMonth() : "0"+resTime.getDayOfMonth();
+        String resDate=String.valueOf(LocalDateTime.now().getYear())+"-"+salaryMonth+"-"+salaryDay+" 00:00:00";
+        return ApiResponse.ok(LocalDateTime.parse(resDate,DateTimeFormatter.ofPattern(TimeFormatConstants.DEFAULT_DATE_TIME_FORMAT)));
+    }
+
+
     @PostMapping("/set")
     @ApiOperation("设置结算薪水的时间 需要权限[salay_set]")
     @ApiImplicitParam(name = "salaryTime",value = "结算时间")
@@ -126,25 +152,25 @@ public class SalaryController {
     @ApiImplicitParam(name = "salaryVo",value = "设置员工薪水基本信息的对象")
     public ApiResponse<Void> updateSalary(@PathVariable Integer id,
                                           @RequestBody SetSalaryVo salaryVo){
-        if(salaryVo.getStaffId()==null || salaryVo.getChange()==null){
+        if(salaryVo.getChange()==null || StringUtils.isBlank(salaryVo.getRemark())){
             return ApiResponse.selfError(ReturnCode.NEED_PARAM);
-        }
-        if(userService.getById(salaryVo.getStaffId())==null){
-            return ApiResponse.selfError(ReturnCode.USER_NOT_EXITST);
         }
         Salary salary=salaryService.getById(id);
         if(salary==null){
             return ApiResponse.selfError(ReturnCode.SALARY_NOT_EXITST);
         }
 
-        salary.setRemark(salaryVo.getRemark());
+        String remark=(StringUtils.isBlank(salary.getRemark()) ? "" : salary.getRemark())
+                +"修改时间："+LocalDateTime.now().format(DateTimeFormatter.ofPattern(TimeFormatConstants.DEFAULT_DATE_TIME_FORMAT))+"\t"
+                +"修改原因："+salaryVo.getRemark()+"\t"
+                +"工资改变："+(salaryVo.getChange()>0 ? "增加" : "减少")+salaryVo.getChange()+"元"+"<br/>";
+
+        salary.setRemark(remark);
         salary.setSumSalary(salary.getSumSalary()+salaryVo.getChange());
-        salary.setSettleDate(LocalDateTime.now());
 
         boolean res=salaryService.updateById(salary);
 
         return res ? ApiResponse.ok():ApiResponse.serverError();
-
     }
 
     @DeleteMapping("/del/{id}")

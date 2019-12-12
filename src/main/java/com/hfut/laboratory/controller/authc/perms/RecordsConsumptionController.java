@@ -150,7 +150,7 @@ public class RecordsConsumptionController {
         }
         Customer customer=null;
         if(consumVo.getCustomerPhone()!=null){
-             customer= customerService.getOne(QueryWapperUtils.getInWapper("phone", new String[]{consumVo.getCustomerPhone()}));
+             customer= customerService.getOne(QueryWapperUtils.getInWapper("phone", consumVo.getCustomerPhone()));
             if(customer==null){
                 return ApiResponse.selfError(ReturnCode.CUSTOMER_NOT_EXIST);
             }
@@ -219,7 +219,7 @@ public class RecordsConsumptionController {
             Integer customerId=null;
 
             if(consumVo.getCustomerPhone()!=null){
-                Customer customer = customerService.getOne(QueryWapperUtils.getInWapper("phone", new String[]{consumVo.getCustomerPhone()}));
+                Customer customer = customerService.getOne(QueryWapperUtils.getInWapper("phone", consumVo.getCustomerPhone()));
                 if(customer==null){
                     return ApiResponse.selfError(ReturnCode.CUSTOMER_NOT_EXIST);
                 }

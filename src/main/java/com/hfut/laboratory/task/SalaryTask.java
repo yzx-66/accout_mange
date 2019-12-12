@@ -61,7 +61,7 @@ public class SalaryTask {
         }
 
         List<Integer> staffIds=new ArrayList<>();
-        userRoleService.list(QueryWapperUtils.getInWapper("role_id", new Integer[]{2, 3, 4})).forEach(u_r-> staffIds.add(((UserRole)u_r).getUserId()));
+        userRoleService.list(QueryWapperUtils.getInWapper("role_id", 2, 3, 4)).forEach(u_r-> staffIds.add(((UserRole)u_r).getUserId()));
 
         List<Salary> salaryList=new ArrayList<>();
         staffIds.forEach(id->{

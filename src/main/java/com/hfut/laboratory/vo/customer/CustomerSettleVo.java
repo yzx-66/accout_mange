@@ -6,7 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * 客户使用现金结算某些项目时
+ * 客户使用结算某些项目时
  */
 @Data
 @Builder
@@ -17,6 +17,7 @@ public class CustomerSettleVo {
     private Integer staffId;
     //如果不是会员不填
     private Integer customerId;
+    private Integer payType;
     private Integer projectId;
     private Float price;
     //此次改变的备注

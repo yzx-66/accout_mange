@@ -34,6 +34,8 @@ public class Project implements Serializable {
 
     private Float percentage;
 
+    private Integer status;
+
     private String introduction;
 
 
