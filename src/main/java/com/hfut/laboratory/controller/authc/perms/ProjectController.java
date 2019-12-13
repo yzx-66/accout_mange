@@ -130,7 +130,6 @@ public class ProjectController {
             res=projectService.removeById(id);
         }catch (Exception e){
             log.info(this.getClass().getName()+"deleteProject:error");
-            TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
             return ApiResponse.selfError(ReturnCode.DELETE_FALI_Foreign_KEY);
         }
         return res ? ApiResponse.ok():ApiResponse.serverError();

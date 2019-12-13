@@ -142,7 +142,7 @@ public class RoleController {
         }
     }
 
-    public RoleVo getRoleVo(Role role){
+    private RoleVo getRoleVo(Role role){
         List<Permission> permissionList=new ArrayList<>();
         rolePermissionService.list(QueryWapperUtils.getInWapper("role_id",role.getId())).forEach(r_p->{
             RolePermission rolePermission= (RolePermission) r_p;

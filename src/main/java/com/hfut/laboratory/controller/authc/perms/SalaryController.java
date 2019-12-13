@@ -181,7 +181,7 @@ public class SalaryController {
         return res ? ApiResponse.ok():ApiResponse.serverError();
     }
 
-    public List<ReturnSalaryVo> getReturnSalaryVoList(List<Salary> records){
+    private List<ReturnSalaryVo> getReturnSalaryVoList(List<Salary> records){
         List<ReturnSalaryVo> res=new ArrayList<>();
         records.forEach(salary -> {
             User staff = userService.getById(salary.getUserId());

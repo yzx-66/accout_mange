@@ -67,7 +67,6 @@ public class PermissionController {
             res= permissionService.remove(QueryWapperUtils.getInWapper("id", id));
         }catch (Exception e){
             log.info(this.getClass().getName()+"deletePermission:error");
-            TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
             return ApiResponse.selfError(ReturnCode.DELETE_FALI_Foreign_KEY);
         }
         return res ? ApiResponse.ok(): ApiResponse.serverError();

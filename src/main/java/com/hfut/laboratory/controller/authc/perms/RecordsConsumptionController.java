@@ -299,7 +299,7 @@ public class RecordsConsumptionController {
         }
     }
 
-    public List<ReturnConsumVo> getReturnConsumVoList(List<RecordsConsumption> records){
+    private List<ReturnConsumVo> getReturnConsumVoList(List<RecordsConsumption> records){
         List<ReturnConsumVo> res=new ArrayList<>();
         records.forEach(record->{
             User user=userService.getById(record.getUserId());
@@ -309,7 +309,7 @@ public class RecordsConsumptionController {
         return res;
     }
 
-    public boolean editTurnover(RecordsConsumption recordsConsumption){
+    private boolean editTurnover(RecordsConsumption recordsConsumption){
         RecordsTurnover recordsTurnover = recordsTurnoverService.getOne(
                 QueryWapperUtils.getInWapper("date", new LocalDateTime[]{TimeConvertUtils.convertTo_yMd(recordsConsumption.getPayTime())}));
 
