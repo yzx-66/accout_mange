@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class ApiResponse<T> {
+public class ApiResponse {
 
     /**是否成功*/
     private boolean success;
@@ -19,7 +19,7 @@ public class ApiResponse<T> {
     /**返回信息*/
     private String msg;
     /**返回数据*/
-    private T data;
+    private Object data;
 
 
     /**

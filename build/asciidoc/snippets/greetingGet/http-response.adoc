@@ -1,5 +1,6 @@
 [source,http,options="nowrap"]
 ----
-HTTP/1.1 404 Not Found
+HTTP/1.1 302 Found
+Location: /acc/pub/reject
 
 ----

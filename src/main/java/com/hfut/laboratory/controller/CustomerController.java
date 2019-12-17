@@ -1,4 +1,4 @@
-package com.hfut.laboratory.controller.authc.perms;
+package com.hfut.laboratory.controller;
 
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
@@ -66,7 +66,7 @@ public class CustomerController {
     @GetMapping("/list")
     @ApiOperation("获取客户列表")
     @Cacheable(value = "getCustomerList",keyGenerator="simpleKeyGenerator")
-    public ApiResponse<PageResult<Customer>> getCustomerList(@RequestParam(required = false,defaultValue = "1") Integer current,
+    public ApiResponse getCustomerList(@RequestParam(required = false,defaultValue = "1") Integer current,
                                                              @RequestParam(required = false,defaultValue = "20") Integer size){
         Page<Customer> page=new Page<>(current,size);
         IPage<Customer> customerIPage = customerService.page(page, null);
@@ -78,7 +78,7 @@ public class CustomerController {
     @ApiOperation("通过id获取客户")
     @ApiImplicitParam(name = "id",value = "客户的id")
     @Cacheable(value = "getCustomerById",keyGenerator="simpleKeyGenerator")
-    public ApiResponse<Customer> getCustomerById(@PathVariable Integer id){
+    public ApiResponse getCustomerById(@PathVariable Integer id){
         Customer customer = customerService.getById(id);
         return ApiResponse.ok(customer);
     }
@@ -91,7 +91,7 @@ public class CustomerController {
             @ApiImplicitParam(name = "size",value = "需要数据的条数limit")
     })
     @Cacheable(value = "queryCutomer",keyGenerator="simpleKeyGenerator")
-    public ApiResponse<PageResult<Customer>> queryCutomer(@RequestParam(required = false,defaultValue = "1") Integer current,
+    public ApiResponse queryCutomer(@RequestParam(required = false,defaultValue = "1") Integer current,
                                                           @RequestParam(required = false,defaultValue = "20") Integer size,
                                                           @RequestParam(required = false) String name,
                                                           @RequestParam(required = false) String phone,
@@ -121,7 +121,7 @@ public class CustomerController {
     @ApiOperation("通过id获取客户的所有优惠卡")
     @ApiImplicitParam(name = "id",value = "客户的id")
     @Cacheable(value = "getCustmerCardById",keyGenerator="simpleKeyGenerator")
-    public ApiResponse<List<CustomerCardVo>> getCustmerCardById(@PathVariable Integer id){
+    public ApiResponse getCustmerCardById(@PathVariable Integer id){
         if (!isCustomerExits(id)) {
             return ApiResponse.selfError(ReturnCode.CUSTOMER_NOT_EXIST);
         }
@@ -150,7 +150,7 @@ public class CustomerController {
     @ApiOperation("通过id获取客户的余额")
     @ApiImplicitParam(name = "id",value = "客户的id")
     @Cacheable(value = "getBalanceById",keyGenerator="simpleKeyGenerator")
-    public ApiResponse<Float> getBalanceById(@PathVariable Integer id){
+    public ApiResponse getBalanceById(@PathVariable Integer id){
         Customer customer = customerService.getById(id);
         if(customer==null){
             return ApiResponse.selfError(ReturnCode.CUSTOMER_NOT_EXIST);
@@ -168,7 +168,7 @@ public class CustomerController {
     @PostMapping("/add")
     @ApiOperation("添加客户 不可添加余额 必须走充值")
     @ApiImplicitParam(name = "customer",value = "客户的json对象")
-    public ApiResponse<Void> insertCustomer(@RequestBody Customer customer){
+    public ApiResponse insertCustomer(@RequestBody Customer customer){
         if(customer.getName()==null || customer.getPhone()==null){
             return ApiResponse.selfError(ReturnCode.NEED_PARAM);
         }
@@ -182,7 +182,7 @@ public class CustomerController {
     @PostMapping("/freeze/{id}")
     @ApiOperation("冻结或解冻客户 如果是冻结则解冻 如果是非冻结则冻结（需要权限：[customer_freeze]）")
     @ApiImplicitParam(name = "id",value = "客户的id")
-    public ApiResponse<Void> deleteCustomer(@PathVariable Integer id){
+    public ApiResponse deleteCustomer(@PathVariable Integer id){
         Customer customer = customerService.getById(id);
         if(customer==null){
             return ApiResponse.selfError(ReturnCode.CUSTOMER_NOT_EXIST);
@@ -197,7 +197,7 @@ public class CustomerController {
     @PutMapping("/edit")
     @ApiOperation("修改客户 不可以修改余额")
     @ApiImplicitParam(name = "customer",value = "客户的json对象")
-    public ApiResponse<Void> updateCustomer(@RequestBody Customer customer){
+    public ApiResponse updateCustomer(@RequestBody Customer customer){
         if (!isCustomerExits(customer.getId())) {
             return ApiResponse.selfError(ReturnCode.CUSTOMER_NOT_EXIST);
         }
@@ -216,7 +216,7 @@ public class CustomerController {
             @ApiImplicitParam(name = "makeCardVo",value = "客户办卡的传递对象")
     })
     @Transactional
-    public ApiResponse<Void> insertCustmerCard(@PathVariable Integer id,
+    public ApiResponse insertCustmerCard(@PathVariable Integer id,
                                                   @RequestBody CustomerMakeCardVo makeCardVo){
         if (!isCustomerExits(id)) {
             return ApiResponse.selfError(ReturnCode.CUSTOMER_NOT_EXIST);
@@ -321,7 +321,7 @@ public class CustomerController {
             @ApiImplicitParam(name = "editCardVo",value = "客户改变卡的次数的传递对象")
     })
     @Transactional
-    public ApiResponse<Void> updateCustmerCardPro(@PathVariable Integer id,
+    public ApiResponse updateCustmerCardPro(@PathVariable Integer id,
                                                      @RequestBody CustomerEditCardVo editCardVo){
         if (!isCustomerExits(id)) {
             return ApiResponse.selfError(ReturnCode.CUSTOMER_NOT_EXIST);
@@ -428,7 +428,7 @@ public class CustomerController {
             @ApiImplicitParam(name = "balanceVo",value = "客户改变卡余额的传递对象")
     })
     @Transactional
-    public ApiResponse<Void> updateCustmerBalance(@PathVariable Integer id,
+    public ApiResponse updateCustmerBalance(@PathVariable Integer id,
                                                   @RequestBody CustomerEditBalanceVo balanceVo){
         if (!isCustomerExits(id)) {
             return ApiResponse.selfError(ReturnCode.CUSTOMER_NOT_EXIST);
@@ -477,7 +477,7 @@ public class CustomerController {
     @ApiOperation("客户结算")
     @ApiImplicitParam(name = "settleVo",value = "客户用现金的传递对象")
     @Transactional
-    public ApiResponse<Void> settleCustomer(@RequestBody CustomerSettleVo settleVo){
+    public ApiResponse settleCustomer(@RequestBody CustomerSettleVo settleVo){
         if(settleVo.getStaffId()==null || settleVo.getProjectId()==null || settleVo.getPayType()==null){
             return ApiResponse.selfError(ReturnCode.NEED_PARAM);
         }
@@ -547,7 +547,7 @@ public class CustomerController {
             @ApiImplicitParam(name = "returnCardVo",value = "退卡的对象")
     })
     @Transactional
-    public ApiResponse<Void> returnCustmerCard(@PathVariable Integer id,
+    public ApiResponse returnCustmerCard(@PathVariable Integer id,
                                                   @RequestBody CustomerReturnCardVo returnCardVo){
         if(returnCardVo.getStaffId()==null){
             return ApiResponse.selfError(ReturnCode.NEED_PARAM);
@@ -590,7 +590,7 @@ public class CustomerController {
     @ApiOperation("删除客户现有的卡 ")
     @ApiImplicitParam(name = "cardId",value = "客户优惠卡的id")
     @Transactional
-    public ApiResponse<Void> deleteCustmerCard(@RequestParam Integer cardId){
+    public ApiResponse deleteCustmerCard(@RequestParam Integer cardId){
         CustomerCard customerCard=customerCardService.getById(cardId);
         if(customerCard==null){
             return ApiResponse.selfError(ReturnCode.CUSTOMER_CARD_NOT_EXITST);

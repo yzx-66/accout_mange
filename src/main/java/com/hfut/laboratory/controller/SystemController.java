@@ -1,10 +1,12 @@
-package com.hfut.laboratory.controller.anon;
+package com.hfut.laboratory.controller;
 
+import com.hfut.laboratory.config.JwtConfig;
 import com.hfut.laboratory.dto.UserInfo;
 import com.hfut.laboratory.enums.ReturnCode;
 import com.hfut.laboratory.pojo.User;
 import com.hfut.laboratory.service.UserService;
 import com.hfut.laboratory.util.CodecUtils;
+import com.hfut.laboratory.util.CookieUtils;
 import com.hfut.laboratory.util.jwt.JwtTokenUtils;
 import com.hfut.laboratory.vo.ApiResponse;
 import com.hfut.laboratory.vo.user.PasswordVo;
@@ -31,16 +33,19 @@ public class SystemController {
     @Autowired
     private UserService userService;
 
+    @Autowired
+    private JwtConfig jwtConfig;
+
     @RequestMapping("pub/reject")
     @ApiOperation("没权限shiro会转发到该接口")
-    public ApiResponse<Void> needLogin(){
+    public ApiResponse needLogin(){
         return ApiResponse.authError();
     }
 
     @PostMapping("login")
     @ApiOperation("登陆接口")
     @ApiImplicitParam(name = "userQuery",value = "登陆验证的对象")
-    public ApiResponse<Void> login(@RequestBody UserQuery userQuery, HttpServletRequest request, HttpServletResponse response){
+    public ApiResponse login(@RequestBody UserQuery userQuery, HttpServletRequest request, HttpServletResponse response){
 
         Subject subject = SecurityUtils.getSubject();
         try {
@@ -50,9 +55,11 @@ public class SystemController {
             try{
                 JwtTokenUtils.setJwtToken(request,response,userQuery.getName());
             }catch (Exception e){
+                e.printStackTrace();
                 log.error(new Date()+this.getClass().getName());
                 return ApiResponse.serverError();
             }
+
             return ApiResponse.ok();
 
         }catch (Exception e){
@@ -60,10 +67,16 @@ public class SystemController {
         }
     }
 
+    @GetMapping("logout")
+    public ApiResponse logout(HttpServletRequest request,HttpServletResponse response){
+        CookieUtils.setCookie(request,response,jwtConfig.getCookieName(),null,1,"utf-8");
+        return ApiResponse.ok();
+    }
+
     @PutMapping("pwd")
     @ApiOperation("修改密码接口")
     @ApiImplicitParam(name = "passwordVo",value = "修改密码的对象")
-    public ApiResponse<Void> reSetPassword(@RequestBody PasswordVo passwordVo,HttpServletRequest request){
+    public ApiResponse reSetPassword(@RequestBody PasswordVo passwordVo,HttpServletRequest request){
         UserInfo userInfo = JwtTokenUtils.getUserInfoFromToken(request);
         if(userInfo==null){
             return ApiResponse.selfError(ReturnCode.NEED_LOGIN);

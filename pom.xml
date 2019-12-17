@@ -173,7 +173,7 @@
                     <imageName>yzx/${project.artifactId}</imageName>
                     <!--指定标签-->
                     <imageTags>
-                        <imageTag>2.0</imageTag>
+                        <imageTag>3.0</imageTag>
                     </imageTags>
                     <!-- 指定 Dockerfile 路径 ${project.basedir}：项目根路径下（默认是 根路径/Dockerfile）-->
                     <dockerDirectory>${project.basedir}</dockerDirectory>

@@ -22,7 +22,9 @@ public class CorsConfig {
         corsConfiguration.addAllowedMethod("*");
 
         //TODO http://127.0.0.1:80
-        corsConfiguration.addAllowedOrigin("*");
+        corsConfiguration.addAllowedOrigin("http://localhost");
+        corsConfiguration.addAllowedOrigin("http://106.14.125.136");
+        //corsConfiguration.addAllowedOrigin("*");
 
         //允许携带cookie
         corsConfiguration.setAllowCredentials(true);

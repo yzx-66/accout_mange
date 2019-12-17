@@ -7,6 +7,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import javax.annotation.PostConstruct;
 import java.security.PrivateKey;
 import java.security.PublicKey;
 
@@ -25,15 +26,12 @@ public class JwtConfig {
     private Integer adminExpireMinutes;
     private Integer expireMinutes;
 
-//    @Bean
-//    public PublicKey publicKey() throws Exception {
-//        return RsaUtils.getPublicKey(pubKeyPath);
-//    }
-//
-//    @Bean
-//    public PrivateKey privateKey() throws Exception {
-//        return RsaUtils.getPrivateKey(priKeyPath);
-//    }
+    private PublicKey publicKey;
+    private PrivateKey privateKey;
 
-
+    @PostConstruct
+    public void createRsaKey() throws Exception {
+        publicKey = RsaUtils.getPublicKey(pubKeyPath);
+        privateKey = RsaUtils.getPrivateKey(priKeyPath);
+    }
 }

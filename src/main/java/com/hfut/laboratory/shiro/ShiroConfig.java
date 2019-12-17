@@ -1,4 +1,4 @@
-package com.hfut.laboratory.shiro.config;
+package com.hfut.laboratory.shiro;
 
 import com.hfut.laboratory.constants.UrlConstants;
 import com.hfut.laboratory.shiro.filter.JWTFilter;
@@ -38,15 +38,14 @@ public class ShiroConfig {
         filterMap.put("jwt", new JWTFilter());
         shiroFilterFactoryBean.setFilters(filterMap);
 
-
         //需要登录的接口，如果访问某个接口，需要登录却没登录，则调用此接口(如果不是前后端分离，则跳转页面)
-        shiroFilterFactoryBean.setLoginUrl("/pub/reject");
+        shiroFilterFactoryBean.setLoginUrl("/acc/pub/reject");
 
         //登录成功，跳转url，如果前后端分离，则没这个调用
         //shiroFilterFactoryBean.setSuccessUrl("/");
 
         //没有权限，未授权就会调用此方法， 先验证登录 再验证是否有权限
-        shiroFilterFactoryBean.setUnauthorizedUrl("/pub/reject");
+        shiroFilterFactoryBean.setUnauthorizedUrl("/acc/pub/reject");
 
 
         //拦截器路径，坑一，部分路径无法进行拦截，时有时无；因为使用的是hashmap, 无序的，应该改为LinkedHashMap
@@ -82,7 +81,7 @@ public class ShiroConfig {
         filterChainDefinitionMap.put("/**", "jwt");
 
         //TODO 取消拦截就注释这里
-        //shiroFilterFactoryBean.setFilterChainDefinitionMap(filterChainDefinitionMap);
+        shiroFilterFactoryBean.setFilterChainDefinitionMap(filterChainDefinitionMap);
 
         return shiroFilterFactoryBean;
     }

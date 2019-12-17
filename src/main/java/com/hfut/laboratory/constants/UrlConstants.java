@@ -8,7 +8,11 @@ public class UrlConstants {
      */
     public static final String[] ANONURLS=new String[]{"" +
             "/pub/**",
-            "/login"
+            "/login",
+            "/swagger-resources/**",
+            "/v2/**",
+            "/swagger-ui.html#!/**",
+            "/swagger-resources/**"
     };
     /**
      * 登陆后可访问

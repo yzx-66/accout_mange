@@ -1,4 +1,4 @@
-package com.hfut.laboratory.controller.authc.perms;
+package com.hfut.laboratory.controller;
 
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
@@ -71,7 +71,7 @@ public class RecordsConsumptionController {
             @ApiImplicitParam(name = "size",value = "需要数据的条数limit")
     })
     @Cacheable(value = "getRecordsConsumptionList",keyGenerator="simpleKeyGenerator")
-    public ApiResponse<PageResult<ReturnConsumVo>> getRecordsConsumptionList(@RequestParam(required = false,defaultValue = "1") Integer current,
+    public ApiResponse getRecordsConsumptionList(@RequestParam(required = false,defaultValue = "1") Integer current,
                                                                              @RequestParam(required = false,defaultValue = "20")Integer size,
                                                                              @RequestParam(required = false,defaultValue = "true")boolean isDesc){
         Page<RecordsConsumption> page=new Page<>(current,size);
@@ -90,13 +90,14 @@ public class RecordsConsumptionController {
             @ApiImplicitParam(name = "current",value = "当前页"),
             @ApiImplicitParam(name = "size",value = "需要数据的条数limit"),
             @ApiImplicitParam(name = "startTime",value = "起始时间"),
+            @ApiImplicitParam(name = "isDesc",value = "是否降序排序"),
             @ApiImplicitParam(name = "endTime",value = "结束时间"),
             @ApiImplicitParam(name = "staffId",value = "员工id"),
             @ApiImplicitParam(name = "customerName",value = "客户姓名"),
             @ApiImplicitParam(name = "payType",value = "支付方式")
     })
     @Cacheable(value = "QueryRecordsConsumptionList",keyGenerator="simpleKeyGenerator")
-    public ApiResponse<PageResult<ReturnConsumVo>> QueryRecordsConsumptionList(@RequestParam(required = false,defaultValue = "1") Integer current,
+    public ApiResponse QueryRecordsConsumptionList(@RequestParam(required = false,defaultValue = "1") Integer current,
                                                                                @RequestParam(required = false,defaultValue = "20") Integer size,
                                                                                @RequestParam(required = false,defaultValue = "true")boolean isDesc,
                                                                                @RequestParam(required = false) LocalDateTime startTime,
@@ -141,7 +142,7 @@ public class RecordsConsumptionController {
     @PostMapping("/add")
     @ApiOperation("手动添加一些消费记录 会修改turnover（但consum_type不会添加到busness表 如果有这个需要 请通过CustomerController结算")
     @ApiImplicitParam(name = "consumVo",value = "添加或者修改的consum对象")
-    public ApiResponse<Void> insertRecordsConsumption(@RequestBody AddOrEditConsumVo consumVo){
+    public ApiResponse insertRecordsConsumption(@RequestBody AddOrEditConsumVo consumVo){
         if(consumVo.getConsumType()==null || consumVo.getPrice()==null || consumVo.getPrice()==null || consumVo.getStaffId()==null ){
             return ApiResponse.selfError(ReturnCode.NEED_PARAM);
         }
@@ -176,7 +177,7 @@ public class RecordsConsumptionController {
             @ApiImplicitParam(name = "id",value = "消费记录id"),
     })
     @Transactional
-    public ApiResponse<Void> updateRecordsConsumption(@PathVariable Integer id,
+    public ApiResponse updateRecordsConsumption(@PathVariable Integer id,
                                                          @RequestBody AddOrEditConsumVo consumVo){
         if(consumVo.getConsumType()==null || consumVo.getPrice()==null || consumVo.getPrice()==null || consumVo.getStaffId()==null ){
             return ApiResponse.selfError(ReturnCode.NEED_PARAM);
@@ -245,7 +246,7 @@ public class RecordsConsumptionController {
             }
 
             RecordBusiness recordBusiness = recordBusinessService.getOne(
-                    QueryWapperUtils.getInWapper("date", new LocalDateTime[]{recordsConsumption.getPayTime()}));
+                    QueryWapperUtils.getInWapper("date", recordsConsumption.getPayTime()));
             if(recordBusiness!=null){
                 if(shouldChangeBussness_customerId){
                     recordBusiness.setCustomerId(customerId);
@@ -279,7 +280,7 @@ public class RecordsConsumptionController {
     @ApiOperation("删除消费记录 （需要权限[consum_edit]） 会随着修改busness、turnover")
     @ApiImplicitParam(name = "id",value = "消费记录id")
     @Transactional
-    public ApiResponse<Void> deleteRecordsConsumption(@PathVariable Integer id){
+    public ApiResponse deleteRecordsConsumption(@PathVariable Integer id){
         RecordsConsumption recordsConsumption = recordsConsumptionService.getById(id);
         if(recordsConsumption==null){
             return ApiResponse.selfError(ReturnCode.CONSUM_NOT_EXITST);
@@ -287,7 +288,7 @@ public class RecordsConsumptionController {
 
         boolean res1=true,res2=true,res3=true;
         res1=editTurnover(recordsConsumption);
-        res2=recordBusinessService.remove(QueryWapperUtils.getInWapper("date", new LocalDateTime[]{recordsConsumption.getPayTime()}));
+        res2=recordBusinessService.remove(QueryWapperUtils.getInWapper("date", recordsConsumption.getPayTime()));
         res3=recordsConsumptionService.removeById(recordsConsumption);
 
         if(res1 && res2 && res3){
@@ -311,7 +312,7 @@ public class RecordsConsumptionController {
 
     private boolean editTurnover(RecordsConsumption recordsConsumption){
         RecordsTurnover recordsTurnover = recordsTurnoverService.getOne(
-                QueryWapperUtils.getInWapper("date", new LocalDateTime[]{TimeConvertUtils.convertTo_yMd(recordsConsumption.getPayTime())}));
+                QueryWapperUtils.getInWapper("date", TimeConvertUtils.convertTo_yMd(recordsConsumption.getPayTime())));
 
         if (recordsTurnover != null && recordsConsumption.isRecord()) {
             recordsConsumption.setRecord(false);

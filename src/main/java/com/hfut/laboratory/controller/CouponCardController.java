@@ -1,4 +1,4 @@
-package com.hfut.laboratory.controller.authc.perms;
+package com.hfut.laboratory.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -7,9 +7,11 @@ import com.hfut.laboratory.enums.ReturnCode;
 import com.hfut.laboratory.pojo.CouponCard;
 import com.hfut.laboratory.pojo.CouponCardDetail;
 import com.hfut.laboratory.pojo.Project;
+import com.hfut.laboratory.pojo.RecordBusiness;
 import com.hfut.laboratory.service.CouponCardDetailService;
 import com.hfut.laboratory.service.CouponCardService;
 import com.hfut.laboratory.service.ProjectService;
+import com.hfut.laboratory.service.RecordBusinessService;
 import com.hfut.laboratory.util.QueryWapperUtils;
 import com.hfut.laboratory.vo.ApiResponse;
 import com.hfut.laboratory.vo.card.CardDetailVo;
@@ -56,6 +58,9 @@ public class CouponCardController {
     @Autowired
     private ProjectService projectService;
 
+    @Autowired
+    private RecordBusinessService recordBusinessService;
+
 
     @GetMapping("/list")
     @ApiOperation("获取优惠卡列表")
@@ -64,7 +69,7 @@ public class CouponCardController {
             @ApiImplicitParam(name = "size",value = "需要数据的条数limit")
     })
     @Cacheable(value = "getCouponCardList",keyGenerator="simpleKeyGenerator")
-    public ApiResponse<PageResult<CouponCard>> getCouponCardList(@RequestParam(required = false,defaultValue = "1") Integer current,
+    public ApiResponse getCouponCardList(@RequestParam(required = false,defaultValue = "1") Integer current,
                                                                  @RequestParam(required = false,defaultValue = "20") Integer size){
         Page<CouponCard> page=new Page<>(current,size);
         IPage<CouponCard> cardIPage = couponCardService.page(page, null);
@@ -74,7 +79,7 @@ public class CouponCardController {
     @GetMapping("/simple/list")
     @ApiOperation("获取收费项目列表id、name列表")
     @Cacheable(value = "getProjectSimpleList",keyGenerator="simpleKeyGenerator")
-    public ApiResponse<List<CardSimple>> getProjectSimpleList(){
+    public ApiResponse getProjectSimpleList(){
         List<CardSimple> res=new ArrayList<>();
         couponCardService.list(QueryWapperUtils.getInWapper("status",1))
                 .forEach(card -> res.add(new CardSimple(((CouponCard)card).getId(),((CouponCard)card).getName())));
@@ -88,7 +93,7 @@ public class CouponCardController {
             @ApiImplicitParam(name = "size",value = "需要数据的条数limit")
     })
     @Cacheable(value = "getCouponCardAndDetailList",keyGenerator="simpleKeyGenerator")
-    public ApiResponse<PageResult<CouponCardVo>> getCouponCardAndDetailList(@RequestParam(required = false,defaultValue = "1") Integer current,
+    public ApiResponse getCouponCardAndDetailList(@RequestParam(required = false,defaultValue = "1") Integer current,
                                                                             @RequestParam(required = false,defaultValue = "20") Integer size){
         List<CouponCardVo> res=new ArrayList<>();
         Page<CouponCard> page=new Page<>(current,size);
@@ -109,7 +114,7 @@ public class CouponCardController {
             @ApiImplicitParam(name = "startTime",value = "起始时间"),
             @ApiImplicitParam(name = "endTime",value = "结束时间")
     })
-    public ApiResponse<PageResult<CouponCardVo>> queryCardList(@RequestParam(required = false,defaultValue = "1") Integer current,
+    public ApiResponse queryCardList(@RequestParam(required = false,defaultValue = "1") Integer current,
                                                                @RequestParam(required = false,defaultValue = "20") Integer size,
                                                                @RequestParam(required = false) String name,
                                                                @RequestParam(required = false) Integer projectId,
@@ -153,7 +158,7 @@ public class CouponCardController {
     @ApiOperation("通过id获取优惠卡")
     @ApiImplicitParam(name = "id",value = "优惠卡的id")
     @Cacheable(value = "getCouponCardById",keyGenerator="simpleKeyGenerator")
-    public ApiResponse<CouponCard> getCouponCardById(@PathVariable Integer id){
+    public ApiResponse getCouponCardById(@PathVariable Integer id){
         CouponCard card = couponCardService.getById(id);
         return ApiResponse.ok(card);
     }
@@ -162,7 +167,7 @@ public class CouponCardController {
     @ApiOperation("通过id获取优惠卡及对应项目")
     @ApiImplicitParam(name = "id",value = "优惠卡的id")
     @Cacheable(value = "getCouponCardAndDetailById",keyGenerator="simpleKeyGenerator")
-    public ApiResponse<CouponCardVo> getCouponCardAndDetailById(@PathVariable Integer id){
+    public ApiResponse getCouponCardAndDetailById(@PathVariable Integer id){
         CouponCard card = couponCardService.getById(id);
         return ApiResponse.ok(getCardDetailVo(card));
     }
@@ -170,7 +175,7 @@ public class CouponCardController {
 
     @PostMapping("/freeze/{id}")
     @ApiOperation("冻结优惠卡 需要权限[card_freeze]")
-    public ApiResponse<Void> freezeCard(@PathVariable Integer id){
+    public ApiResponse freezeCard(@PathVariable Integer id){
         CouponCard card=couponCardService.getById(id);
         if(card==null){
             return ApiResponse.selfError(ReturnCode.CARD_NOT_EXIST);
@@ -183,7 +188,7 @@ public class CouponCardController {
     @PostMapping("/add")
     @ApiOperation("添加优惠卡（需要权限：[card_add]）")
     @ApiImplicitParam(name = "card",value = "优惠卡的json对象")
-    public ApiResponse<Void> insertCouponCard(@RequestBody CouponCard card){
+    public ApiResponse insertCouponCard(@RequestBody CouponCard card){
         if(card.getName()==null || card.getStartTime()==null || card.getEndTime()==null || card.getPrice()==null){
             return ApiResponse.selfError(ReturnCode.NEED_PARAM);
         }
@@ -195,7 +200,7 @@ public class CouponCardController {
     @PutMapping("/edit")
     @ApiOperation("修改优惠卡（需要权限：[card_edit]）")
     @ApiImplicitParam(name = "card",value = "优惠卡的json对象")
-    public ApiResponse<Void> updateCouponCard(@RequestBody CouponCard card){
+    public ApiResponse updateCouponCard(@RequestBody CouponCard card){
         if(card.getId()==null || card.getName()==null || card.getStartTime()==null || card.getEndTime()==null || card.getPrice()==null){
             return ApiResponse.selfError(ReturnCode.NEED_PARAM);
         }
@@ -211,7 +216,7 @@ public class CouponCardController {
     @ApiOperation("修改优惠卡的项目（需要权限：[card_edit]）")
     @ApiImplicitParam(name = "cardDetailVo",value = "传递card_pro的项目信息")
     @Transactional
-    public ApiResponse<Void> updateCouponCardDetail(@RequestBody CardDetailVo cardDetailVo){
+    public ApiResponse updateCouponCardDetail(@RequestBody CardDetailVo cardDetailVo){
         if(cardDetailVo.getCardId()==null || cardDetailVo.getProDetails()==null){
             return ApiResponse.selfError(ReturnCode.NEED_PARAM);
         }
@@ -252,8 +257,17 @@ public class CouponCardController {
     @ApiOperation("删除优惠卡（需要权限：[card_del]）")
     @ApiImplicitParam(name = "id",value = "优惠卡的id")
     @Transactional
-    public ApiResponse<Void> deleteCouponCard(@PathVariable Integer id){
+    public ApiResponse deleteCouponCard(@PathVariable Integer id){
         boolean res1=true,res2=true;
+
+        QueryWrapper<RecordBusiness> queryWapper=new QueryWrapper<>();
+        queryWapper.and(wapper->wapper.in("type",1))
+                .and(wapper->wapper.in("thing_id",id));
+
+        if(recordBusinessService.list(queryWapper).size()!=0){
+            return ApiResponse.selfError(ReturnCode.DELETE_FALI_Foreign_KEY);
+        }
+
         try{
             res1=couponCardDetailService.remove(QueryWapperUtils.getInWapper("card_id",id));
             res2 = couponCardService.removeById(id);

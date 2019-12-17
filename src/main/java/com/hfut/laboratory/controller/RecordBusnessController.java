@@ -1,4 +1,4 @@
-package com.hfut.laboratory.controller.authc;
+package com.hfut.laboratory.controller;
 
 import com.hfut.laboratory.enums.ReturnCode;
 import com.hfut.laboratory.service.CouponCardService;
@@ -40,7 +40,7 @@ public class RecordBusnessController {
             @ApiImplicitParam(name = "type",value = "类型 1：项目、2：卡"),
     })
     @Cacheable(value = "groupByProject",keyGenerator="simpleKeyGenerator")
-    public ApiResponse<Map<String,Object>> groupByProject(@RequestParam(required = false) LocalDateTime startTime,
+    public ApiResponse groupByProject(@RequestParam(required = false) LocalDateTime startTime,
                                                           @RequestParam(required = false) LocalDateTime endTime,
                                                           @RequestParam Integer type){
         if(type != 1 && type != 2){
@@ -51,10 +51,10 @@ public class RecordBusnessController {
         groupByProject.forEach(map->{
             String name="";
             if(type==1){
-                name = projectService.getById((Integer) map.get("thing_id")).getName();
+                name = couponCardService.getById((Integer) map.get("thing_id")).getName();
             }
             if(type ==2){
-                name = couponCardService.getById((Integer) map.get("thing_id")).getName();
+                name = projectService.getById((Integer) map.get("thing_id")).getName();
             }
             res.put(name,map.get("count"));
         });

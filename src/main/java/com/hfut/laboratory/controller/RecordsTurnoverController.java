@@ -1,4 +1,4 @@
-package com.hfut.laboratory.controller.authc.roles.boss;
+package com.hfut.laboratory.controller;
 
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
@@ -41,7 +41,7 @@ public class RecordsTurnoverController {
             @ApiImplicitParam(name = "size",value = "需要数据的条数limit")
     })
     @Cacheable(value = "getRecordsTurnoverList",keyGenerator="simpleKeyGenerator")
-    public ApiResponse<PageResult<RecordsTurnover>> getRecordsTurnoverList(@RequestParam(required = false,defaultValue = "1") Integer current,
+    public ApiResponse getRecordsTurnoverList(@RequestParam(required = false,defaultValue = "1") Integer current,
                                                                            @RequestParam(required = false,defaultValue = "20") Integer size,
                                                                            @RequestParam(required = false,defaultValue = "true")boolean isDesc){
         Page<RecordsTurnover> page=new Page<>(current,size);
@@ -62,7 +62,7 @@ public class RecordsTurnoverController {
             @ApiImplicitParam(name = "endTime",value = "结束时间")
     })
     @Cacheable(value = "QueryRecordsTurnoverList",keyGenerator="simpleKeyGenerator")
-    public ApiResponse<PageResult<RecordsTurnover>> QueryRecordsTurnoverList(@RequestParam(required = false,defaultValue = "1") Integer current,
+    public ApiResponse QueryRecordsTurnoverList(@RequestParam(required = false,defaultValue = "1") Integer current,
                                                                              @RequestParam(required = false,defaultValue = "20") Integer size,
                                                                              @RequestParam(required = false,defaultValue = "true")boolean isDesc,
                                                                              @RequestParam(required = false) LocalDateTime startTime,

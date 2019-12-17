@@ -1,4 +1,4 @@
-package com.hfut.laboratory.controller.authc.roles.root;
+package com.hfut.laboratory.controller;
 
 import com.hfut.laboratory.enums.ReturnCode;
 import com.hfut.laboratory.pojo.Permission;
@@ -43,7 +43,7 @@ public class RoleController {
     @GetMapping("/list")
     @ApiOperation("获取角色列表")
     @Cacheable(value = "getRoleList",keyGenerator="simpleKeyGenerator")
-    public ApiResponse<List<Role>> getRoleList(){
+    public ApiResponse getRoleList(){
         List<Role> roleList = roleService.list(null);
         return ApiResponse.ok(roleList);
     }
@@ -51,7 +51,7 @@ public class RoleController {
     @GetMapping("/r_p/list")
     @ApiOperation("获取角色和对应权限的列表")
     @Cacheable(value = "getRoleAndPermList",keyGenerator="simpleKeyGenerator")
-    public ApiResponse<List<RoleVo>> getRoleAndPermList(){
+    public ApiResponse getRoleAndPermList(){
         List<RoleVo> res=new ArrayList<>();
         roleService.list(null).forEach(role -> {
             res.add(getRoleVo(role));
@@ -63,7 +63,7 @@ public class RoleController {
     @ApiOperation("通过id获取角色")
     @ApiImplicitParam(name = "id",value = "角色的id")
     @Cacheable(value = "getRoleById",keyGenerator="simpleKeyGenerator")
-    public ApiResponse<Role> getRoleById(@PathVariable Integer id){
+    public ApiResponse getRoleById(@PathVariable Integer id){
         Role role = roleService.getById(id);
         return ApiResponse.ok(role);
     }
@@ -72,7 +72,7 @@ public class RoleController {
     @ApiOperation("通过id获取角色即对应权限")
     @ApiImplicitParam(name = "id",value = "角色的id")
     @Cacheable(value = "getRoleAndPermessionById",keyGenerator="simpleKeyGenerator")
-    public ApiResponse<RoleVo> getRoleAndPermessionById(@PathVariable Integer id){
+    public ApiResponse getRoleAndPermessionById(@PathVariable Integer id){
         Role role = roleService.getById(id);
         return ApiResponse.ok(getRoleVo(role));
     }
@@ -83,7 +83,7 @@ public class RoleController {
             @ApiImplicitParam(name = "name",value = "角色的英文名字"),
             @ApiImplicitParam(name = "introduction",value = "该角色的中文介绍")
     })
-    public ApiResponse<Void> insertRole(@RequestParam String name,
+    public ApiResponse insertRole(@RequestParam String name,
                                            @RequestParam String introduction){
         Role role=new Role();
         role.setName(name);
@@ -100,7 +100,7 @@ public class RoleController {
             @ApiImplicitParam(name = "permIds",value = "该角色的权限id集合 没有的话不填写该参数")
     })
     @Transactional //多次操作数据库 开启事务
-    public ApiResponse<Void> updateRole(@PathVariable Integer id,
+    public ApiResponse updateRole(@PathVariable Integer id,
                                            @RequestParam List<Integer> permIds){
         Role role=roleService.getById(id);
         rolePermissionService.remove(QueryWapperUtils.getInWapper("role_id",role.getId()));
@@ -123,7 +123,7 @@ public class RoleController {
     @ApiOperation("删除角色")
     @ApiImplicitParam(name = "id",value = "角色的id")
     @Transactional
-    public ApiResponse<Void> deleteRole(@PathVariable Integer id){
+    public ApiResponse deleteRole(@PathVariable Integer id){
         boolean res1 = rolePermissionService.remove(QueryWapperUtils.getInWapper("role_id",id));
         boolean res2=true;
         try {

@@ -31,7 +31,7 @@ public class JwtTokenUtils {
     public static void setJwtToken(HttpServletRequest request, HttpServletResponse response, Object userSign) throws Exception {
         UserService userService=BeanUtils.getBean(UserService.class,request);
         JwtConfig jwtConfig=BeanUtils.getBean(JwtConfig.class,request);
-        PrivateKey privateKey=BeanUtils.getBean(PrivateKey.class,request);
+        PrivateKey privateKey=RsaUtils.getPrivateKey(jwtConfig.getPriKeyPath());
         UserRoleService userRoleService=BeanUtils.getBean(UserRoleService.class,request);
 
         User user=null;

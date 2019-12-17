@@ -33,7 +33,6 @@ public class PermisstionOrAuthorizationFilter extends AuthorizationFilter {
 
         for(String perm:perms){
             if(hasPerms.contains(perm)){
-                Subject subject = SecurityUtils.getSubject();
                 JwtTokenUtils.setJwtTokenByInfoFormCookie(httpServletRequest,httpServletResponse);
                 return true;
             }

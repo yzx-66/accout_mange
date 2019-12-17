@@ -1,4 +1,4 @@
-package com.hfut.laboratory.controller.authc.roles.root;
+package com.hfut.laboratory.controller;
 
 import com.hfut.laboratory.enums.ReturnCode;
 import com.hfut.laboratory.pojo.Permission;
@@ -12,7 +12,6 @@ import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
-import org.springframework.transaction.interceptor.TransactionAspectSupport;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -29,7 +28,7 @@ public class PermissionController {
     @GetMapping("/list")
     @ApiOperation("获取权限列表")
     @Cacheable(value = "getPermissionList",keyGenerator="simpleKeyGenerator")
-    public ApiResponse<List<Permission>> getPermissionList(){
+    public ApiResponse getPermissionList(){
         List<Permission> permissionList = permissionService.list(null);
         return ApiResponse.ok(permissionList);
     }
@@ -38,7 +37,7 @@ public class PermissionController {
     @ApiOperation("通过id获取权限")
     @ApiImplicitParam(name = "id",value = "权限的id")
     @Cacheable(value = "getPermessionById",keyGenerator="simpleKeyGenerator")
-    public ApiResponse<Permission> getPermessionById(@PathVariable Integer id){
+    public ApiResponse getPermessionById(@PathVariable Integer id){
         Permission permission = permissionService.getById(id);
         return ApiResponse.ok(permission);
     }
@@ -49,7 +48,7 @@ public class PermissionController {
             @ApiImplicitParam(name = "name",value = "权限的英文名字"),
             @ApiImplicitParam(name = "introduction",value = "该权限的中文介绍")
     })
-    public ApiResponse<Void> insertPermission(@RequestParam String name,
+    public ApiResponse insertPermission(@RequestParam String name,
                                                  @RequestParam String introduction){
         Permission permission=new Permission();
         permission.setName(name);
@@ -61,7 +60,7 @@ public class PermissionController {
     @DeleteMapping("/{id}")
     @ApiOperation("删除权限")
     @ApiImplicitParam(name = "id",value = "权限的英文名字")
-    public ApiResponse<Void> deletePermission(@PathVariable Integer id){
+    public ApiResponse deletePermission(@PathVariable Integer id){
         boolean res =true;
         try {
             res= permissionService.remove(QueryWapperUtils.getInWapper("id", id));

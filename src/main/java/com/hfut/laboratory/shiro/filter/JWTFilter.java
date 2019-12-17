@@ -6,6 +6,7 @@ import com.hfut.laboratory.util.jwt.JwtTokenUtils;
 import org.apache.shiro.authz.UnauthorizedException;
 import org.apache.shiro.util.AntPathMatcher;
 import org.apache.shiro.web.filter.authc.BasicHttpAuthenticationFilter;
+import org.apache.shiro.web.filter.authz.AuthorizationFilter;
 import org.apache.shiro.web.util.WebUtils;
 
 import javax.servlet.ServletRequest;
@@ -16,13 +17,14 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * 相当于原来的登陆拦截器 authc
  */
-public class JWTFilter extends BasicHttpAuthenticationFilter {
+public class JWTFilter extends AuthorizationFilter {
 
     private AntPathMatcher pathMatcher = new AntPathMatcher();
 
-    @Override
-    protected boolean isAccessAllowed(ServletRequest request, ServletResponse response, Object mappedValue) throws UnauthorizedException {
+    @SuppressWarnings({"unchecked"})
+    public boolean isAccessAllowed(ServletRequest request, ServletResponse response, Object mappedValue) throws Exception{
         HttpServletRequest httpServletRequest = WebUtils.toHttp(request);
+        HttpServletResponse httpServletResponse=WebUtils.toHttp(response);
 
         for (String u : UrlConstants.ANONURLS) {
             if (pathMatcher.match(u, httpServletRequest.getRequestURI())){
@@ -30,15 +32,6 @@ public class JWTFilter extends BasicHttpAuthenticationFilter {
                 return true;
             }
         }
-
-        return executeLogin(request, response);
-    }
-
-
-    @Override
-    protected boolean executeLogin(ServletRequest request, ServletResponse response) {
-        HttpServletRequest httpServletRequest = WebUtils.toHttp(request);
-        HttpServletResponse httpServletResponse=WebUtils.toHttp(response);
 
         try {
             UserInfo userInfo = JwtTokenUtils.getUserInfoFromToken(httpServletRequest);
@@ -52,6 +45,5 @@ public class JWTFilter extends BasicHttpAuthenticationFilter {
             return false;
         }
     }
-
 }
 

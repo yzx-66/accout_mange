@@ -1,4 +1,4 @@
-package com.hfut.laboratory.controller.authc.perms;
+package com.hfut.laboratory.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -56,7 +56,7 @@ public class SalaryController {
             @ApiImplicitParam(name = "size",value = "需要数据的条数limit")
     })
     @Cacheable(value = "getSalaryList",keyGenerator="simpleKeyGenerator")
-    public ApiResponse<PageResult<ReturnSalaryVo>> getSalaryList(@RequestParam(required = false,defaultValue = "1") Integer current,
+    public ApiResponse getSalaryList(@RequestParam(required = false,defaultValue = "1") Integer current,
                                                                  @RequestParam(required = false,defaultValue = "20") Integer size,
                                                                  @RequestParam(required = false,defaultValue = "true")boolean isDesc){
         Page<Salary> page=new Page<>(current,size);
@@ -79,7 +79,7 @@ public class SalaryController {
             @ApiImplicitParam(name = "staffId",value = "员工id"),
     })
     @Cacheable(value = "QuerySalaryList",keyGenerator="simpleKeyGenerator")
-    public ApiResponse<PageResult<ReturnSalaryVo>> QuerySalaryList(@RequestParam(required = false,defaultValue = "1") Integer current,
+    public ApiResponse QuerySalaryList(@RequestParam(required = false,defaultValue = "1") Integer current,
                                                                    @RequestParam(required = false,defaultValue = "20") Integer size,
                                                                    @RequestParam(required = false,defaultValue = "true")boolean isDesc,
                                                                    @RequestParam(required = false) LocalDateTime startTime,
@@ -110,7 +110,7 @@ public class SalaryController {
 
     @GetMapping("/salary_time")
     @ApiOperation("获取出账时间")
-    public ApiResponse<LocalDateTime> getsalaryTime() throws IOException {
+    public ApiResponse getsalaryTime() throws IOException {
         File file=new File(salaryPath);
         if(!file.exists()){
            return ApiResponse.selfError(ReturnCode.SALARY_TIME_NOT_EXIST);
@@ -150,7 +150,7 @@ public class SalaryController {
     @PutMapping("/edit/{id}")
     @ApiOperation("修改员工薪水 需要权限[salay_edit]")
     @ApiImplicitParam(name = "salaryVo",value = "设置员工薪水基本信息的对象")
-    public ApiResponse<Void> updateSalary(@PathVariable Integer id,
+    public ApiResponse updateSalary(@PathVariable Integer id,
                                           @RequestBody SetSalaryVo salaryVo){
         if(salaryVo.getChange()==null || StringUtils.isBlank(salaryVo.getRemark())){
             return ApiResponse.selfError(ReturnCode.NEED_PARAM);
@@ -176,7 +176,7 @@ public class SalaryController {
     @DeleteMapping("/del/{id}")
     @ApiOperation("删除员工薪水 需要权限[salay_del]")
     @ApiImplicitParam(name = "id",value = "薪水id")
-    public ApiResponse<Void> deleteSalary(@PathVariable Integer id){
+    public ApiResponse deleteSalary(@PathVariable Integer id){
         boolean res=salaryService.removeById(id);
         return res ? ApiResponse.ok():ApiResponse.serverError();
     }

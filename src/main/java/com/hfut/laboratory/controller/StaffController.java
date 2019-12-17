@@ -1,4 +1,4 @@
-package com.hfut.laboratory.controller.authc;
+package com.hfut.laboratory.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -42,7 +42,7 @@ public class StaffController {
     @GetMapping("/list")
     @ApiOperation("获取在职员工（boss、manger、staff）id、name列表")
     @Cacheable(value = "getStaffList",keyGenerator="simpleKeyGenerator")
-    public ApiResponse<List<SimpleStaffVo>> getStaffList(){
+    public ApiResponse getStaffList(){
         List<UserRole> roleList = userRoleService.list(QueryWapperUtils.getInWapper("role_id", 2, 3, 4));
 
         List<SimpleStaffVo> res=new ArrayList<>();
@@ -55,6 +55,21 @@ public class StaffController {
         return ApiResponse.ok(res);
     }
 
+    @GetMapping("/all/list")
+    @ApiOperation("获取所有员工（boss、manger、staff）id、name列表")
+    @Cacheable(value = "getAllStaffList",keyGenerator="simpleKeyGenerator")
+    public ApiResponse getAllStaffList(){
+        List<UserRole> roleList = userRoleService.list(QueryWapperUtils.getInWapper("role_id", 2, 3, 4));
+
+        List<SimpleStaffVo> res=new ArrayList<>();
+        roleList.forEach(u_r->{
+            User user = userService.getById(u_r.getUserId());
+            res.add(new SimpleStaffVo(user.getId(),user.getName()));
+        });
+        return ApiResponse.ok(res);
+    }
+
+
     @GetMapping("/job")
     @ApiOperation("查询员工做的事情")
     @ApiImplicitParams({
@@ -65,7 +80,7 @@ public class StaffController {
             @ApiImplicitParam(name = "staffId",value = "员工id"),
     })
     @Cacheable(value = "getProjectByName",keyGenerator="simpleKeyGenerator")
-    public ApiResponse<Map<String,Integer>> getProjectByName(@RequestParam(required = false,defaultValue = "1") Integer current,
+    public ApiResponse getProjectByName(@RequestParam(required = false,defaultValue = "1") Integer current,
                                                              @RequestParam(required = false,defaultValue = "20") Integer size,
                                                              @RequestParam(required = false) LocalDateTime startTime,
                                                              @RequestParam(required = false) LocalDateTime endTime,
