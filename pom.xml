@@ -30,37 +30,37 @@
     </properties>
 
 
-    <pluginRepositories>
-        <pluginRepository>
-            <id>jcenter-snapshots</id>
-            <name>jcenter</name>
-            <url>http://oss.jfrog.org/artifactory/oss-snapshot-local/</url>
-        </pluginRepository>
-        <pluginRepository>
-            <id>jcenter-releases</id>
-            <name>jcenter</name>
-            <url>http://jcenter.bintray.com</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </pluginRepository>
-    </pluginRepositories>
+<!--    <pluginRepositories>-->
+<!--        <pluginRepository>-->
+<!--            <id>jcenter-snapshots</id>-->
+<!--            <name>jcenter</name>-->
+<!--            <url>http://oss.jfrog.org/artifactory/oss-snapshot-local/</url>-->
+<!--        </pluginRepository>-->
+<!--        <pluginRepository>-->
+<!--            <id>jcenter-releases</id>-->
+<!--            <name>jcenter</name>-->
+<!--            <url>http://jcenter.bintray.com</url>-->
+<!--            <snapshots>-->
+<!--                <enabled>false</enabled>-->
+<!--            </snapshots>-->
+<!--        </pluginRepository>-->
+<!--    </pluginRepositories>-->
 
-    <repositories>
-        <repository>
-            <id>jcentral</id>
-            <name>bintray</name>
-            <url>http://jcenter.bintray.com</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>jcenter-snapshots</id>
-            <name>jcenter</name>
-            <url>http://oss.jfrog.org/artifactory/oss-snapshot-local/</url>
-        </repository>
-    </repositories>
+<!--    <repositories>-->
+<!--        <repository>-->
+<!--            <id>jcentral</id>-->
+<!--            <name>bintray</name>-->
+<!--            <url>http://jcenter.bintray.com</url>-->
+<!--            <snapshots>-->
+<!--                <enabled>false</enabled>-->
+<!--            </snapshots>-->
+<!--        </repository>-->
+<!--        <repository>-->
+<!--            <id>jcenter-snapshots</id>-->
+<!--            <name>jcenter</name>-->
+<!--            <url>http://oss.jfrog.org/artifactory/oss-snapshot-local/</url>-->
+<!--        </repository>-->
+<!--    </repositories>-->
 
     <dependencies>
         <dependency>
