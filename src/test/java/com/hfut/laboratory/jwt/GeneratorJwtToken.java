@@ -1,4 +1,4 @@
-package com.hfut.laboratory.other;
+package com.hfut.laboratory.jwt;
 
 import com.hfut.laboratory.dto.UserInfo;
 import com.hfut.laboratory.config.JwtConfig;

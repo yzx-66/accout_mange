@@ -1,10 +1,6 @@
 package com.hfut.laboratory.other;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.hfut.laboratory.pojo.CouponCard;
-import com.hfut.laboratory.pojo.Customer;
-import com.hfut.laboratory.service.CustomerService;
 import com.hfut.laboratory.util.CodecUtils;
 import com.hfut.laboratory.util.TimeConvertUtils;
 import org.junit.Test;
@@ -14,13 +10,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.io.*;
-import java.lang.reflect.Proxy;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Arrays;
-import java.util.Calendar;
 import java.util.Date;
-import java.util.GregorianCalendar;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest

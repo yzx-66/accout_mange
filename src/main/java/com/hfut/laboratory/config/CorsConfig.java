@@ -26,7 +26,7 @@ public class CorsConfig {
         corsConfiguration.addAllowedOrigin("http://106.14.125.136");
         //corsConfiguration.addAllowedOrigin("*");
 
-        //允许携带cookie
+        //允许携带cookie 此时允许的origin不可以为*
         corsConfiguration.setAllowCredentials(true);
 
         UrlBasedCorsConfigurationSource urlBasedCorsConfigurationSource=new UrlBasedCorsConfigurationSource();

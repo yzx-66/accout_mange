@@ -136,7 +136,7 @@ public final class CookieUtils {
                 cookieValue = URLEncoder.encode(cookieValue, encodeString);
             }
             Cookie cookie = new Cookie(cookieName, cookieValue);
-            if (cookieMaxAge != null && cookieMaxAge > 0)
+            if (cookieMaxAge != null && cookieMaxAge>0)
                 cookie.setMaxAge(cookieMaxAge);
             if (null != request)// 设置域名的cookie
                 cookie.setDomain(getDomainName(request));
@@ -157,17 +157,20 @@ public final class CookieUtils {
     private static final String getDomainName(HttpServletRequest request) {
         String domainName = null;
 
-        String serverName = request.getRequestURL().toString();
-        if (serverName == null || serverName.equals("")) {
-            domainName = "";
-        } else {
+        try{
             if(request.getMethod().toUpperCase().equals("GET")){
                 domainName=request.getHeader("Referer").split("/")[2];
             }else {
                 domainName=request.getHeader("Origin").split("//")[1];
+            }
+        }catch (NullPointerException e){
+            domainName=request.getHeader("Host").split(":")[0];
+            if(StringUtils.isBlank(domainName)){
+                throw new RuntimeException("无法获得设置cookie的domain");
             }
         }
         return domainName;
     }
 
 }
+

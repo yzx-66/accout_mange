@@ -1,4 +1,4 @@
-package com.hfut.laboratory.other;
+package com.hfut.laboratory.mysql;
 
 import com.hfut.laboratory.pojo.User;
 import com.hfut.laboratory.service.UserService;
