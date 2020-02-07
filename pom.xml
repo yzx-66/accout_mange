@@ -127,25 +127,25 @@
             <artifactId>springfox-swagger-ui</artifactId>
             <version>2.9.2</version>
         </dependency>
-        <!--offline doc-->
-        <dependency>
-            <groupId>org.springframework.restdocs</groupId>
-            <artifactId>spring-restdocs-mockmvc</artifactId>
-            <!--<version>2.0.2.RELEASE</version>-->
-            <!--<scope>test</scope>-->
-        </dependency>
-        <dependency>
-            <groupId>io.github.swagger2markup</groupId>
-            <artifactId>swagger2markup-spring-restdocs-ext</artifactId>
-            <version>${swagger2markup.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-staticdocs</artifactId>
-            <version>2.6.1</version>
-            <!--<scope>test</scope>-->
-        </dependency>
+<!--        &lt;!&ndash;offline doc&ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.restdocs</groupId>-->
+<!--            <artifactId>spring-restdocs-mockmvc</artifactId>-->
+<!--            &lt;!&ndash;<version>2.0.2.RELEASE</version>&ndash;&gt;-->
+<!--            &lt;!&ndash;<scope>test</scope>&ndash;&gt;-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>io.github.swagger2markup</groupId>-->
+<!--            <artifactId>swagger2markup-spring-restdocs-ext</artifactId>-->
+<!--            <version>${swagger2markup.version}</version>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>io.springfox</groupId>-->
+<!--            <artifactId>springfox-staticdocs</artifactId>-->
+<!--            <version>2.6.1</version>-->
+<!--            &lt;!&ndash;<scope>test</scope>&ndash;&gt;-->
+<!--        </dependency>-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
@@ -328,21 +328,6 @@
 
 <!--                </executions>-->
 <!--            </plugin>-->
-
-
-<!--            <plugin>-->
-<!--                <groupId>org.apache.maven.plugins</groupId>-->
-<!--                <artifactId>maven-compiler-plugin</artifactId>-->
-<!--                <configuration>-->
-<!--                    <source>1.8</source>-->
-<!--                    <target>1.8</target>-->
-<!--                    <encoding>UTF-8</encoding>-->
-<!--                    <compilerArguments>-->
-<!--                        <bootclasspath>C:\Java\jdk1.8.0_11\jre\lib\rt.jar;C:\Java\jdk1.8.0_11\jre\lib\plugin.jar</bootclasspath>-->
-<!--                    </compilerArguments>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
-
         </plugins>
     </build>
 </project>

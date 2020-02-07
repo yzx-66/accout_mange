@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a42bad7-9b52-469a-8618-50dcb70514aa" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/hfut/laboratory/swagger/Swagger2MarkupTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/hfut/laboratory/swagger/Swagger2MarkupTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -29,8 +31,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5834">
-              <caret line="343" column="28" lean-forward="true" selection-start-line="343" selection-start-column="28" selection-end-line="343" selection-end-column="28" />
+            <state relative-caret-position="-3622">
+              <caret line="126" column="50" selection-start-line="126" selection-start-column="50" selection-end-line="126" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/hfut/laboratory/swagger/Swagger2MarkupTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="302">
+              <caret line="60" column="3" selection-start-line="60" selection-start-column="3" selection-end-line="60" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -49,15 +60,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-85">
               <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/CouponCardController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="836">
-              <caret line="77" selection-start-line="77" selection-end-line="77" />
             </state>
           </provider>
         </entry>
@@ -193,7 +195,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/config/DateDeserializer.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/util/ObjectMapperUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/vo/salary/SetSalaryVo.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/hfut/laboratory/json/SalaryJsons.java" />
@@ -244,6 +245,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/constants/UrlConstants.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/util/CookieUtils.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/com/hfut/laboratory/swagger/Swagger2MarkupTest.java" />
       </list>
     </option>
   </component>
@@ -326,12 +328,45 @@
               <item name="accout-mange" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="accout-mange" type="b2602c69:ProjectViewProjectNode" />
               <item name="accout-mange" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="laboratory" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="accout-mange" type="b2602c69:ProjectViewProjectNode" />
+              <item name="accout-mange" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="accout-mange" type="b2602c69:ProjectViewProjectNode" />
+              <item name="accout-mange" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="accout-mange" type="b2602c69:ProjectViewProjectNode" />
+              <item name="accout-mange" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="laboratory" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="accout-mange" type="b2602c69:ProjectViewProjectNode" />
+              <item name="accout-mange" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="laboratory" type="462c0819:PsiDirectoryNode" />
+              <item name="swagger" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -561,7 +596,7 @@
       <workItem from="1580714826206" duration="738000" />
       <workItem from="1580877615599" duration="1248000" />
       <workItem from="1580880527360" duration="206000" />
-      <workItem from="1581083009640" duration="3084000" />
+      <workItem from="1581083009640" duration="4165000" />
     </task>
     <task id="LOCAL-00001" summary="修复redis做缓存的一个bug">
       <created>1574682967415</created>
@@ -640,7 +675,21 @@
       <option name="project" value="LOCAL" />
       <updated>1581088732540</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="提交">
+      <created>1581088992233</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1581088992233</updated>
+    </task>
+    <task id="LOCAL-00013" summary="提交">
+      <created>1581089089330</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1581089089330</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -676,7 +725,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="479703000" />
+    <option name="totallyTimeSpent" value="480784000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -689,7 +738,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4978903" visible="true" weight="0.22520107" />
       <window_info id="Structure" order="1" sideWeight="0.5021097" side_tool="true" weight="0.23324397" />
@@ -701,7 +749,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.53541076" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49865952" visible="true" weight="0.04249292" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49865952" visible="true" weight="0.33002833" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49597856" weight="0.41076487" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -714,7 +762,7 @@
       <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49865952" weight="0.5439094" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.3286119" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
-      <window_info anchor="bottom" id="Version Control" order="15" weight="0.11756374" />
+      <window_info anchor="bottom" id="Version Control" order="15" weight="0.32719547" />
       <window_info anchor="bottom" id="Duplicates" order="16" weight="0.32956153" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -769,6 +817,32 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="修复redis做缓存的一个bug" />
@@ -846,13 +920,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.1.8.RELEASE/spring-webmvc-5.1.8.RELEASE-sources.jar!/org/springframework/web/servlet/HandlerInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="93" column="35" selection-start-line="93" selection-start-column="35" selection-end-line="93" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.1.8.RELEASE/spring-webmvc-5.1.8.RELEASE-sources.jar!/org/springframework/web/servlet/config/annotation/WebMvcConfigurer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="167">
@@ -1192,10 +1259,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/hfut/laboratory/swagger/Swagger2MarkupTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="60" column="3" selection-start-line="60" selection-start-column="3" selection-end-line="60" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5834">
-          <caret line="343" column="28" lean-forward="true" selection-start-line="343" selection-start-column="28" selection-end-line="343" selection-end-column="28" />
+        <state relative-caret-position="-3622">
+          <caret line="126" column="50" selection-start-line="126" selection-start-column="50" selection-end-line="126" selection-end-column="50" />
         </state>
       </provider>
     </entry>
