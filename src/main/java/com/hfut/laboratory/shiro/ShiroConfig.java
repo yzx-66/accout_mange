@@ -81,7 +81,7 @@ public class ShiroConfig {
         filterChainDefinitionMap.put("/**", "jwt");
 
         //TODO 取消拦截就注释这里
-        shiroFilterFactoryBean.setFilterChainDefinitionMap(filterChainDefinitionMap);
+        //shiroFilterFactoryBean.setFilterChainDefinitionMap(filterChainDefinitionMap);
 
         return shiroFilterFactoryBean;
     }

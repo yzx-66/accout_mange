@@ -24,6 +24,7 @@ public class CorsConfig {
         //TODO http://127.0.0.1:80
         corsConfiguration.addAllowedOrigin("http://localhost");
         corsConfiguration.addAllowedOrigin("http://106.14.125.136");
+        corsConfiguration.addAllowedOrigin("http://hfutyzx.cn");
         //corsConfiguration.addAllowedOrigin("*");
 
         //允许携带cookie 此时允许的origin不可以为*
