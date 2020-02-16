@@ -1,13 +1,17 @@
 package com.hfut.laboratory.other;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.hfut.laboratory.pojo.User;
+import com.hfut.laboratory.service.UserService;
 import com.hfut.laboratory.util.CodecUtils;
+import com.hfut.laboratory.util.QueryWapperUtils;
 import com.hfut.laboratory.util.TimeConvertUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.io.*;
 import java.time.LocalDateTime;
@@ -20,6 +24,9 @@ public class OtherTests {
 
     @Autowired
     private ObjectMapper objectMapper;
+
+    @Autowired
+    private UserService userService;
 
 
     @Test
@@ -51,6 +58,10 @@ public class OtherTests {
     }
 
     @Test
-    public void test06(){
+    public void test06() throws InterruptedException {
+        User user = userService.getOne(QueryWapperUtils.getInWapper("id", 1));
+        user.setPhone("99999");
+        boolean res = userService.update(user, QueryWapperUtils.getInWapper("id", 1));
+      //  Thread.sleep(1000);
     }
 }

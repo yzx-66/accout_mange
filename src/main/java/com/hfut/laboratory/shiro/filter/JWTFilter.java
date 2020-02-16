@@ -11,6 +11,7 @@ import org.apache.shiro.web.util.WebUtils;
 
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -25,6 +26,8 @@ public class JWTFilter extends AuthorizationFilter {
     public boolean isAccessAllowed(ServletRequest request, ServletResponse response, Object mappedValue) throws Exception{
         HttpServletRequest httpServletRequest = WebUtils.toHttp(request);
         HttpServletResponse httpServletResponse=WebUtils.toHttp(response);
+
+        Cookie[] cookies = httpServletRequest.getCookies();
 
         for (String u : UrlConstants.ANONURLS) {
             if (pathMatcher.match(u, httpServletRequest.getRequestURI())){
