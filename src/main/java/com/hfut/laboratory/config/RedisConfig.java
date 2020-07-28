@@ -22,7 +22,7 @@ import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
 
-@Configuration
+//@Configuration
 @EnableCaching
 public class RedisConfig {
 

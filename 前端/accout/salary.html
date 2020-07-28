@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>页面首页</title>
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./lib/bootstrap-validator/css/bootstrapValidator.min.css">
+    <link rel="stylesheet" href="./lib/nprogress/nprogress.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/employeeSalary.css">
+</head>
+<body>
+
+<!--左边栏-->
+<div class="left_aside">
+
+    <div class="brand">后台管理系统</div>
+
+    <div class="user">
+        <div class="user_img">
+            <img src="./image/default.png" alt="">
+        </div>
+        <div class="user_name">
+            <span>超级管理员</span>
+        </div>
+
+        <div class="user_name">
+
+        </div>
+    </div>
+
+    <div class="nav">
+
+		 <ul>
+            <li class="first">
+                <a href="./customer.html">
+                    <i class="glyphicon glyphicon-user"></i>
+                    <span>客户管理</span>
+                </a>
+            </li>
+        </ul>
+
+
+        <ul>
+            <li class="first">
+                <a href="./staff.html">
+                    <i class="glyphicon glyphicon-user"></i>
+                    <span>员工管理</span>
+                </a>
+            </li>
+        </ul>
+
+
+		 <ul>
+            <li class="first">
+                <a href="./project.html">
+                    <i class="glyphicon glyphicon-tags"></i>
+                    <span>项目管理</span>
+                </a>
+            </li>
+        </ul>
+
+		<ul>
+            <li class="first current">
+                <a href="./salary.html">
+                    <i class="glyphicon glyphicon-jpy"></i>
+                    <span>薪水管理</span>
+                </a>
+            </li>
+        </ul>
+
+        <ul>
+            <li class="first">
+                <a href="./card.html">
+                    <i class="glyphicon glyphicon-tags"></i>
+                    <span>优惠卡管理</span>
+                </a>
+            </li>
+        </ul>
+
+        <ul>
+            <li class="first">
+                <a href="./consum.html">
+                    <i class="glyphicon glyphicon-list"></i>
+                    <span>消费记录</span>
+                </a>
+            </li>
+        </ul>
+
+		<ul>
+            <li class="first">
+                <a href="./turnover.html">
+                    <i class="glyphicon glyphicon-list"></i>
+                    <span>营业额记录</span>
+                </a>
+            </li>
+        </ul>
+
+    </div>
+
+</div>
+
+<!--右边主体-->
+<div class="item_main">
+
+    <!--    头部导航栏-->
+    <div class="main_top">
+        <a href="#" class="pull-left" id="top_btn_left"><i class="glyphicon glyphicon-align-justify"></i></a>
+        <a href="#" class="pull-right" id="top_btn_right"><i class="glyphicon glyphicon-log-out"></i></a>
+    </div>
+
+    <!--    主体内容-->
+    <div class="main_body container-fluid">
+        <!--        路径导航-->
+        <ol class="breadcrumb">
+            <li><a href="./index1.html" style="color: #2aabd2">首页</a></li>
+            <li class="active">薪水管理</li>
+        </ol>
+
+        <!--            全体展示  -->
+        <div>
+        	<div class="disply" >
+                   <div id="paystate">
+                   	<div style=" float:left; margin-right: 10px;">
+                   		<p>更改结算日期</p>
+                   		<input type="date" id="salaryday"/>
+                   		<button onclick=" setTime()">提交</button>
+                   	</div>
+                   	
+                   	<div id="msgbox">
+                   	<span  ></span>
+                   	</div>
+                   	<div style=" float:right; ">
+                   	<span class="glyphicon glyphicon-calendar" style="font-size: 50px"></span>  	
+                   </div>
+                   	</div> 
+                    <div>
+                    	<span class="glyphicon glyphicon-list-alt" style="color: rgb(81, 153, 218); font-size: 13px;"></span>
+                    	选择员工
+                        <select id="staffname" onchange="render()" >
+                         <option style='display: none'></option>
+                         <option >全体员工</option>	
+                         </select>
+                    </div>
+                    <div style="margin-top: 5px;">
+                    	<span class="glyphicon glyphicon-time" style="color: rgb(81, 153, 218); font-size: 13px;"></span>
+                    	起始
+                        <input type="date" id="user_date_start" />
+                                                                        截至
+                        <input type="date" id="user_date_end"  />
+        		        <span id="11" align="center">工资详单</span> 
+        		        <button onclick="update_table()"><span class="glyphicon glyphicon-refresh" style="color: rgb(81, 153, 218); font-size: 13px;" >筛选刷新</span></button>
+        		        <span id="inputerror" style="color: red; " ></span>
+                   </div>
+                   
+        	</div>
+            <table class="list_table">
+             	<thead>
+             		<th>员工姓名</th>
+             		<th>项目收入</th>
+             		<th>办卡收入</th>
+             		<th>招揽营业额 </th>
+             		<th>项目提成</th>
+             		<th>底薪</th>
+             		<th>总工资</th>
+             		<th>结算日期</th>
+             		<th>备注</th>
+             		<th>修改/删除</th>
+             	</thead>
+             	
+             	<tbody id="salarlist">
+             		
+             	</tbody>
+             </table>
+             <div align="center">
+                <ul id="page_classify"></ul>
+             </div>
+        </div>
+    </div>
+
+<!-- 制作模板 -->
+                    <script type="text/html" id="my_template">	
+                      {{each records v i}}
+                    <tr id="{{i}}">
+                        <td >{{v.staffName}}</td>
+                          <td >{{v.proSum}}</td>
+                        <td >{{v.cardSum}}</td>
+                        <td > {{v.makeMoneyIncome}}</td>
+                        <td > {{v.proAdd}}</td>
+                        <td >{{ v.baseSalary}}</td>
+                        <td >{{ v.sumSalary}}</td>
+                        <td >{{v.settleDate}}</td>
+                        <td name="remark" style="width: 310px; white-space: pre-wrap" ></td>
+                        <td style="width: 160px;vertical-align: middle;">
+                            <div >
+                        	<button  class="btn" data-toggle="modal" data-target="#myModal1" onclick="get_updateid(this)">修改</button>
+                        	<button  class="btn" data-toggle="modal" data-target="#myModal2" onclick="get_updateid(this)">删除本条</button>
+                            </div>
+                        </td>
+                         <td style="display: none;">{{v.id}}</td>
+                    </tr>
+                        {{/each }}
+                        
+                </script>
+<!--退出模态框-->
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" id="myModal">
+
+    <div class="modal-dialog  modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                <h4 class="modal-title">温馨提示</h4>
+            </div>
+            <div class="modal-body">
+                <p style="color: #A94442;">
+                    <i class="glyphicon glyphicon-info-sign"></i>
+                    <span id="logout_notify">你确定要退出后台管理系统吗</span>
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary" id="logout_btn">退出</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--工资修改模态框-->
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog" style="width:250px">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					&times;
+				</button>
+				<h4 class="modal-title" id="myModalLabel">
+					总工资金额增/减
+				</h4>
+			</div>
+			<div class="modal-body">
+			    <p>修改金额</p>
+			    <input id="salary_change" type="number" name="" id="" value="" placeholder="正数增加/负数减少" style="border:1px solid"/>
+			    <hr />
+				<p>修改原因</p>
+				<textarea id="change_reason"></textarea>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">关闭
+				</button>
+				<button type="button" class="btn btn-primary" data-dismiss="modal" onclick="changesalary()">
+					提交更改
+				</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal -->
+</div>
+<!--工资条删除模态框-->
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog" style="width:250px">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					&times;
+				</button>
+			</div>
+			<div class="modal-body">
+				<span class="glyphicon glyphicon-trash" style="color: rgb(251, 50, 60); font-size: 22px;"> </span>
+			    <p style=" font-size: 22px;">您确定要删除本条记录？</p>
+			 </div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">关闭
+				</button>
+				<button type="button" class="btn btn-primary" data-dismiss="modal" onclick="delete_note()">
+					删除
+				</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal -->
+</div>
+
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
+<script src="lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
+<script src="./lib/nprogress/nprogress.js"></script>
+<script src="./js/common.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./js/salay.js"></script>
+
+</body>
+</html>

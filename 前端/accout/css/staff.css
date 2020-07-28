@@ -1,0 +1,380 @@
+::-webkit-scrollbar {
+	display: none;
+}
+
+.staff_body {
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	padding-left: 180px;
+	background-color: white;
+	padding-top: 121px;
+	transition: 1s;
+}
+
+.exchange1 {
+	padding-left: 0px;
+	transition: 1s;
+}
+
+#body_main_left {
+	margin: 15px 15px 15px 30px;
+	padding: 15px 0px;
+	width: 95%;
+	min-width: 624px;
+	background-color: #00000004;
+	z-index: 1;
+	border-radius: 15px;
+	float: left;
+}
+
+#body_main_left_top {
+	height: 100px;
+	width: 57.5%;
+	min-width: 640px;
+	margin: 0px 0px 0px 30px;
+	background-color: #FFFFFF;
+	position: fixed;
+}
+
+#body_main_left_top_select_roleId {
+	position: absolute;
+	left: 15px;
+	bottom: 15px;
+	width: 135px;
+	height: 35px;
+	font-size: 20px;
+	font-family: "楷体";
+	color: #FF0000;
+	text-align: center;
+	text-align-last: center;
+}
+
+#body_main_left_top_select_status {
+	position: absolute;
+	left: 200px;
+	bottom: 15px;
+	width: 175px;
+	height: 35px;
+	font-size: 20px;
+	font-family: "楷体";
+	color: #FF0000;
+	text-align: center;
+	text-align-last: center;
+}
+
+.body_main_li_css_js {
+	margin: 40px 25px;
+	padding: 5px;
+	font-size: 24px;
+	font-family: "楷体";
+	background-color: #ADFF2F4f;
+	border-radius: 15px;
+	overflow: hidden;
+	transition: 0.5s;
+	-ms-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+}
+
+.body_main_li_css_js:hover {
+	margin: 40px 5px;
+	transition: 0.5s;
+	box-shadow: 2px 2px 12px #9D9D9D;
+	cursor: pointer;
+}
+
+.body_main_li_css_js_fren {
+	margin: 40px 25px;
+	padding: 5px;
+	font-size: 24px;
+	font-family: "楷体";
+	background-color: #F5F5F5;
+	border-radius: 15px;
+	overflow: hidden;
+	transition: 0.5s;
+	-ms-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+}
+
+.body_main_li_css_js_fren:hover {
+	margin: 40px 5px;
+	transition: 0.5s;
+	box-shadow: 2px 2px 12px #9D9D9D;
+	cursor: pointer;
+}
+
+.body_main_li_css_js:active {
+	margin: 40px 15px;
+	transition: 0.01s;
+	cursor: pointer;
+}
+
+.body_main_li_css_js_ever {
+	margin: 20px 15px;
+	padding: 5px;
+	font-size: 24px;
+	font-family: "楷体";
+	background-color: #ADFF2F4f;
+	border-radius: 15px;
+	overflow: hidden;
+	-ms-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+}
+
+.body_main_li_css_js_ever:hover {
+	cursor: pointer;
+}
+
+.body_main_li_first_css_js {
+	text-align: center;
+	margin: 0 1.5%;
+	width: 10%;
+	float: left;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.body_main_li_second_css_js {
+	text-align: center;
+	margin: 0 1.5%;
+	width: 15%;
+	float: left;
+}
+
+.body_main_li_third_css_js {
+	text-align: center;
+	margin: 0 1.5%;
+	width: 10%;
+	float: left;
+}
+
+.body_main_li_forth_css_js {
+	text-align: center;
+	margin: 0 1.5%;
+	width: 25%;
+	float: left;
+	word-break: break-all;
+}
+
+.body_main_li_fifth_css_js {
+	text-align: center;
+	margin: 0 1.5%;
+	width: 25%;
+	float: left;
+	word-break: break-all;
+}
+
+#body_main_left_right_img {
+	width: 36px;
+	height: 36px;
+	float: right;
+	margin-right: 25px;
+}
+
+.img_bigger:hover {
+	cursor: pointer;
+	transform: scale(1.5);
+	transition: 1s;
+}
+
+.body_main_right {
+	margin: 10px 15px;
+	width: 80%;
+	min-width: 400px;
+	z-index: 1;
+	border-radius: 20px;
+	right: 0;
+	/* 	position: fixed;
+	width: 25%;
+	margin: 10px 35px; */
+	/* 	max-width: 500px; */
+	overflow: hidden;
+	transition: 1s;
+	white-space: pre-line;
+}
+
+.exchange2 {
+	/* width: 30%; */
+	transition: 1s;
+}
+
+.body_main_right_xiangxi {
+	margin: 5px auto;
+	width: 90%;
+	z-index: 2;
+	background-color: #BCE8F150;
+	transition: 1s;
+	border-radius: 25px;
+	white-space: pre-line;
+}
+
+.body_main_right_xiangxi_next {
+	margin: 5px auto;
+	width: 90%;
+	z-index: 2;
+	background-color: #FFFF0030;
+	transition: 1s;
+	border-radius: 25px;
+	white-space: pre-line;
+}
+
+.xiangxi_li {
+	width: 100%;
+	margin: 25px 0px 0px 0px;
+	padding: 10px 10px 0px 10px;
+	font-size: 24px;
+	font-family: "楷体";
+	color: red;
+	padding-left: 35px;
+}
+
+#data_xiangxi_ul {
+	overflow: hidden;
+}
+
+/* 以下为button的一些设置,可以删除 */
+.btn {
+	font-size: 1.5em;
+	padding: 0.5rem 2rem;
+	font-weight: 200;
+	font-family: "楷体";
+	border: 0.078125rem solid white;
+	border-radius: 15px;
+	margin: 35px 15px 10px 15px;
+	float: right;
+	outline: none;
+}
+
+.btn_alert {
+	font-size: 1.25em;
+	padding: 0.25rem 1.5rem;
+	font-weight: 200;
+	font-family: "楷体";
+	border-radius: 5px;
+	margin: 15px 15px 5px 15px;
+	float: right;
+	outline: none;
+	background-color: gainsboro;
+	color: #000000;
+	border: 1px soild black;
+}
+
+.btn_alert:hover {
+	transition: 0.5s;
+	cursor: pointer;
+	box-shadow: 1px 1px 12px #9D9D9D;
+	color: white;
+	background-color: dimgray;
+}
+
+.btn_confirm {
+	font-size: 1.25em;
+	padding: 0.25rem 1.5rem;
+	font-weight: 200;
+	font-family: "楷体";
+	border-radius: 5px;
+	margin: 35px 15px 5px 15px;
+	float: right;
+	outline: none;
+	background-color: gainsboro;
+	color: #000000;
+	border: 1px soild black;
+}
+
+.btn_confirm:hover {
+	transition: 0.5s;
+	cursor: pointer;
+	box-shadow: 1px 1px 12px #9D9D9D;
+	color: white;
+	background-color: dimgray;
+}
+
+.btn:hover {
+	transition: 0.5s;
+	cursor: pointer;
+	box-shadow: 1px 1px 12px #9D9D9D;
+}
+
+.btn_del {
+	background-color: black;
+	color: white;
+}
+
+.btn_del:hover {
+	background-color: red;
+	color: white;
+
+}
+
+.btn_fren {
+	background-color: white;
+	color: black;
+}
+
+.btn_fren:hover {
+	background-color: skyblue;
+	color: black;
+}
+
+.btn_change {
+	background-color: gray;
+	color: white;
+}
+
+.btn_change:hover {
+	background-color: orange;
+	color: black;
+}
+
+.change_staff_eve_div {
+	margin-left: 72px;
+	width: 300px;
+}
+
+.change_staff_eve_p {
+	font-family: "楷体";
+	font-size: 24px;
+	margin-left: 16px;
+}
+
+.change_staff_eve_input {
+	width: 300px;
+	height: 32px;
+	font-family: "楷体";
+	font-size: 20px;
+	background-color: #0000000A;
+	padding: 4px;
+	text-align: center;
+	text-align-last: center;
+	border-radius: 10px;
+	-web-kit-appearance: none;
+	-moz-appearance: none;
+	border: 1px solid black;
+}
+
+
+.input_never_change {
+	color: darkgrey;
+}
+
+
+.unava {
+	display: none;
+}
+
+.center_modal {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.center_bottom {
+	position: fixed;
+	top: 60%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}

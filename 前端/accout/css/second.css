@@ -1,0 +1,8 @@
+.table.table-bordered.table-hover td,
+.table.table-bordered.table-hover th {
+  text-align: center;
+  vertical-align: middle;
+}
+#add_btn {
+  margin-bottom: 20px;
+}

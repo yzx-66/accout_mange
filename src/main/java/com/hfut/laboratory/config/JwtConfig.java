@@ -28,10 +28,4 @@ public class JwtConfig {
 
     private PublicKey publicKey;
     private PrivateKey privateKey;
-
-    @PostConstruct
-    public void createRsaKey() throws Exception {
-        publicKey = RsaUtils.getPublicKey(pubKeyPath);
-        privateKey = RsaUtils.getPrivateKey(priKeyPath);
-    }
 }

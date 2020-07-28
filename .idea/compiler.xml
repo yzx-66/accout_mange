@@ -9,6 +9,9 @@
         <module name="accout-mange" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="accout-mange" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">

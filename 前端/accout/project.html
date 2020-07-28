@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>页面首页</title>
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./lib/bootstrap-validator/css/bootstrapValidator.min.css">
+    <link rel="stylesheet" href="./lib/nprogress/nprogress.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/common.css">
+	<script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
+    <script src="./js/project.js"></script>
+</head>
+<body>
+
+<!--左边栏-->
+<div class="left_aside">
+
+    <div class="brand">后台管理系统</div>
+
+    <div class="user">
+        <div class="user_img">
+            <img src="./image/default.png" alt="">
+        </div>
+        <div class="user_name">
+            <span>超级管理员</span>
+        </div>
+
+        <div class="user_name">
+
+        </div>
+    </div>
+
+    <div class="nav">
+
+		 <ul>
+            <li class="first">
+                <a href="./customer.html">
+                    <i class="glyphicon glyphicon-user"></i>
+                    <span>客户管理</span>
+                </a>
+            </li>
+        </ul>
+
+
+        <ul>
+            <li class="first">
+                <a href="./staff.html">
+                    <i class="glyphicon glyphicon-user"></i>
+                    <span>员工管理</span>
+                </a>
+            </li>
+        </ul>
+
+
+		 <ul>
+            <li class="first current">
+                <a href="./project.html">
+                    <i class="glyphicon glyphicon-tags"></i>
+                    <span>项目管理</span>
+                </a>
+            </li>
+        </ul>
+
+        <ul>
+            <li class="first">
+                <a href="./card.html">
+                    <i class="glyphicon glyphicon-tags"></i>
+                    <span>优惠卡管理</span>
+                </a>
+            </li>
+        </ul>
+
+		<ul>
+            <li class="first">
+                <a href="./salary.html">
+                    <i class="glyphicon glyphicon-jpy"></i>
+                    <span>薪水管理</span>
+                </a>
+            </li>
+        </ul>
+
+        <ul>
+            <li class="first">
+                <a href="./consum.html">
+                    <i class="glyphicon glyphicon-list"></i>
+                    <span>消费记录</span>
+                </a>
+            </li>
+        </ul>
+
+		<ul>
+            <li class="first">
+                <a href="./turnover.html">
+                    <i class="glyphicon glyphicon-list"></i>
+                    <span>营业额记录</span>
+                </a>
+            </li>
+        </ul>
+
+    </div>
+
+</div>
+
+<!--右边主体-->
+<div class="item_main">
+
+    <!--    头部导航栏-->
+    <div class="main_top">
+        <a href="#" class="pull-left" id="top_btn_left"><i class="glyphicon glyphicon-align-justify"></i></a>
+        <a href="#" class="pull-right" id="top_btn_right"><i class="glyphicon glyphicon-log-out"></i></a>
+    </div>
+
+    <!--    主体内容-->
+    <div class="main_body container-fluid">
+        <!--        路径导航-->
+        <ol class="breadcrumb">
+            <li><a href="./index1.html" style="color: #2aabd2">首页</a></li>
+            <li class="active">项目管理</li>
+			<br/><br/>
+			<!--添加按钮-->
+			<button class="btn btn-primary" type="submit" id="add_btn">添加项目</button>
+			<br/>
+			<br/>
+			<!-- 对数据渲染的位置-->
+			<div class="list_table">
+
+			<!--插在此处    -->
+			</div>
+			<!--分页部分    -->
+			<ul id="page_classify"></ul>
+			</ol>
+    </div>
+
+</div>
+
+<!--模态框-->
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" id="myModal">
+
+    <div class="modal-dialog  modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                <h4 class="modal-title">温馨提示</h4>
+            </div>
+            <div class="modal-body">
+                <p style="color: #A94442;">
+                    <i class="glyphicon glyphicon-info-sign"></i>
+                    <span id="logout_notify">你确定要退出后台管理系统吗</span>
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary" id="logout_btn">退出</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--     添加项目模态框-->
+<div class="modal fade" tabindex="-1" role="dialog" id="myModal_add">
+
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                <h4 class="modal-title">添加项目</h4>
+            </div>
+            <form id="form_add">
+                <div class="modal-body">
+
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="请输入项目名称"
+                               name="name" id="add_project_name">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="请输入项目价格"
+                               name="price">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="请输入项目提成 (0.00格式!!!)"
+                               name="percentage">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="请输入介绍"
+                               name="introduction">
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="submit" class="btn btn-primary" id="submit_btn">添加</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+<!--     修改项目模态框-->
+<div class="modal fade" tabindex="-1" role="dialog" id="myModal_changeproject">
+
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                <h4 class="modal-title">修改项目</h4>
+            </div>
+            <form id="form_changeproject">
+                <div class="modal-body">
+
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="请输入项目名称"
+                               name="name" id="lfd_add_project_name">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="lfd_price" placeholder="请输入项目价格"
+                               name="price">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="lfd_add" placeholder="请输入项目提成 (0.00格式!!!)"
+                               name="percentage">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="lfd_intro" placeholder="请输入介绍"
+                               name="introduction">
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="submit" class="btn btn-primary" id="change_project_btn">修改</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+<!--     数据渲染-->
+<script type="text/html" id="tql">
+    <table class="table table-bordered table-hover table-striped">
+        <tr>
+            <th style="width: 5%;">编号</th>
+            <th>项目介绍</th>
+            <th>项目名称</th>
+            <th>项目价格</th>
+            <th>项目提成</th>
+            <th>操作</th>
+
+        </tr>
+
+        {{each data.records v i}}
+        <tr>
+            <td>{{v.id-1}}</td>
+            <td>{{v.introduction}}</td>
+            <td>{{v.name}}</td>
+            <td>{{v.price}}</td>
+            <td>{{v.percentage}}</td>
+
+                {{if v.status==1}}
+            <td data-id="{{v.id}}">
+                <button class="btn btn-default change_project" data-num="{{i}}">修改项目</button>
+
+                <button class="btn btn-danger btn_delete">删除项目</button>
+                <button class="btn btn-danger btn_change">冻结项目</button>
+            </td>
+            </td>
+
+            {{else}}
+            <td data-id="{{v.id}}">
+                <button class="btn btn-default change_project" data-num="{{i}}">修改项目</button>
+
+                <button class="btn btn-danger btn_delete">删除项目</button>
+                <button class="btn btn-success btn_change">解冻项目</button>
+            </td>
+            {{/if}}
+
+        </tr>
+        {{/each }}
+    </table>
+</script>
+
+<script src="js/common.js"></script>
+</body>
+</html>

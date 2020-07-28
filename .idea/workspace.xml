@@ -1,12 +1,261 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2a42bad7-9b52-469a-8618-50dcb70514aa" name="Default Changelist" comment="">
+    <list default="true" id="0bb2a1a8-eef1-4587-9b74-f125760a89ac" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_3_0_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_annotation_3_0_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_boot_starter_3_0_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_core_3_0_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_extension_3_0_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_generator_3_0_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_9_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_9_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_9_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jsqlparser_jsqlparser_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_20_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_3_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_9_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_jsonwebtoken_jjwt_0_9_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_lettuce_lettuce_core_5_1_7_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_buffer_4_1_36_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_4_1_36_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_common_4_1_36_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_4_1_36_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_4_1_36_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_4_1_36_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_reactor_core_3_2_10_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_core_2_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_schema_2_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spi_2_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spring_web_2_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger2_2_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_common_2_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_ui_2_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_swagger_annotations_1_5_20.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_swagger_models_1_5_20.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_javax_activation_api_1_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_2_0_1_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__joda_time_joda_time_2_10_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_16.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_9_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_9_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_8_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_11_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_11_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_cache_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_config_core_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_config_ogdl_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_core_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_crypto_cipher_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_crypto_core_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_crypto_hash_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_event_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_lang_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_spring_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_web_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_21.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_9_0_21.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_21.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_11_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_freemarker_freemarker_2_3_28.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_library_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_0_17_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_2_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mapstruct_mapstruct_1_2_0_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_2_23_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_4_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_2_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_reactivestreams_reactive_streams_1_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_26.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_26.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_1_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_1_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_configuration_processor_2_1_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_1_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_cache_2_1_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_redis_2_1_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_freemarker_2_1_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_1_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_1_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_1_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_1_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_1_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_1_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_1_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_1_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_1_9_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_keyvalue_2_1_9_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_redis_2_1_9_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_plugin_spring_plugin_core_1_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_plugin_spring_plugin_metadata_1_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_1_8_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_1_8_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_1_8_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_5_1_8_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_1_8_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_1_8_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_1_8_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_1_8_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_oxm_5_1_8_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_1_8_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_1_8_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_1_8_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_1_8_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_6_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_23.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/.idea/accout.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/card.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/consum.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/css/base.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/css/common.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/css/common.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/css/consum_page.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/css/employeeSalary.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/css/first.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/css/first.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/css/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/css/second.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/css/second.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/css/staff.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/css/staff_common.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/css/staff_common.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/css/start.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/css/user.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/css/user.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/customer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/image/default.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/image/none.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/image/添加.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/js/card.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/js/common.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/js/consum.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/js/customer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/js/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/js/login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/js/project.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/js/salay.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/js/staff.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/js/turnover.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/artTemplate/template-web.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/bootstrap-paginator/bootstrap-paginator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/bootstrap-paginator/bootstrap-paginator.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/bootstrap-validator/css/bootstrapValidator.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/bootstrap-validator/css/bootstrapValidator.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/bootstrap-validator/js/bootstrapValidator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/bootstrap-validator/js/bootstrapValidator.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/bootstrap-validator/js/language/ar_MA.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/bootstrap-validator/js/language/be_NL.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/bootstrap-validator/js/language/bg_BG.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/bootstrap-validator/js/language/cs_CZ.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/bootstrap-validator/js/language/da_DK.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/bootstrap-validator/js/language/de_DE.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/bootstrap-validator/js/language/en_US.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/bootstrap-validator/js/language/es_CL.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/bootstrap-validator/js/language/es_ES.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/bootstrap-validator/js/language/fr_FR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/bootstrap-validator/js/language/gr_EL.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/bootstrap-validator/js/language/hu_HU.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/bootstrap-validator/js/language/it_IT.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/bootstrap-validator/js/language/nl_NL.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/bootstrap-validator/js/language/pl_PL.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/bootstrap-validator/js/language/pt_BR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/bootstrap-validator/js/language/tr_TR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/bootstrap-validator/js/language/vi_VN.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/bootstrap-validator/js/language/zh_CN.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/bootstrap-validator/js/language/zh_TW.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/bootstrap/css/bootstrap-theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/bootstrap/css/bootstrap-theme.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/bootstrap/css/bootstrap-theme.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/bootstrap/css/bootstrap-theme.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/bootstrap/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/bootstrap/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/bootstrap/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/bootstrap/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/bootstrap/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/bootstrap/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/bootstrap/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/bootstrap/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/bootstrap/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/bootstrap/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/bootstrap/js/npm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/echarts/echarts.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/jquery-confirm/jquery-confirm.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/jquery-confirm/jquery-confirm.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/jquery-fileupload/jquery.fileupload.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/jquery-fileupload/jquery.iframe-transport.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/jquery-fileupload/jquery.ui.widget.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/jquery/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/jquery/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/jquery/jquery.pagination.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/layDate/laydate/laydate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/layDate/laydate/theme/default/font/iconfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/layDate/laydate/theme/default/font/iconfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/layDate/laydate/theme/default/font/iconfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/layDate/laydate/theme/default/font/iconfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/layDate/laydate/theme/default/laydate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/layDate/test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/layDate/文档/官网.url" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/layDate/文档/文档.url" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/layDate/文档/社区.url" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/layDate/更新日志.url" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/nprogress/nprogress.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/nprogress/nprogress.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/vue/vue-2_6_10.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/vue/vue-resource-1_5_1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/lib/vue/vue-router-3.0.6.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/project.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/salary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/staff.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端/accout/turnover.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/数据库脚本/account_mange.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/shiro/filter/JWTFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/shiro/filter/JWTFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/hfut/laboratory/other/OtherTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/hfut/laboratory/other/OtherTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accout-mange.iml" beforeDir="false" afterPath="$PROJECT_DIR$/accout-mange.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hs_err_pid5424.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/salary" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/AccoutMangeApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/AccoutMangeApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/config/CorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/config/CorsConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/config/JwtConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/config/JwtConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/config/RedisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/config/RedisConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/task/SalaryTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/task/SalaryTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/util/TimeConvertUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/util/TimeConvertUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/rsa/rsa.pri" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/rsa/rsa.pub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/salary.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/salary.txt" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,61 +263,57 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/shiro/ShiroConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1235">
-              <caret line="83" column="10" selection-start-line="83" selection-start-column="10" selection-end-line="83" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/shiro/filter/JWTFilter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/util/CookieUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3078">
-              <caret line="171" column="25" selection-start-line="171" selection-start-column="25" selection-end-line="171" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/hfut/laboratory/other/OtherTests.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="779">
-              <caret line="63" column="86" selection-start-line="61" selection-start-column="8" selection-end-line="63" selection-end-column="86" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/service/UserService.java">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="228">
-              <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+              <caret line="15" column="44" lean-forward="true" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/UserController.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/salary.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="212" column="61" selection-start-line="212" selection-start-column="61" selection-end-line="212" selection-end-column="61" />
+            <state>
+              <caret column="19" selection-start-column="19" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/hfut/laboratory/jwt/GeneratorJwtToken.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/hfut/laboratory/jwt/GenerorRsa.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="14" column="23" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -76,8 +321,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/AccoutMangeApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            <state relative-caret-position="133">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/RoleController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -85,112 +339,39 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2394">
-              <caret line="126" column="50" selection-start-line="126" selection-start-column="50" selection-end-line="126" selection-end-column="50" />
+            <state relative-caret-position="-171">
+              <caret line="129" column="42" selection-start-line="129" selection-start-column="34" selection-end-line="129" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/task/TurnoverTask.java">
+        <entry file="file://$PROJECT_DIR$/数据库脚本/account_mange.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
+            <state relative-caret-position="285">
+              <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/前端/accout/js/card.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#td#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/CustomerController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6004">
-              <caret line="343" column="10" selection-start-line="343" selection-start-column="10" selection-end-line="343" selection-end-column="10" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/accout-mange.iml">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="FxmlFile" />
-        <option value="Enum" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>ReturnCode.NEED_PARAM;</find>
-      <find>throw new RuntimeException(this.getClass().getName()</find>
-      <find>@Cacheable(keyGenerator=&quot;simpleKeyGenerator&quot;)</find>
-      <find>&quot;\t</find>
-      <find>\n&quot; +</find>
-      <find>\t</find>
-      <find>@GetMapping</find>
-      <find>CustomerQuery</find>
-      <find>consumVo.get</find>
-      <find>busnessGroupVo.getType()</find>
-      <find>busnessGroupVo.getStartTime()</find>
-      <find>salaryVo.getEndTime()</find>
-      <find>jobVo.getType()</find>
-      <find>jobVo.getStaffId()</find>
-      <find>Getmapping</find>
-      <find>ApiResponse.self</find>
-      <find>ApiResponse.selfError(ReturnCode.DELETE_FALI_Foreign_KEY)</find>
-      <find>ApiResponse.serverError()</find>
-      <find>ReturnSalaryVo</find>
-      <find>new Integer[]{</find>
-      <find>new String[]{</find>
-      <find>@Cacheable</find>
-      <find>Converter</find>
-      <find>ApiResponse&lt;Void&gt;</find>
-      <find>read</find>
-      <find>read()</find>
-      <find>read(</find>
-      <find>createRsaKey</find>
-      <find>jwtConfig.getPrivateKey()</find>
-      <find>getDomainName</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>build</replace>
-      <replace>ApiResponse.buildServerError();</replace>
-      <replace>ApiResponse.bulidSuccessButNoBody();</replace>
-      <replace>bulidSuccess</replace>
-      <replace>bulidSuccess();</replace>
-      <replace>buildServerError();</replace>
-      <replace>ReturnCode</replace>
-      <replace>ApiResponse.buildSelfError</replace>
-      <replace />
-      <replace>bulidSuccess():</replace>
-      <replace>public ApiResponse&lt;</replace>
-      <replace>ApiResponse.bulidSuccess(</replace>
-      <replace>ReturnCode.CREATED</replace>
-      <replace>ApiResponse.buildCreated()</replace>
-      <replace>@RestController</replace>
-      <replace>ApiResponse.ok</replace>
-      <replace>ApiResponse.serverError</replace>
-      <replace>ApiResponse.selfError</replace>
-      <replace>ApiResponse.authError</replace>
-      <replace>ApiResponse.created()</replace>
-      <replace>created()</replace>
-      <replace>_EXITST);</replace>
-      <replace>_KEY);</replace>
-      <replace>_EXIST);</replace>
-      <replace>.authError()</replace>
-      <replace>staffId</replace>
-      <replace>type</replace>
-      <replace>startTime</replace>
-      <replace>endTime</replace>
-      <replace>ApiResponse</replace>
-    </replaceStrings>
-    <dirStrings>
-      <dir>C:\EXCS\IDEA_exc\accout-mange\src</dir>
-    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -198,241 +379,29 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/pojo/CouponCard.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/pojo/Salary.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/vo/salary/ReturnSalaryVo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/enums/ReturnCode.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/salary.txt" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/anon/SystemController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/perms/CouponCardController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/perms/CustomerController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/perms/ProjectController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/perms/RecordsConsumptionController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/perms/SalaryController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/roles/boss/RecordsTurnoverController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/roles/boss/UserController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/roles/root/PermissionController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/roles/root/RoleController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/RecordBusnessController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/authc/StaffController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/vo/ApiResponse.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/StaffController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/PermissionController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/RecordsConsumptionController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/SalaryController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/task/SalaryTask.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/ProjectController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/CouponCardController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/interceptor/CorsInterceptor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/config/MyWebMvcConfigurer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/util/jwt/JwtTokenUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/config/JwtConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/shiro/filter/PermisstionOrAuthorizationFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/SystemController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/RecordBusnessController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/shiro/config/ShiroConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/shiro/config/JwtApplicationRunner.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/config/DateConvertConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/util/ObjectUtils.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/hfut/laboratory/jwt/GenerorRsa.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/hfut/laboratory/mysql/MybatisPlusTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/constants/UrlConstants.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/com/hfut/laboratory/swagger/Swagger2MarkupTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/config/RedisConfig.java" />
-        <option value="$PROJECT_DIR$/Dockerfile" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/config/CorsConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/shiro/filter/JWTFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/util/CookieUtils.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/hfut/laboratory/other/OtherTests.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/shiro/ShiroConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/account_mange.sql" />
       </list>
     </option>
   </component>
-  <component name="InvalidFacetManager">
-    <ignored-facets>
-      <facet id="accout-mange/invalid/Web" />
-    </ignored-facets>
-  </component>
-  <component name="JsFlowSettings">
-    <service-enabled>true</service-enabled>
-    <exe-path />
-    <other-services-enabled>true</other-services-enabled>
-    <auto-save>true</auto-save>
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="downloadSourcesAutomatically" value="true" />
-        <option name="importAutomatically" value="true" />
-        <option name="vmOptionsForImporter" value="-Xmx768m" />
-      </MavenImportingSettings>
-    </option>
-  </component>
-  <component name="MavenProjectNavigator">
-    <treeState>
-      <expand>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="accout-mange" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="accout-mange" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="accout-mange" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
-        </path>
-      </expand>
-      <select />
-    </treeState>
-  </component>
-  <component name="MavenRunner">
-    <option name="skipTests" value="true" />
-  </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-10" />
-    <option name="y" value="-10" />
-    <option name="width" value="975" />
-    <option name="height" value="1050" />
+    <option name="width" value="830" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="CatdeaLogs" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="accout-mange" type="b2602c69:ProjectViewProjectNode" />
               <item name="accout-mange" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="accout-mange" type="b2602c69:ProjectViewProjectNode" />
-              <item name="accout-mange" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="accout-mange" type="b2602c69:ProjectViewProjectNode" />
-              <item name="accout-mange" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="accout-mange" type="b2602c69:ProjectViewProjectNode" />
-              <item name="accout-mange" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="accout-mange" type="b2602c69:ProjectViewProjectNode" />
-              <item name="accout-mange" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="laboratory" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="accout-mange" type="b2602c69:ProjectViewProjectNode" />
-              <item name="accout-mange" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="laboratory" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="accout-mange" type="b2602c69:ProjectViewProjectNode" />
-              <item name="accout-mange" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="laboratory" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="accout-mange" type="b2602c69:ProjectViewProjectNode" />
-              <item name="accout-mange" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="laboratory" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="accout-mange" type="b2602c69:ProjectViewProjectNode" />
-              <item name="accout-mange" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="laboratory" type="462c0819:PsiDirectoryNode" />
-              <item name="shiro" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="accout-mange" type="b2602c69:ProjectViewProjectNode" />
-              <item name="accout-mange" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="laboratory" type="462c0819:PsiDirectoryNode" />
-              <item name="shiro" type="462c0819:PsiDirectoryNode" />
-              <item name="filter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="accout-mange" type="b2602c69:ProjectViewProjectNode" />
-              <item name="accout-mange" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="laboratory" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="accout-mange" type="b2602c69:ProjectViewProjectNode" />
-              <item name="accout-mange" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="accout-mange" type="b2602c69:ProjectViewProjectNode" />
-              <item name="accout-mange" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="accout-mange" type="b2602c69:ProjectViewProjectNode" />
-              <item name="accout-mange" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="accout-mange" type="b2602c69:ProjectViewProjectNode" />
-              <item name="accout-mange" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="laboratory" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="accout-mange" type="b2602c69:ProjectViewProjectNode" />
-              <item name="accout-mange" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="laboratory" type="462c0819:PsiDirectoryNode" />
-              <item name="other" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -451,25 +420,13 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/Program Files/nodejs/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.39770114" />
-    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="Docker" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.hfut.laboratory" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\EXCS\IDEA_exc\accout-mange\SQL脚本" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\EXCS\IDEA_exc\accout-mange\src" />
-      <recent name="C:\EXCS\IDEA_exc\accout-mange\src\main\java\com\hfut\laboratory" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.hfut.laboratory.util" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\EXCS\IDEA_exc\accout-mange\src\main\resources" />
+      <recent name="C:\EXCS\IDEA_exc\accout-mange" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -484,40 +441,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.AccoutMangeApplication">
-    <configuration name="CouponCardJsons.serializeCardDetailVo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="accout-mange" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.hfut.laboratory.json.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.hfut.laboratory.json" />
-      <option name="MAIN_CLASS_NAME" value="com.hfut.laboratory.json.CouponCardJsons" />
-      <option name="METHOD_NAME" value="serializeCardDetailVo" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CouponCardJsons.serializeCouponCard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="accout-mange" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.hfut.laboratory.json.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.hfut.laboratory.json" />
-      <option name="MAIN_CLASS_NAME" value="com.hfut.laboratory.json.CouponCardJsons" />
-      <option name="METHOD_NAME" value="serializeCouponCard" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OtherTests.test06" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.GenerorRsa.genRsa">
+    <configuration name="GenerorRsa.genRsa" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="accout-mange" />
       <extension name="coverage">
         <pattern>
@@ -525,614 +450,155 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.hfut.laboratory.other" />
-      <option name="MAIN_CLASS_NAME" value="com.hfut.laboratory.other.OtherTests" />
-      <option name="METHOD_NAME" value="test06" />
+      <option name="PACKAGE_NAME" value="com.hfut.laboratory.jwt" />
+      <option name="MAIN_CLASS_NAME" value="com.hfut.laboratory.jwt.GenerorRsa" />
+      <option name="METHOD_NAME" value="genRsa" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="accout-mange-1.0-SNAPSHOT.jar" type="JarApplication" temporary="true">
-      <option name="JAR_PATH" value="$PROJECT_DIR$/target/accout-mange-1.0-SNAPSHOT.jar" />
-      <method v="2" />
-    </configuration>
-    <configuration name="AccoutMangeApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="AccoutMangeApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="accout-mange" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.hfut.laboratory.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.hfut.laboratory.AccoutMangeApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <list>
-      <item itemvalue="JAR Application.accout-mange-1.0-SNAPSHOT.jar" />
-      <item itemvalue="JUnit.CouponCardJsons.serializeCouponCard" />
-      <item itemvalue="JUnit.CouponCardJsons.serializeCardDetailVo" />
-      <item itemvalue="JUnit.OtherTests.test06" />
-      <item itemvalue="Spring Boot.AccoutMangeApplication" />
-    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.AccoutMangeApplication" />
-        <item itemvalue="JUnit.OtherTests.test06" />
-        <item itemvalue="JAR Application.accout-mange-1.0-SNAPSHOT.jar" />
-        <item itemvalue="JUnit.CouponCardJsons.serializeCardDetailVo" />
-        <item itemvalue="JUnit.CouponCardJsons.serializeCouponCard" />
+        <item itemvalue="JUnit.GenerorRsa.genRsa" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="SpringBeansView">
-    <option name="beanDetailsProportion" value="0.3" />
-  </component>
-  <component name="SpringBootOptions">
-    <option name="showAdditionalConfigNotification" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="2a42bad7-9b52-469a-8618-50dcb70514aa" name="Default Changelist" comment="" />
-      <created>1572961847481</created>
+      <changelist id="0bb2a1a8-eef1-4587-9b74-f125760a89ac" name="Default Changelist" comment="" />
+      <created>1595931007621</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1572961847481</updated>
-      <workItem from="1572961852567" duration="15306000" />
-      <workItem from="1573031315457" duration="136482000" />
-      <workItem from="1573394960735" duration="18344000" />
-      <workItem from="1573414078344" duration="1074000" />
-      <workItem from="1573446243877" duration="39000" />
-      <workItem from="1573446306319" duration="9897000" />
-      <workItem from="1573456275039" duration="52000" />
-      <workItem from="1573456426955" duration="717000" />
-      <workItem from="1573457261561" duration="1317000" />
-      <workItem from="1573458639508" duration="1527000" />
-      <workItem from="1573460243996" duration="53000" />
-      <workItem from="1573460325192" duration="662000" />
-      <workItem from="1573479645085" duration="183000" />
-      <workItem from="1573480159214" duration="129000" />
-      <workItem from="1573480361139" duration="628000" />
-      <workItem from="1573534113820" duration="24000000" />
-      <workItem from="1573576033446" duration="442000" />
-      <workItem from="1573624484114" duration="17931000" />
-      <workItem from="1573644008627" duration="1194000" />
-      <workItem from="1573648881887" duration="90000" />
-      <workItem from="1573657479074" duration="1952000" />
-      <workItem from="1573662100527" duration="3658000" />
-      <workItem from="1573692586420" duration="3139000" />
-      <workItem from="1573892149886" duration="3580000" />
-      <workItem from="1573920141147" duration="12564000" />
-      <workItem from="1573991288177" duration="732000" />
-      <workItem from="1574004952739" duration="11915000" />
-      <workItem from="1574050269838" duration="1004000" />
-      <workItem from="1574133559465" duration="175000" />
-      <workItem from="1574133947698" duration="383000" />
-      <workItem from="1574136919635" duration="197000" />
-      <workItem from="1574137393834" duration="432000" />
-      <workItem from="1574139926970" duration="3260000" />
-      <workItem from="1574187411232" duration="851000" />
-      <workItem from="1574599824565" duration="8587000" />
-      <workItem from="1574612241199" duration="36000" />
-      <workItem from="1574648443752" duration="4494000" />
-      <workItem from="1574658534587" duration="596000" />
-      <workItem from="1574682835588" duration="413000" />
-      <workItem from="1574683288536" duration="3421000" />
-      <workItem from="1574702522100" duration="80000" />
-      <workItem from="1574942273249" duration="1834000" />
-      <workItem from="1574989711164" duration="457000" />
-      <workItem from="1575000790100" duration="2032000" />
-      <workItem from="1575011095623" duration="6085000" />
-      <workItem from="1575291276752" duration="1164000" />
-      <workItem from="1575308902994" duration="2751000" />
-      <workItem from="1575348174211" duration="556000" />
-      <workItem from="1575371128550" duration="6791000" />
-      <workItem from="1575458219018" duration="15299000" />
-      <workItem from="1575534134849" duration="12779000" />
-      <workItem from="1575569603042" duration="632000" />
-      <workItem from="1575615729695" duration="8036000" />
-      <workItem from="1575708574708" duration="13809000" />
-      <workItem from="1575793947146" duration="2569000" />
-      <workItem from="1575802640181" duration="10039000" />
-      <workItem from="1575981445036" duration="6776000" />
-      <workItem from="1576074668871" duration="7350000" />
-      <workItem from="1576132257067" duration="7811000" />
-      <workItem from="1576208371397" duration="3292000" />
-      <workItem from="1576238367805" duration="7030000" />
-      <workItem from="1576254534465" duration="254000" />
-      <workItem from="1576255025584" duration="150000" />
-      <workItem from="1576304745983" duration="10946000" />
-      <workItem from="1576388017212" duration="2108000" />
-      <workItem from="1576411180181" duration="1782000" />
-      <workItem from="1576434403753" duration="2378000" />
-      <workItem from="1576438162457" duration="27000" />
-      <workItem from="1576472871631" duration="13335000" />
-      <workItem from="1576519786314" duration="17000" />
-      <workItem from="1576520133366" duration="234000" />
-      <workItem from="1576545508362" duration="25700000" />
-      <workItem from="1576641594846" duration="1136000" />
-      <workItem from="1576745775043" duration="7457000" />
-      <workItem from="1580466153682" duration="275000" />
-      <workItem from="1580714826206" duration="738000" />
-      <workItem from="1580877615599" duration="1248000" />
-      <workItem from="1580880527360" duration="206000" />
-      <workItem from="1581083009640" duration="6788000" />
-      <workItem from="1581097000792" duration="1713000" />
-      <workItem from="1581144732241" duration="3310000" />
-      <workItem from="1581238366551" duration="3759000" />
-      <workItem from="1581422961058" duration="3330000" />
-      <workItem from="1581740532698" duration="3602000" />
-      <workItem from="1581745224691" duration="24000" />
+      <updated>1595931007621</updated>
+      <workItem from="1595931011805" duration="2640000" />
     </task>
-    <task id="LOCAL-00001" summary="修复redis做缓存的一个bug">
-      <created>1574682967415</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1574682967415</updated>
-    </task>
-    <task id="LOCAL-00002" summary="提交代码">
-      <created>1574683253028</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1574683253028</updated>
-    </task>
-    <task id="LOCAL-00003" summary="提交代码">
-      <created>1574683465788</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1574683465789</updated>
-    </task>
-    <task id="LOCAL-00004" summary="编辑描述">
-      <created>1574683588424</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1574683588424</updated>
-    </task>
-    <task id="LOCAL-00005" summary="按照需求修改代码">
-      <created>1575470452247</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1575470452247</updated>
-    </task>
-    <task id="LOCAL-00006" summary="按照需求修改代码">
-      <created>1575648018324</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1575648018324</updated>
-    </task>
-    <task id="LOCAL-00007" summary="按照需求修改代码">
-      <created>1576143569046</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1576143569046</updated>
-    </task>
-    <task id="LOCAL-00008" summary="按照需求修改代码">
-      <created>1576221374427</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1576221374427</updated>
-    </task>
-    <task id="LOCAL-00009" summary="一期项目完成">
-      <created>1576584283415</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1576584283415</updated>
-    </task>
-    <task id="LOCAL-00010" summary="提交">
-      <created>1581088007954</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1581088007954</updated>
-    </task>
-    <task id="LOCAL-00011" summary="提交">
-      <created>1581088732539</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1581088732540</updated>
-    </task>
-    <task id="LOCAL-00012" summary="提交">
-      <created>1581088992233</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1581088992233</updated>
-    </task>
-    <task id="LOCAL-00013" summary="提交">
-      <created>1581089089330</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1581089089330</updated>
-    </task>
-    <task id="LOCAL-00014" summary="提交">
-      <created>1581090080942</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1581090080942</updated>
-    </task>
-    <task id="LOCAL-00015" summary="提交">
-      <created>1581097386554</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1581097386555</updated>
-    </task>
-    <task id="LOCAL-00016" summary="提交">
-      <created>1581097500838</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1581097500838</updated>
-    </task>
-    <task id="LOCAL-00017" summary="提交">
-      <created>1581099747210</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1581099747210</updated>
-    </task>
-    <task id="LOCAL-00018" summary="提交">
-      <created>1581423152093</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1581423152093</updated>
-    </task>
-    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="OtherTests_test06 - 2019.12.14 at 15h 30m 52s.xml">
-      <configuration name="OtherTests.test06" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="OtherTests_test06 - 2019.12.14 at 15h 32m 21s.xml">
-      <configuration name="OtherTests.test06" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="OtherTests_test06 - 2019.12.14 at 15h 33m 28s.xml">
-      <configuration name="OtherTests.test06" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="OtherTests_test06 - 2019.12.16 at 02h 28m 16s.xml">
-      <configuration name="OtherTests.test06" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="OtherTests_test06 - 2019.12.16 at 02h 29m 13s.xml">
-      <configuration name="OtherTests.test06" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="OtherTests_test06 - 2020.02.15 at 12h 29m 05s.xml">
-      <configuration name="OtherTests.test06" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="OtherTests_test06 - 2020.02.15 at 12h 31m 53s.xml">
-      <configuration name="OtherTests.test06" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="OtherTests_test06 - 2020.02.15 at 12h 34m 57s.xml">
-      <configuration name="OtherTests.test06" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="OtherTests_test06 - 2020.02.15 at 12h 39m 46s.xml">
-      <configuration name="OtherTests.test06" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="OtherTests_test06 - 2020.02.15 at 12h 41m 33s.xml">
-      <configuration name="OtherTests.test06" configurationId="JUnit" />
+    <history-entry file="GenerorRsa_genRsa - 2020.07.28 at 19h 17m 41s.xml">
+      <configuration name="GenerorRsa.genRsa" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="499145000" />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
+    <option name="totallyTimeSpent" value="2640000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4978903" visible="true" weight="0.22922252" />
-      <window_info id="Structure" order="1" sideWeight="0.5021097" side_tool="true" weight="0.23324397" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Web" order="7" side_tool="true" />
+      <window_info id="Designer" />
+      <window_info id="Image Layers" />
+      <window_info id="Capture Tool" />
+      <window_info id="UI Designer" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info id="Web" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Spring" />
+      <window_info anchor="bottom" id="GraphQL" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Docker" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" weight="0.5779037" />
+      <window_info anchor="bottom" id="Run with VisualVM" />
+      <window_info anchor="bottom" id="Java Enterprise" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Debug with VisualVM" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.53541076" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49865952" weight="0.33002833" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49597856" weight="0.4362606" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.04532578" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49865952" weight="0.45609066" />
-      <window_info anchor="bottom" id="Spring" order="7" weight="0.32956153" />
-      <window_info anchor="bottom" id="GraphQL" order="8" weight="0.32956153" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.04249292" />
-      <window_info anchor="bottom" id="Docker" order="10" weight="0.27053824" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5013405" side_tool="true" weight="0.30028328" />
-      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49865952" weight="0.21529745" />
-      <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.3286119" />
-      <window_info anchor="bottom" id="Database Changes" order="14" />
-      <window_info anchor="bottom" id="Version Control" order="15" weight="0.32719547" />
-      <window_info anchor="bottom" id="Duplicates" order="16" weight="0.32956153" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Maven" />
+      <window_info anchor="right" id="PlantUML" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Bean Validation" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" weight="0.37801608" />
-      <window_info anchor="right" id="PlantUML" order="4" />
-      <window_info anchor="right" id="Palette" order="5" />
-      <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="right" id="Database" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="Theme Preview" order="9" />
-      <window_info anchor="right" id="Bean Validation" order="10" />
     </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4978903" visible="true" weight="0.23324397" />
-      <window_info id="Structure" order="1" sideWeight="0.5021097" side_tool="true" weight="0.23324397" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Web" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.36916548" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33521923" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49932975" weight="0.42291373" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.41867045" />
-      <window_info anchor="bottom" id="Spring" order="7" weight="0.32956153" />
-      <window_info anchor="bottom" id="GraphQL" order="8" weight="0.32956153" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32956153" />
-      <window_info anchor="bottom" id="Docker" order="10" weight="0.27157003" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50067025" side_tool="true" weight="0.24611032" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.36209336" />
-      <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.32956153" />
-      <window_info anchor="bottom" id="Database Changes" order="14" />
-      <window_info anchor="bottom" id="Version Control" order="15" />
-      <window_info anchor="bottom" id="Duplicates" order="16" weight="0.32956153" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.20643431" />
-      <window_info anchor="right" id="PlantUML" order="4" />
-      <window_info anchor="right" id="Palette" order="5" />
-      <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="right" id="Database" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="Theme Preview" order="9" />
-      <window_info anchor="right" id="Bean Validation" order="10" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-              <option name="COLUMN_ORDER">
-                <list>
-                  <option value="0" />
-                  <option value="1" />
-                  <option value="2" />
-                  <option value="3" />
-                </list>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="Branch">
-          <value>
-            <list />
-          </value>
-        </entry>
-        <entry key="User">
-          <value>
-            <list />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="修复redis做缓存的一个bug" />
-    <MESSAGE value="提交代码" />
-    <MESSAGE value="编辑描述" />
-    <MESSAGE value="按照需求修改代码" />
-    <MESSAGE value="一期项目完成" />
-    <MESSAGE value="提交" />
-    <option name="LAST_COMMIT_MESSAGE" value="提交" />
-  </component>
-  <component name="XDebuggerManager">
-    <watches-manager>
-      <configuration name="SpringBootApplicationConfigurationType">
-        <watch expression="request.getHeader(&quot;Origin&quot;)" language="JAVA" />
-        <watch expression="((ShiroHttpServletRequest) request).getRequestURI()" language="JAVA" custom="org.apache.shiro.web.servlet.ShiroHttpServletRequest" />
-        <watch expression="userService.getOne(QueryWapperUtils.getInWapper(&quot;id&quot;, 1)" language="JAVA" />
-        <watch expression="&quot;http://localhost/card.html&quot;.split(&quot;/&quot;)" language="JAVA" />
-      </configuration>
-    </watches-manager>
-  </component>
-  <component name="debuggerHistoryManager">
-    <expressions id="watch">
-      <expression>
-        <expression-string>userService.getOne(QueryWapperUtils.getInWapper(&quot;id&quot;, 1)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>&quot;http://localhost/card.html&quot;.split(&quot;/&quot;)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>((ShiroHttpServletRequest) request).getRequestURI()</expression-string>
-        <language-id>JAVA</language-id>
-        <custom-info>org.apache.shiro.web.servlet.ShiroHttpServletRequest</custom-info>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>request.getHeader(&quot;Origin&quot;)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>servletRequest.getHeader(&quot;Origin&quot;)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>httpServletRequest.getHeader(&quot;Origin&quot;)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>response.headers.count</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>response.headers</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>((ResponseFacade) servletResponse).getHeaders(&quot;Set-Cookie&quot;)</expression-string>
-        <language-id>JAVA</language-id>
-        <custom-info>org.apache.catalina.connector.ResponseFacade</custom-info>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-    </expressions>
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/config/MyWebMvcConfigurer.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/interceptor/CorsInterceptor.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-web/1.4.0/shiro-web-1.4.0-sources.jar!/org/apache/shiro/web/filter/AccessControlFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="161" selection-start-line="161" selection-end-line="161" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/shiro/filter/PermisstionOrAuthorizationFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="e#572#604#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/shiro/filter/RolesOrAuthorizationFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/StaffController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="817">
-          <caret line="112" column="47" lean-forward="true" selection-start-line="112" selection-start-column="47" selection-end-line="112" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/RecordBusnessController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="57" column="13" selection-start-line="57" selection-start-column="13" selection-end-line="57" selection-end-column="13" />
+        <state relative-caret-position="133">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/shiro/config/JwtApplicationRunner.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/util/jwt/JwtTokenUtils.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/RecordsConsumptionController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="19" selection-start-line="19" selection-end-line="19" selection-end-column="6" />
+        <state relative-caret-position="225">
+          <caret line="48" column="13" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/util/TimeConvertUtils.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/RecordsTurnoverController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        <state relative-caret-position="225">
+          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/util/ObjectUtils.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/RoleController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/util/ObjectMapperUtils.java">
+    <entry file="file://$PROJECT_DIR$/数据库脚本/account_mange.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        <state relative-caret-position="285">
+          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/util/BeanUtils.java">
+    <entry file="file://$PROJECT_DIR$/前端/accout/js/card.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <state relative-caret-position="304">
+          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#td#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/util/CodecUtils.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <state relative-caret-position="-171">
+          <caret line="129" column="42" selection-start-line="129" selection-start-column="34" selection-end-line="129" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/util/JsonUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="30" column="35" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/accout-mange.iml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/SystemController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/salary.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="73" column="5" lean-forward="true" selection-start-line="69" selection-start-column="4" selection-end-line="73" selection-end-column="5" />
+        <state>
+          <caret column="19" selection-start-column="19" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -1146,308 +612,27 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/com/hfut/laboratory/jwt/GenerorRsa.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/hfut/laboratory/mysql/MybatisPlusTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/SalaryController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/RecordsTurnoverController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/RecordsConsumptionController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3021">
-          <caret line="190" column="9" selection-start-line="190" selection-start-column="9" selection-end-line="190" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/vo/record/ReturnConsumVo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/constants/UrlConstants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="32" column="7" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/util/jwt/JwtUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="988">
-          <caret line="62" selection-start-line="62" selection-end-line="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/util/jwt/RsaUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1691">
-          <caret line="94" selection-start-line="94" selection-end-line="94" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/config/MybatisPlusConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/config/JwtConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/PermissionController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/hfut/laboratory/swagger/Swagger2MarkupTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1140">
-          <caret line="60" column="3" selection-start-line="60" selection-start-column="3" selection-end-line="60" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/CouponCardController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="836">
-          <caret line="77" selection-start-line="77" selection-end-line="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/config/DateConvertConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dockerfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/salary.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/ProjectController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="44" column="56" selection-start-line="44" selection-start-column="56" selection-end-line="44" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="16" selection-start-column="16" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/config/CorsConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/vo/ApiResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="817">
-          <caret line="47" column="28" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/config/RedisConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1330">
-          <caret line="90" column="56" selection-start-line="90" selection-start-column="56" selection-end-line="90" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-extension/3.0.5/mybatis-plus-extension-3.0.5-sources.jar!/com/baomidou/mybatisplus/extension/service/IService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="137" column="12" selection-start-line="137" selection-start-column="12" selection-end-line="137" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/util/QueryWapperUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/shiro/ShiroConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1235">
-          <caret line="83" column="10" selection-start-line="83" selection-start-column="10" selection-end-line="83" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/shiro/filter/JWTFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/util/CookieUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3078">
-          <caret line="171" column="25" selection-start-line="171" selection-start-column="25" selection-end-line="171" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/hfut/laboratory/other/OtherTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="779">
-          <caret line="63" column="86" selection-start-line="61" selection-start-column="8" selection-end-line="63" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+          <caret line="14" column="23" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/AccoutMangeApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        <state relative-caret-position="133">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2394">
-          <caret line="126" column="50" selection-start-line="126" selection-start-column="50" selection-end-line="126" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/task/TurnoverTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/CustomerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6004">
-          <caret line="343" column="10" selection-start-line="343" selection-start-column="10" selection-end-line="343" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hfut/laboratory/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="212" column="61" selection-start-line="212" selection-start-column="61" selection-end-line="212" selection-end-column="61" />
+        <state relative-caret-position="228">
+          <caret line="15" column="44" lean-forward="true" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
         </state>
       </provider>
     </entry>
   </component>
   <component name="masterDetails">
     <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
       <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>1.8</last-edited>
@@ -1455,18 +640,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>Maven: com.vaadin.external.google:android-json:0.0.20131108.vaadin1</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.39770114" />
               </list>
             </option>
           </splitter-proportions>

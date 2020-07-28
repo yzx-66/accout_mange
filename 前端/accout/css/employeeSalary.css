@@ -1,0 +1,93 @@
+.ser_text{
+  
+	height: 34px;
+    font-size: 15px;
+	border-radius:10px ;
+	width: 325px;
+	padding-left: 30px;
+}
+#serch{
+	background:#3C8DBC ;
+	height: 60px;
+	width: 990px;
+	border-radius:10px ;
+	padding-top: 20px;
+}
+
+table.list_table {
+  margin-top:0px;
+  border-collapse:collapse;
+  border:1px solid #aaa;
+  width:100%;
+}
+table.list_table th {
+  vertical-align:baseline;
+  padding:5px 15px 5px 6px;
+  background-color:#3F3F3F;
+  border:1px solid #3F3F3F;
+  text-align:left;
+  color:#fff;
+}
+table.list_table td {
+  vertical-align:text-top;
+  padding:6px 15px 6px 6px;
+  border:1px solid #aaa;
+}
+table.list_table tr:nth-child(odd) {
+  background-color:#F5F5F5;
+}
+table.list_table tr:nth-child(even) {
+  background-color:#fff;
+}
+
+.disply
+{
+	height: 70px;
+	background-color: #EBEBEB;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	padding-left: 10px;
+	margin-bottom: 0;
+	font-family:"微软雅黑";
+	font-size: 14px;
+
+}
+
+.inputcss p{
+	width: 200px;
+}
+.inputcss input{
+    outline-style: none ;
+    border: 1px solid #2299DD; 
+    border-radius: 3px;
+    padding: 13px 14px;
+    width: 200px;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "Microsoft soft";
+    height: 20px;
+    
+}
+#paystate{
+	float: right;
+	display: inline-block;
+}
+#msgbox{
+	background-color: #9D9D9D;
+	border-radius:5px ;
+	float:left; 
+  margin-right: 10px;
+  margin-top:8px;
+  height: 40px;
+  font-size: 20px;
+  padding-top: 5px;
+}
+.btn
+{
+	
+	padding: 5px 10px;
+	margin-bottom: 5px;
+  font-size: 15px;
+  line-height: 1.3333333;
+  border-radius: 6px;
+}

@@ -1,0 +1,90 @@
+/*css reset 初始化*/
+body,
+div,
+ul,
+li,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+textarea,
+select,
+p,
+dl,
+dt,
+dd,
+a,
+img,
+button,
+form,
+table,
+th,
+tr,
+td,
+tbody,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+  /*所有的元素采用内减模式*/
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+body {
+  font-size: 14px;
+  color: #333;
+  font-family: 'Microsoft Yahei', 'Times New Roman', Times, serif;
+  /*后面都是备胎*/
+}
+ul,
+ol {
+  list-style: none;
+}
+a,
+a:hover,
+a:active,
+a:visited,
+a:link
+{
+  text-decoration: none;
+  color: #333;
+}
+input {
+  border: none;
+  /*去除边框*/
+  outline: none;
+  /*去除轮廓线*/
+  -webkit-appearance: none;
+  /*去除 表单在移动端 阴影 立体 效果 */
+}
+/*css common 公共样式*/
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+/*清除浮动*/
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+  line-height: 0;
+}
+

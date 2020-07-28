@@ -12,5 +12,6 @@ public class TimeConvertUtils {
     public static LocalDateTime convertTo_yMd(LocalDateTime localDateTime){
         String date = localDateTime.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"))+" 00:00:00";
         return LocalDateTime.parse(date,DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+
     }
 }

@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>页面首页</title>
+		<link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="./lib/bootstrap-validator/css/bootstrapValidator.min.css">
+		<link rel="stylesheet" href="./lib/nprogress/nprogress.css">
+		<link rel="stylesheet" href="./css/base.css">
+
+		<!-- 导入个人CSS文件 并对common.css进行了小部分修改 -->
+		<link rel="stylesheet" href="./css/staff_common.css">
+		<link rel="stylesheet" href="./css/staff.css">
+	</head>
+	<body onload="javascript:set_data('http://106.14.125.136/acc/user/list','true')" style="min-width: 1120px;">
+
+		<!--左边栏-->
+		<div class="left_aside">
+
+			<div class="brand">后台管理系统</div>
+
+			<div class="user">
+				<div class="user_img">
+					<img src="./image/default.png" alt="">
+				</div>
+				<div class="user_name">
+					<span>超级管理员</span>
+				</div>
+
+				<div class="user_name">
+
+				</div>
+			</div>
+
+			<div class="nav">
+
+				 <ul>
+					<li class="first">
+						<a href="./customer.html">
+							<i class="glyphicon glyphicon-user"></i>
+							<span>客户管理</span>
+						</a>
+					</li>
+				</ul>
+
+
+				<ul>
+					<li class="first current">
+						<a href="./staff.html">
+							<i class="glyphicon glyphicon-user"></i>
+							<span>员工管理</span>
+						</a>
+					</li>
+				</ul>
+
+
+				 <ul>
+					<li class="first">
+						<a href="./project.html">
+							<i class="glyphicon glyphicon-tags"></i>
+							<span>项目管理</span>
+						</a>
+					</li>
+				</ul>
+
+				<ul>
+					<li class="first">
+						<a href="./card.html">
+							<i class="glyphicon glyphicon-tags"></i>
+							<span>优惠卡管理</span>
+						</a>
+					</li>
+				</ul>
+
+				<ul>
+		            <li class="first">
+		                <a href="./salary.html">
+		                   <i class="glyphicon glyphicon-jpy"></i>
+		                   <span>薪水管理</span>
+		                </a>
+					</li>
+		      </ul>
+
+				<ul>
+					<li class="first">
+						<a href="./consum.html">
+							<i class="glyphicon glyphicon-list"></i>
+							<span>消费记录</span>
+						</a>
+					</li>
+				</ul>
+
+				<ul>
+					<li class="first">
+						<a href="./turnover.html">
+							<i class="glyphicon glyphicon-list"></i>
+							<span>营业额记录</span>
+						</a>
+					</li>
+				</ul>
+
+			</div>
+
+		</div>
+
+		<!--右边主体-->
+		<div class="item_main">
+
+			<!--    头部导航栏-->
+			<div class="main_top">
+				<a href="#" class="pull-left" id="top_btn_left"><i class="glyphicon glyphicon-align-justify"></i></a>
+				<a href="#" class="pull-right" id="top_btn_right"><i class="glyphicon glyphicon-log-out"></i></a>
+			</div>
+
+
+			<!-- 将路径导航也同样固定了下来 -->
+			<div class="main_body container-fluid">
+				<!--        路径导航-->
+				<ol class="breadcrumb">
+					<li><a href="./index1.html" style="color: #2aabd2">首页</a></li>
+					<li><a href="#">用户管理</a></li>
+				</ol>
+			</div>
+
+			<!--主体内容-->
+			<div class="staff_body">
+				<!-- 左上主体 -->
+				<div style="width: 60%;">
+					<div id="body_main_left_top">
+						<select id="body_main_left_top_select_roleId">
+							<option value="every">全部用户</option>
+							<option value="boss">超级管理员</option>
+							<option value="root">老板</option>
+							<option value="manger">经理</option>
+							<option value="staff">员工</option>
+						</select>
+						<select id="body_main_left_top_select_status">
+							<option value="true">显示所有员工</option>
+							<option value="false">不显示冻结员工</option>
+							<option value="fren">仅显示冻结员工</option>
+						</select>
+					</div>
+				</div>
+					
+					<div style="width: 60%;float: left;">
+					<!-- 左边主体 -->
+					<div id="body_main_left" style="margin-top: 100px;">
+						<ul id="staff_body_ul_js">
+							<!-- 生成始终不消失的li -->
+							<li class="body_main_li_css_js_ever" style="margin-bottom: 30px;">
+								<div class="body_main_li_first_css_js unava">序号</div>
+								<div class="body_main_li_second_css_js">姓名</div>
+								<div class="body_main_li_third_css_js">性别</div>
+								<div class="body_main_li_forth_css_js">联系方式</div>
+								<div class="body_main_li_fifth_css_js">入职时间</div>
+							</li>
+						</ul>
+						<!-- 用来存放并显示添加符号的div -->
+						<div id="body_main_left_right_img">
+							<img class="img_bigger" src="image/添加.png" width="36px" height="36px" onclick="modal_true()">
+						</div>
+					</div>
+					
+				</div>
+				<div style="width: 32.5%;float: right;">
+									<!-- 右部分主体 -->
+					<div class="body_main_right">
+						<div class="body_main_right_xiangxi" id="body_main_right_xiangxi"><ul id="data_xiangxi_ul"></ul></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!--模态框-->
+		<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" id="myModal">
+			<div class="modal-dialog  modal-sm " role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+						<h4 class="modal-title">温馨提示</h4>
+					</div>
+					<div class="modal-body">
+						<p style="color: #A94442;">
+							<i class="glyphicon glyphicon-info-sign"></i>
+							<span id="logout_notify">你确定要退出后台管理系统吗</span>
+						</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+						<button type="button" class="btn btn-primary" id="logout_btn">退出</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 模态框 修改 -->
+		<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" id="modal_2" data-backdrop="static">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+						<h4 class="modal-title">用户修改</h4>
+					</div>
+					<div class="modal-body">
+						<form id="form_moal_2">
+
+							<div class="unava">
+								<div>
+									<p class="change_staff_eve_p">id：</p>
+								</div>
+								<div class="form-group change_staff_eve_div">
+									<input type="text" class="change_staff_eve_input" id="change_staff_eve_input_id" />
+								</div>
+							</div>
+							<div>
+								<div>
+									<p class="change_staff_eve_p">用户类型：</p>
+								</div>
+								<div class="form-group change_staff_eve_div">
+									<select class="change_staff_eve_input" id="change_staff_eve_input_roleId">
+										<option value="1">超级管理员</option>
+										<option value="2">老板</option>
+										<option value="3">经理</option>
+										<option value="4">员工</option>
+									</select>
+								</div>
+							</div>
+							<div>
+								<div>
+									<p class="change_staff_eve_p">姓名：</p>
+								</div>
+								<div class="form-group change_staff_eve_div">
+									<input type="text" class="change_staff_eve_input" id="change_staff_eve_input_name" name="change_staff_eve_input_name" />
+								</div>
+							</div>
+							<div>
+								<div>
+									<p class="change_staff_eve_p">性别：</p>
+								</div>
+								<div class="form-group change_staff_eve_div">
+									<select class="change_staff_eve_input" id="change_staff_eve_input_sex">
+										<option value="1">男</option>
+										<option value="2">女</option>
+									</select>
+								</div>
+							</div>
+							<div>
+								<div>
+									<p class="change_staff_eve_p">联系方式：</p>
+								</div>
+								<div class="form-group change_staff_eve_div">
+									<input type="text" class="change_staff_eve_input" id="change_staff_eve_input_phone" name="change_staff_eve_input_phone" />
+								</div>
+							</div>
+							<div>
+								<div>
+									<p class="change_staff_eve_p">底薪：</p>
+								</div>
+								<div class="form-group change_staff_eve_div">
+									<input type="text" class="change_staff_eve_input" id="change_staff_eve_input_baseSalary" name="change_staff_eve_input_baseSalary" />
+								</div>
+							</div>
+							
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal" onclick="refresh()">取消</button>
+						<!-- 因为使用表单验证的原因 所以不得以对修改使用的refresh方法来进行修改 但是会影响用户体验 -->
+						<button type="button" class="btn btn-primary" onclick="change_modal_data()">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 		模态框 添加 -->
+		<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" id="modal_3" data-backdrop="static">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+						<h4 class="modal-title">用户添加</h4>
+					</div>
+					<div class="modal-body">
+						<form id="form_moal_3">
+
+							<div class="unava">
+								<div>
+									<p class="change_staff_eve_p">id：</p>
+								</div>
+								<div class="form-group change_staff_eve_div">
+									<input type="text" class="change_staff_eve_input" id="add_staff_eve_input_id" />
+								</div>
+							</div>
+							<div>
+								<div>
+									<p class="change_staff_eve_p">用户类型：</p>
+								</div>
+								<div class="form-group change_staff_eve_div">
+									<select class="change_staff_eve_input" id="add_staff_eve_input_roleId">
+										<option value="1">超级管理员</option>
+										<option value="2">老板</option>
+										<option value="3">经理</option>
+										<option value="4">员工</option>
+									</select>
+								</div>
+							</div>
+							<div>
+								<div>
+									<p class="change_staff_eve_p">姓名：</p>
+								</div>
+								<div class="form-group change_staff_eve_div">
+									<input type="text" class="change_staff_eve_input" id="add_staff_eve_input_name" name="add_staff_eve_input_name" />
+								</div>
+							</div>
+							<div>
+								<div>
+									<p class="change_staff_eve_p">性别：</p>
+								</div>
+								<div class="form-group change_staff_eve_div">
+									<select class="change_staff_eve_input" id="add_staff_eve_input_sex">
+										<option value="1">男</option>
+										<option value="2">女</option>
+									</select>
+								</div>
+							</div>
+							<div>
+								<div>
+									<p class="change_staff_eve_p">联系方式：</p>
+								</div>
+								<div class="form-group change_staff_eve_div">
+									<input type="text" class="change_staff_eve_input" id="add_staff_eve_input_phone" name="add_staff_eve_input_phone" />
+								</div>
+							</div>
+							<div>
+								<div>
+									<p class="change_staff_eve_p">底薪：</p>
+								</div>
+								<div class="form-group change_staff_eve_div">
+									<input type="text" class="change_staff_eve_input" id="add_staff_eve_input_baseSalary" name="add_staff_eve_input_baseSalary" />
+								</div>
+							</div>
+							<div>
+								<div>
+									<p class="change_staff_eve_p">密码：</p>
+								</div>
+								<div class="form-group change_staff_eve_div">
+									<input type="text" class="change_staff_eve_input" id="add_staff_eve_input_password" name="add_staff_eve_input_password" />
+								</div>
+							</div>
+							<div>
+								<div>
+									<p class="change_staff_eve_p">是否可用：</p>
+								</div>
+								<div class="form-group change_staff_eve_div">
+									<select class="change_staff_eve_input" id="add_staff_eve_input_status">
+										<option value="1">可用</option>
+										<option value="2">不可用</option>
+									</select>
+								</div>
+							</div>
+							
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal" onclick="refresh()">取消</button>
+						<button type="button" class="btn btn-primary" onclick="add_modal_data()">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--模态框 提示-->
+		<div class="modal fade bs-example-modal-sm center_modal" tabindex="-1" role="dialog" id="modal_4">
+			<div class="modal-dialog  modal-sm " role="document">
+				<div class="modal-content">
+					<div class="modal-body" style="overflow: hidden;">
+						<p style="color: #A94442;">
+							<i class="glyphicon glyphicon-info-sign"></i>
+							<span id="modal_4_value"></span>
+						</p>
+						<button type="button" class="btn_alert btn-primary" data-dismiss="modal">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--模态框 提示且刷新界面-->
+		<div class="modal fade bs-example-modal-sm center_modal" tabindex="-1" role="dialog" id="modal_6">
+			<div class="modal-dialog  modal-sm " role="document">
+				<div class="modal-content">
+					<div class="modal-body" style="overflow: hidden;">
+						<p style="color: #A94442;">
+							<i class="glyphicon glyphicon-info-sign"></i>
+							<span id="modal_6_value"></span>
+						</p>
+						<button type="button" class="btn_alert btn-primary" data-dismiss="modal" onclick="refresh()">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 模态框 确认 confirm仿造 -->
+		<div class="modal fade bs-example-modal-sm center_bottom" tabindex="-1" role="dialog" id="modal_5">
+			<div class="modal-dialog  modal-sm " role="document">
+				<div class="modal-content">
+					<div class="modal-body" style="overflow: hidden;">
+						<p style="color: #A94442;">
+							<i class="glyphicon glyphicon-info-sign"></i>
+							<span id="modal_5_value"></span>
+						</p>
+						<button type="button" class="btn_confirm btn-primary" data-dismiss="modal" id="modal_5_button2">取消</button>
+						<button type="button" class="btn_confirm btn-primary" data-dismiss="modal" id="modal_5_button1">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="./lib/jquery/jquery.min.js"></script>
+		<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+		<script src="lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
+		<script src="./lib/nprogress/nprogress.js"></script>
+		<script src="./lib/echarts/echarts.min.js"></script>
+		<script src="./js/common.js"></script>
+		<script src="./js/index.js"></script>
+
+		<script type="text/javascript" src="js/staff.js"></script>
+	</body>
+</html>

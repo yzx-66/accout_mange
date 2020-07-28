@@ -1,0 +1,15 @@
+.table.table-bordered.table-hover td,
+.table.table-bordered.table-hover th {
+    text-align: center;
+}
+#add_btn{
+     margin-top: 35px;
+ }
+#hide_frozen{
+}
+#search_dropdown,
+#search_status_dropdown,
+#search_byId_btn,
+#search_byName{
+    margin-top: 25px;
+}

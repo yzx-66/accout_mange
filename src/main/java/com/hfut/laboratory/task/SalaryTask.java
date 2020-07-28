@@ -69,9 +69,9 @@ public class SalaryTask {
             if(staff.getStatus()==0){
                 return;
             }
-            Float cardSum=0.0f,proSum=0.0f, makeMoneyIncome=0.0f,proAdd=0.0f;
+            float cardSum=0.0f,proSum=0.0f, makeMoneyIncome=0.0f,proAdd=0.0f;
 
-            QueryWrapper<RecordsConsumption> consumptionQqueryWrapper = new QueryWrapper();
+            QueryWrapper<RecordsConsumption> consumptionQqueryWrapper = new QueryWrapper<>();
             consumptionQqueryWrapper.lt("pay_time", LocalDateTime.now())
                     .and(wapper -> wapper.ge("pay_time", LocalDateTime.now().minusMonths(1)))
                     .and(wapper -> wapper.in("user_id", id));
@@ -88,7 +88,7 @@ public class SalaryTask {
                 }
             }
 
-            QueryWrapper<RecordBusiness> businessQueryWrapper = new QueryWrapper();
+            QueryWrapper<RecordBusiness> businessQueryWrapper = new QueryWrapper<>();
             businessQueryWrapper.lt("date", LocalDateTime.now())
                     .and(wapper -> wapper.ge("date", LocalDateTime.now().minusMonths(1)))
                     .and(wapper -> wapper.in("user_id", id))

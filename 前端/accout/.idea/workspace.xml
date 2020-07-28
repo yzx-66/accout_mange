@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fe45374b-3e86-4e6f-a9b3-21609f5fab3a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../README.en.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../myblog/hello.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/.idea/artifacts/manger_war.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/.idea/artifacts/manger_war_exploded.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_8.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_8.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/.idea/libraries/Maven__com_mchange_c3p0_0_9_5_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/.idea/libraries/Maven__com_mchange_mchange_commons_java_0_2_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/.idea/libraries/Maven__javax_servlet_javax_servlet_api_3_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/.idea/libraries/Maven__javax_servlet_jsp_javax_servlet_jsp_api_2_3_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/.idea/libraries/Maven__jstl_jstl_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/.idea/libraries/Maven__junit_junit_4_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_35.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/.idea/libraries/Maven__org_mybatis_mybatis_3_4_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_3_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_7_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/.idea/libraries/Maven__org_springframework_spring_aop_4_3_14_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/.idea/libraries/Maven__org_springframework_spring_aspects_4_3_14_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/.idea/libraries/Maven__org_springframework_spring_beans_4_3_14_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/.idea/libraries/Maven__org_springframework_spring_context_4_3_14_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/.idea/libraries/Maven__org_springframework_spring_core_4_3_14_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/.idea/libraries/Maven__org_springframework_spring_expression_4_3_14_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/.idea/libraries/Maven__org_springframework_spring_jdbc_4_3_14_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/.idea/libraries/Maven__org_springframework_spring_orm_4_3_14_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/.idea/libraries/Maven__org_springframework_spring_test_4_3_14_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/.idea/libraries/Maven__org_springframework_spring_tx_4_3_14_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/.idea/libraries/Maven__org_springframework_spring_web_4_3_14_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/.idea/libraries/Maven__org_springframework_spring_webmvc_4_3_14_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/.idea/libraries/Maven__taglibs_standard_1_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/parent/dao/dao.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/parent/dao/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/parent/dao/src/main/java/RIM/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/parent/dao/src/main/java/RIM/mapper/OneMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/parent/dao/src/main/java/RIM/mapper/OneMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/parent/dao/src/test/java/RIM/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/parent/dao/target/classes/RIM/mapper/OneMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/parent/manger/manger.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/parent/manger/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/parent/manger/src/main/config/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/parent/manger/src/main/config/db.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/parent/manger/src/main/config/log4j.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/parent/manger/src/main/config/mybatis.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/parent/manger/src/main/config/springmvc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/parent/manger/src/main/java/RIM/test01.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/parent/manger/src/main/webapp/WEB-INF/views/success.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/parent/manger/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/parent/manger/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/parent/manger/target/classes/META-INF/manger.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/parent/manger/target/classes/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/parent/manger/target/classes/db.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/parent/manger/target/classes/log4j.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/parent/manger/target/classes/mybatis.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/parent/manger/target/classes/springmvc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/parent/manger/target/manger/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/parent/manger/target/manger/WEB-INF/classes/META-INF/manger.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/parent/manger/target/manger/WEB-INF/classes/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/parent/manger/target/manger/WEB-INF/classes/db.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/parent/manger/target/manger/WEB-INF/classes/log4j.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/parent/manger/target/manger/WEB-INF/classes/mybatis.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/parent/manger/target/manger/WEB-INF/classes/springmvc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/parent/manger/target/manger/WEB-INF/views/success.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/parent/manger/target/manger/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/parent/manger/target/manger/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/parent/model/model.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/parent/model/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/parent/model/src/main/java/RIM/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/parent/model/src/main/java/RIM/model/One.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/parent/model/src/main/java/RIM/model/OneExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/parent/model/src/test/java/RIM/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/parent/parent.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/parent/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/parent/service/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/parent/service/service.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/parent/service/src/main/java/RIM/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/parent/service/src/main/java/RIM/Impl/OneServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/parent/service/src/main/java/RIM/OneService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../新建文件夹 (2)/parent/service/src/test/java/RIM/AppTest.java" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/customer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="618">
+              <caret line="489" column="13" selection-start-line="489" selection-start-column="11" selection-end-line="489" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/turnover.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="7" column="43" lean-forward="true" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/customer.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1273">
+              <caret line="67" column="29" selection-start-line="67" selection-start-column="28" selection-end-line="67" selection-end-column="29" />
+              <folding>
+                <element signature="n#form#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#2;n#div#0;n#form#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>106.14.125.136/</find>
+      <find>http://106.14.125.136/</find>
+      <find>实际</find>
+      <find>卡</find>
+      <find>现金</find>
+      <find>httpUrl</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>http://106.14.125.136/acc/</replace>
+      <replace>106.14.125.136/acc/</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/js/staff.js" />
+        <option value="$PROJECT_DIR$/js/customer.js" />
+        <option value="$PROJECT_DIR$/js/turnover.js" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-10" />
+    <option name="y" value="-10" />
+    <option name="width" value="975" />
+    <option name="height" value="1050" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="accout" type="b2602c69:ProjectViewProjectNode" />
+              <item name="accout" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="accout" type="b2602c69:ProjectViewProjectNode" />
+              <item name="accout" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/Program Files/nodejs/node" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fe45374b-3e86-4e6f-a9b3-21609f5fab3a" name="Default Changelist" comment="" />
+      <created>1576431178183</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1576431178183</updated>
+      <workItem from="1576431179853" duration="1143000" />
+      <workItem from="1576438192376" duration="153000" />
+      <workItem from="1576472849189" duration="3232000" />
+      <workItem from="1576590266621" duration="83000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="4611000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17761394" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="GraphQL" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Docker" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
+      <window_info anchor="bottom" id="Version Control" order="12" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="PlantUML" order="4" />
+      <window_info anchor="right" id="Palette" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Database" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/js/staff.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-95">
+          <caret line="320" column="1" selection-start-line="320" selection-start-column="1" selection-end-line="320" selection-end-column="1" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/card.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="85" column="19" selection-start-line="85" selection-start-column="19" selection-end-line="85" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/customer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="618">
+          <caret line="489" column="13" selection-start-line="489" selection-start-column="11" selection-end-line="489" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/customer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1273">
+          <caret line="67" column="29" selection-start-line="67" selection-start-column="28" selection-end-line="67" selection-end-column="29" />
+          <folding>
+            <element signature="n#form#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#2;n#div#0;n#form#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/turnover.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="43" lean-forward="true" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

@@ -1,0 +1,164 @@
+@font_color: #F8F5F9;
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+//左侧边栏
+.left_aside {
+  z-index: 999;
+  height: 100%;
+  width: 180px;
+  background-color: #222D32;
+  position: fixed;
+  left: 0;
+  transition: all 1s;
+
+  //头部文字
+  .brand {
+    background-color: #367FA9;
+    width: 100%;
+    height: 50px;
+    font-size: 24px;
+    color: whitesmoke;
+    text-align: center;
+    line-height: 50px;
+  }
+
+  //  用户信息
+  .user {
+    //用户头像
+    .user_img {
+      margin-top: 30px;
+      height: 80px;
+      width: 80px;
+      padding-left: 50px;
+
+      img {
+        border-radius: 50%;
+        height: 80px;
+        width: 80px;
+      }
+    }
+
+    .user_name {
+      color: @font_color;
+      font-size: 18px;
+      text-align: center;
+      padding-top: 20px;
+    }
+  }
+
+  //  导航栏设置
+  .nav {
+    ul {
+      li {
+        border-left: 3px transparent solid;
+      }
+
+      .current {
+        border-left: 3px solid #006699;
+      }
+
+      .first {
+        padding-left: 40px;
+      }
+
+      .second {
+        padding-left: 57px;
+      }
+
+      a {
+        display: inline-block;
+        color: @font_color;
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        span {
+          font-size: 14px;
+        }
+      }
+
+    }
+  }
+}
+
+.left_aside.exchange {
+  left: -180px;
+}
+
+//右侧主题
+.item_main {
+  height: 100%;
+
+  //头部导航
+  .main_top {
+    padding-left: 180px;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    background-color: #3C8DBC;
+    transition: all 1s;
+    z-index: 666;
+
+    a {
+      font-size: 16px;
+      line-height: 50px;
+      text-align: center;
+      width: 40px;
+      height: 50px;
+
+      i {
+        color: @font_color;
+      }
+    }
+  }
+
+  .main_top.exchange {
+    padding-left: 0;
+  }
+
+  //主体部分
+  .main_body {
+    width: 100%;
+    padding-left: 195px;
+    padding-top: 50px;
+    transition: all 1s;
+
+    //面包屑功能
+    ol {
+      margin-top: 15px;
+      width: 100%;
+    }
+
+    //  echarts图标
+    .echarts {
+      margin-top: 30px;
+      width: 100%;
+      height: 400px;
+
+      .left_echarts {
+        height: 400px;
+        width: 45%;
+        display: inline-block;
+        float: left;
+      }
+
+      .right_echarts {
+        height: 400px;
+        width: 45%;
+        display: inline-block;
+        float: right;
+        margin-right: 30px;
+      }
+    }
+  }
+
+  .main_body.exchange {
+    padding-left: 15px;
+  }
+}
+

@@ -1,0 +1,167 @@
+html,
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.left_aside {
+	z-index: 999;
+	height: 100%;
+	width: 180px;
+	background-color: #222D32;
+	position: fixed;
+	left: 0;
+	transition: all 1s;
+}
+
+.left_aside .brand {
+	background-color: #367FA9;
+	width: 100%;
+	height: 50px;
+	font-size: 24px;
+	color: whitesmoke;
+	text-align: center;
+	line-height: 50px;
+}
+
+.left_aside .user .user_img {
+	margin-top: 30px;
+	height: 80px;
+	width: 80px;
+	padding-left: 50px;
+}
+
+.left_aside .user .user_img img {
+	border-radius: 50%;
+	height: 80px;
+	width: 80px;
+}
+
+.left_aside .user .user_name {
+	color: #f8f5f9;
+	font-size: 18px;
+	text-align: center;
+	padding-top: 20px;
+}
+
+.left_aside .nav ul li {
+	border-left: 3px transparent solid;
+}
+
+.left_aside .nav ul .current {
+	border-left: 3px solid #006699;
+}
+
+.left_aside .nav ul .first {
+	padding-left: 40px;
+}
+
+.left_aside .nav ul .second {
+	padding-left: 57px;
+}
+
+.left_aside .nav ul a {
+	display: inline-block;
+	color: #f8f5f9;
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.left_aside .nav ul a span {
+	font-size: 14px;
+}
+
+.left_aside.exchange {
+	left: -180px;
+}
+
+.item_main {
+	height: 100%;
+}
+
+.item_main .main_top {
+	padding-left: 180px;
+	position: fixed;
+	width: 100%;
+	height: 50px;
+	background-color: #3C8DBC;
+	transition: all 1s;
+	z-index: 666;
+}
+
+.item_main .main_top a {
+	font-size: 16px;
+	line-height: 50px;
+	text-align: center;
+	width: 40px;
+	height: 50px;
+}
+
+.item_main .main_top a i {
+	color: #f8f5f9;
+}
+
+.item_main .main_top.exchange {
+	padding-left: 0;
+}
+
+.item_main .main_body {
+	width: 100%;
+	padding-left: 195px;
+	padding-top: 50px;
+	transition: all 1s;
+}
+
+.item_main .main_body ol {
+	margin-top: 15px;
+	width: 100%;
+}
+
+.item_main .main_body .echarts {
+	margin-top: 30px;
+	width: 100%;
+	height: 400px;
+}
+
+.item_main .main_body .echarts .left_echarts {
+	height: 400px;
+	width: 45%;
+	display: inline-block;
+	float: left;
+}
+
+.item_main .main_body .echarts .right_echarts {
+	height: 400px;
+	width: 45%;
+	display: inline-block;
+	float: right;
+	margin-right: 30px;
+}
+
+.item_main .main_body.exchange {
+	padding-left: 15px;
+}
+
+#turnoverDateChoose {
+	border: rgba(176, 176, 176, 1) 2px solid;
+	position: absolute;
+	right: 10%;
+	top: 2%;
+}
+
+#turnoverDateChooseButton {
+	height: 100%;
+	padding: 0 3%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	background-color: rgba(176, 176, 176, 0.7);
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+#turnoverDateChooseButton:hover {
+	background-color: rgba(176, 176, 176, 1);
+	transition: all 0.2s ease;
+}
