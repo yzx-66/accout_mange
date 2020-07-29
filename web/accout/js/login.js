@@ -62,7 +62,7 @@ $(function () {
             contentType: 'application/json',
             type: "post",
             dataType: "json",
-            url: "http://106.14.125.136/acc/login",
+            url: "http://localhost/api/login",
             data: json_str,
 
             success: function (info) {

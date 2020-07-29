@@ -8,7 +8,7 @@
 // 设置后台需要的参数直接将返回值 进行遍历显示
 function set_data(url, url_status) {
 
-	var urll = "http://106.14.125.136/acc";
+	var urll = "http://localhost/api";
 
 	// 删除staff_body_ul_js中所有li(不消失的除外)
 	$("#staff_body_ul_js").find(".body_main_li_css_js").remove();
@@ -101,7 +101,7 @@ function set_data(url, url_status) {
 // 根据两个下拉框的变化与值的不同执行的方法
 function set_data_get_url() {
 
-	var urll = "http://106.14.125.136/acc";
+	var urll = "http://localhost/api";
 
 	var value_roleId = $("#body_main_left_top_select_roleId").val();
 	var value_status = $("#body_main_left_top_select_status").val();
@@ -281,7 +281,7 @@ function modal_true() {
 // 修改功能实现要产生的模态框
 function change_modal_data() {
 
-	var urll = "http://106.14.125.136/acc";
+	var urll = "http://localhost/api";
 
 	var jsons = {
 		id: Number($("#change_staff_eve_input_id").val()),
@@ -323,7 +323,7 @@ function change_modal_data() {
 // 增加功能实现要产生的模态框
 function add_modal_data() {
 
-	var urll = "http://106.14.125.136/acc";
+	var urll = "http://localhost/api";
 
 	var jsons = {
 		name: $("#add_staff_eve_input_name").val(),
@@ -492,7 +492,7 @@ function modal_5_true(value, val_id, funct) {
 }
 // 删除操作
 function xiangxi_dele(val_id) {
-	var urll = "http://106.14.125.136/acc";
+	var urll = "http://localhost/api";
 	$.ajax({
 		type: 'DELETE',
 
@@ -510,7 +510,7 @@ function xiangxi_dele(val_id) {
 
 // 冻结操作
 function xiangxi_fren(val_id) {
-	var urll = "http://106.14.125.136/acc";
+	var urll = "http://localhost/api";
 
 	$.ajax({
 		type: 'get',

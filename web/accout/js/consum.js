@@ -93,7 +93,7 @@ let exchange_fun2 = function(str) {
 let staff_name_to_id = function(name) {
 	let id = -1;
 	$.ajax({
-		url: "http://106.14.125.136/acc/staff/list",
+		url: "http://localhost/api/staff/list",
 		type: "GET",
 		dataType:"json",
 		data: {},
@@ -114,7 +114,7 @@ let staff_name_to_id = function(name) {
 let customer_name_to_id = function(name) {
 	let id = -1;
 	$.ajax({
-		url: "http://106.14.125.136/acc/customer/list",
+		url: "http://localhost/api/customer/list",
 		type: "GET",
 		dataType:"json",
 		data: {},
@@ -141,7 +141,7 @@ let my_pagesize = 8;
 let inform_total;
 let render = function() {
 	$.ajax({
-		url: "http://106.14.125.136/acc/consum/list",
+		url: "http://localhost/api/consum/list",
 		type: "GET",
 		dataType:"json",
 		data: {
@@ -174,7 +174,7 @@ let search_by_name = function() {
 	let customer_name = $('#search_name').val();
 	let search_by_name_render = function() {	
 		$.ajax({
-			url: "http://106.14.125.136/acc/consum",
+			url: "http://localhost/api/consum",
 			type: "GET",
 			data: {
 				customerId: parseInt(customer_name_to_id(customer_name)),
@@ -210,7 +210,7 @@ let search_by_time = function() {
 	let pay_time = $('#search_time').val();
 	let search_by_time_render = function() {
 		$.ajax({
-			url: "http://106.14.125.136/acc/consum",
+			url: "http://localhost/api/consum",
 			type: "GET",
 			data: {
 				current: my_page + "",
@@ -257,7 +257,7 @@ let clear_input = function() {
 let get_staff_name = function() {
 	let add_staff_name_select = $('#add_staff_name');
 	$.ajax({
-		url: "http://106.14.125.136/acc/staff/list",
+		url: "http://localhost/api/staff/list",
 		type: "GET",
 		dataType:"json",
 		data: {},
@@ -327,7 +327,7 @@ let add_consum_record_fun = function() {
 		return;
 	}
 	$.ajax({
-		url: "http://106.14.125.136/acc/consum/add",
+		url: "http://localhost/api/consum/add",
 		type: "POST",
 		contentType: "application/json",
 		data: JSON.stringify({
@@ -369,7 +369,7 @@ let getDeleteId = function(obj) {
 }
 let delete_consum_record_fun = function() {
 	$.ajax({
-		url: "http://106.14.125.136/acc/consum/del/" + deleteId,
+		url: "http://localhost/api/consum/del/" + deleteId,
 		type: "DELETE",
 		contentType: "application/json",
 		success: function (info) {
@@ -418,7 +418,7 @@ let change_consum_record_fun = function() {
 		changeStaffName = $('#change_staff_name').val(),
 		changeRemark = $('#change_remark').val();
 	$.ajax({
-		url: "http://106.14.125.136/acc/consum/edit/" + consumId,
+		url: "http://localhost/api/consum/edit/" + consumId,
 		type: "PUT",
 		contentType: "application/json",
 		data: JSON.stringify({

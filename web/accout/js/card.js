@@ -8,7 +8,7 @@ $(function(){
     var render = function () {
 
         $.ajax({
-            url: "http://106.14.125.136/acc/card/c_d/list",
+            url: "http://localhost/api/card/c_d/list",
             type: "get",
             data: {
                 current: my_page + "",
@@ -49,7 +49,7 @@ $(function(){
         my_page = 1;
         my_pagesize = 5;
         $.ajax({
-            url: "http://106.14.125.136/acc/card/c_d/list",
+            url: "http://localhost/api/card/c_d/list",
             type: "get",
             data: {
                 current: my_page + "",
@@ -83,7 +83,7 @@ $(function(){
         my_page = 1;
         my_pagesize = 5;
         $.ajax({
-            url: "http://106.14.125.136/acc/card/c_d/list",
+            url: "http://localhost/api/card/c_d/list",
             type: "get",
             data: {
                 current: my_page + "",
@@ -118,7 +118,7 @@ $(function(){
         my_page = 1;
         my_pagesize = 5;
         $.ajax({
-            url: "http://106.14.125.136/acc/card/c_d/list",
+            url: "http://localhost/api/card/c_d/list",
             type: "get",
             data: {
                 current: my_page + "",
@@ -266,7 +266,7 @@ $(function(){
             },
 
             processData: false,
-            url: "http://106.14.125.136/acc/card/add",
+            url: "http://localhost/api/card/add",
             type: "post",
             dataType: "json",
             data: json_str,
@@ -308,7 +308,7 @@ $(function(){
     var cnt = 1;
     //对下拉框里的数据进行展示
     $.ajax({
-        url: "http://106.14.125.136/acc//project/simple/list",
+        url: "http://localhost/api/project/simple/list",
         type: "get",
         success: function (info) {
             console.log(info);
@@ -385,7 +385,7 @@ $(function(){
             "<span class='caret'></span></button><ul class='dropdown-menu' aria-labelledby='dropdownMenu1' id='dropdownMenu-"+tempRow+"'></ul></div>" +
             "<input type='hidden' name='projectId' id='add_choice_input-"+tempRow+"'></div></td>");
         $.ajax({
-            url: "http://106.14.125.136/acc//project/simple/list",
+            url: "http://localhost/api/project/simple/list",
             type: "get",
             success: function (info) {
                 console.log(info);
@@ -484,7 +484,7 @@ $(function(){
         //使用ajax提交逻辑
         $.ajax({
             contentType: 'application/json',
-            url: "http://106.14.125.136/acc/card/edit_pro",
+            url: "http://localhost/api/card/edit_pro",
             type: "put",
             dataType: "json",
             data: json_str,
@@ -524,7 +524,7 @@ $(function(){
             console.log($(this).parent().data("id"));
             $.ajax({
                 contentType: 'application/json',
-                url: "http://106.14.125.136/acc/card/del/" + my_id,
+                url: "http://localhost/api/card/del/" + my_id,
                 type: "delete",
 
                 success: function (info) {
@@ -565,7 +565,7 @@ $(function(){
         console.log($(this).parent().data("id"));
         $.ajax({
             contentType: 'application/json',
-            url: "http://106.14.125.136/acc/card/freeze/" + my_id,
+            url: "http://localhost/api/card/freeze/" + my_id,
             type: "post",
 
             success: function (info) {
@@ -742,7 +742,7 @@ $(function(){
             },
 
             processData: false,
-            url: "http://106.14.125.136/acc/card/edit?id=" + my_id,
+            url: "http://localhost/api/card/edit?id=" + my_id,
             type: "put",
             dataType: "json",
             data: json_str,
@@ -781,7 +781,7 @@ $(function(){
     //项目搜索
     //对下拉框里的数据进行展示
     $.ajax({
-        url: "http://106.14.125.136/acc//project/simple/list",
+        url: "http://localhost/api/project/simple/list",
         type: "get",
         success: function (info) {
             console.log(info);
@@ -898,7 +898,7 @@ $(function(){
         console.log(str);
         my_page = 1;
         $.ajax({
-            url: "http://106.14.125.136/acc/card" + str,
+            url: "http://localhost/api/card" + str,
             type: "get",
             data: {
                 current: my_page + "",

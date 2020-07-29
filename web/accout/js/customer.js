@@ -8,7 +8,7 @@ $(function () {
     var render = function () {
 
         $.ajax({
-            url: "http://106.14.125.136/acc/customer/list",
+            url: "http://localhost/api/customer/list",
             type: "get",
             data: {
                 current: my_page + "",
@@ -50,7 +50,7 @@ $(function () {
         var name = $("#search_byname").val();
         var name_search_render = function () {
             $.ajax({
-                url: "http://106.14.125.136/acc/customer",
+                url: "http://localhost/api/customer",
                 type: "get",
                 data: {
                     name: name,
@@ -97,7 +97,7 @@ $(function () {
         var phone = $("#search_byphone").val();
         var phone_search_render = function () {
             $.ajax({
-                url: "http://106.14.125.136/acc/customer",
+                url: "http://localhost/api/customer",
                 type: "get",
                 data: {
                     phone: phone,
@@ -243,7 +243,7 @@ $(function () {
             },
 
             processData: false,
-            url: "http://106.14.125.136/acc/customer/add",
+            url: "http://localhost/api/customer/add",
             type: "post",
             dataType: "json",
             data: json_str,
@@ -337,7 +337,7 @@ $(function () {
         //使用ajax提交逻辑
         $.ajax({
             contentType: 'application/json',
-            url: "http://106.14.125.136/acc/customer/balance/" + my_id,
+            url: "http://localhost/api/customer/balance/" + my_id,
             type: "put",
             dataType: "json",
             data: json_str,
@@ -465,7 +465,7 @@ $(function () {
             //使用ajax提交逻辑
             $.ajax({
                 contentType: 'application/json',
-                url: "http://106.14.125.136/acc/customer/settle",
+                url: "http://localhost/api/customer/settle",
                 type: "post",
                 dataType: "json",
                 data: json_str,
@@ -506,7 +506,7 @@ $(function () {
             //使用ajax提交逻辑
             $.ajax({
                 contentType: 'application/json',
-                url: "http://106.14.125.136/acc/customer/settle",
+                url: "http://localhost/api/customer/settle",
                 type: "post",
                 dataType: "json",
                 data: json_str,
@@ -602,7 +602,7 @@ $(function () {
         //使用ajax提交逻辑
         $.ajax({
             contentType: 'application/json',
-            url: "http://106.14.125.136/acc/customer/settle",
+            url: "http://localhost/api/customer/settle",
             type: "post",
             dataType: "json",
             data: json_str,
@@ -636,7 +636,7 @@ $(function () {
         my_id = $(this).parent().data("id");
         $.ajax({
             contentType: 'application/json',
-            url: "http://106.14.125.136/acc/customer/freeze/" + my_id,
+            url: "http://localhost/api/customer/freeze/" + my_id,
             type: "post",
             success: function (info) {
                 if (info.code != "0001" && info.code != "0002") {
@@ -670,7 +670,7 @@ $(function () {
         //对卡的种类进行渲染
         $.ajax({
             type: "get",
-            url: "http://106.14.125.136/acc/card/simple/list",
+            url: "http://localhost/api/card/simple/list",
             dataType: "json",
             success: function (info) {
                 if (info.code != "0001" && info.code != "0002") {
@@ -772,7 +772,7 @@ $(function () {
         //使用ajax提交逻辑
         $.ajax({
             contentType: 'application/json',
-            url: "http://106.14.125.136/acc/customer/card/" + my_id,
+            url: "http://localhost/api/customer/card/" + my_id,
             type: "post",
             dataType: "json",
             data: json_str,
@@ -811,7 +811,7 @@ $(function () {
         //对卡的种类进行渲染
         $.ajax({
             type: "get",
-            url: "http://106.14.125.136/acc/customer/card/" + my_id,
+            url: "http://localhost/api/customer/card/" + my_id,
             dataType: "json",
             success: function (info) {
                 if (info.code != "0001" && info.code != "0002") {
@@ -830,7 +830,7 @@ $(function () {
             card_detail_render = function () {
                 $.ajax({
                     type: "get",
-                    url: "http://106.14.125.136/acc/customer/card/" + my_id,
+                    url: "http://localhost/api/customer/card/" + my_id,
                     dataType: "json",
                     success: function (info) {
                         if (info.code != "0001" && info.code != "0002") {
@@ -895,7 +895,7 @@ $(function () {
             console.log(json_str);
 
             $.ajax({
-                url: "http://106.14.125.136/acc/customer/card/" + my_id,
+                url: "http://localhost/api/customer/card/" + my_id,
                 contentType: 'application/json',
                 type: "put",
                 dataType: "json",
@@ -920,7 +920,7 @@ $(function () {
         $(".staff_id").html("员工姓名");
         $(".increase_staffId").val("");
         $.ajax({
-            url: "http://106.14.125.136/acc/staff/list",
+            url: "http://localhost/api/staff/list",
             type: "get",
             dataType: "json",
             success: function (info) {
@@ -954,7 +954,7 @@ $(function () {
             return;
         }
         $.ajax({
-            url: "http://106.14.125.136/acc/customer/card?cardId=" + customerCardId,
+            url: "http://localhost/api/customer/card?cardId=" + customerCardId,
             contentType: 'application/json',
             dataType: "json",
             type: "delete",
@@ -975,7 +975,7 @@ $(function () {
     //项目下拉框渲染
     var project_render = function () {
         $.ajax({
-            url: "http://106.14.125.136/acc/project/simple/list",
+            url: "http://localhost/api/project/simple/list",
             type: "get",
             dataType: "json",
             success: function (info) {

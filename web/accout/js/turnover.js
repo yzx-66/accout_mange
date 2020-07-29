@@ -1,4 +1,4 @@
-var httpUrl = 'http://106.14.125.136/acc';
+var httpUrl = 'http://localhost/api';
 //var httpUrl = 'http://106.14.125.136:6666';
 //数据获取及绑定
 var vueData = new Vue({

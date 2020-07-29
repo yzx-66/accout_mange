@@ -41,7 +41,7 @@ $(function () {
 	$("#logout_btn").click(function () {
 		$.ajax({
 			type: "get",
-			url: "/acc/logout",
+			url: "/api/logout",
 			success: function (info) {
 				if (info.success) {
 					location.href = "login.html";

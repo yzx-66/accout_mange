@@ -10,7 +10,7 @@ $(function(){
     var render = function () {
 
         $.ajax({
-            url: "http://106.14.125.136/acc/project/list",
+            url: "http://localhost/api/project/list",
             type: "get",
             data: {
                 current: my_page + "",
@@ -142,7 +142,7 @@ $(function(){
 
             processData: false,
 			contentType: 'application/json',
-            url: "http://106.14.125.136/acc/project/add",
+            url: "http://localhost/api/project/add",
 			
             type: "post",
             dataType: "json",
@@ -177,7 +177,7 @@ $(function(){
         console.log($(this).parent().data("id"));
         $.ajax({
             contentType: 'application/json',
-            url: "http://106.14.125.136/acc/project/del/" + my_id,
+            url: "http://localhost/api/project/del/" + my_id,
             type: "delete",
 
             success: function (info) {
@@ -218,7 +218,7 @@ $(function(){
         
 
         $.ajax({
-            url: "http://106.14.125.136/acc/project/list",
+            url: "http://localhost/api/project/list",
             type: "get",
             data: {
                 current: my_page + "",
@@ -314,7 +314,7 @@ console.log(json_str);
             },
 
             processData: false,
-            url: "http://106.14.125.136/acc/project/edit?id=" + my_id,
+            url: "http://localhost/api/project/edit?id=" + my_id,
             type: "put",
             dataType: "json",
             data: json_str,
@@ -342,7 +342,7 @@ console.log(json_str);
         my_id = $(this).parent().data("id");
         $.ajax({
             contentType: 'application/json',
-            url: "http://106.14.125.136/acc/project/freeze/" + my_id,
+            url: "http://localhost/api/project/freeze/" + my_id,
             type: "post",
             success: function (info) {
                 console.log(info);

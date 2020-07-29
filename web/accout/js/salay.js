@@ -2,7 +2,7 @@
 //获取下拉表
    var getvollist = function () {
     $.ajax({
-            url: "http://106.14.125.136/acc/staff/all/list",
+            url: "http://localhost/api/staff/all/list",
             type: "get",
             success: function (info) 
             {
@@ -30,7 +30,7 @@
     
         $("#salarlist").empty();
         $.ajax({
-            url: "http://106.14.125.136/acc/salary",
+            url: "http://localhost/api/salary",
             type: "get",
             dataType:"json",
             data: {
@@ -72,7 +72,7 @@
 var pay_state=function (){
 
 	 $.ajax({
-            url: "http://106.14.125.136/acc/salary/salary_time",
+            url: "http://localhost/api/salary/salary_time",
             type: "get",
             success: function (info) 
             {
@@ -106,7 +106,7 @@ var update_table = function(){
 	else
 	{	      
 		$.ajax({
-            url: "http://106.14.125.136/acc/salary",
+            url: "http://localhost/api/salary",
             type: "get",
             dataType:"json",
             data: {
@@ -194,7 +194,7 @@ $(function(){
     else
     var temp = salaryday.getFullYear().toString()+"-"+"0"+salaryday.getMonth().toString()+"-"+"0"+salaryday.getDate().toString()+" 00:00:00";  
     $.ajax({
-            url: "http://106.14.125.136/acc/salary/set",
+            url: "http://localhost/api/salary/set",
             type: "post",
             dataType:"json",
             data: {
@@ -224,7 +224,7 @@ $(function(){
  	var salarydate=$("#salary_change").val();
  	var reason=$("#change_reason").val();
  	$.ajax({
-            url: "http://106.14.125.136/acc/salary/edit/"+updateid,
+            url: "http://localhost/api/salary/edit/"+updateid,
             type: "PUT",
             contentType: "application/json;charset=UTF-8",
             data:JSON.stringify( {
@@ -247,7 +247,7 @@ $(function(){
  //删除工资记录条
  var delete_note=function(obj){
  	 $.ajax({
-            url: "http://106.14.125.136/acc/salary/del/"+updateid,
+            url: "http://localhost/api/salary/del/"+updateid,
             type: "DELETE",
             contentType: "application/json;charset=UTF-8",
             success: function (info) 
