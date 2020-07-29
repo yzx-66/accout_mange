@@ -1,16 +1,19 @@
 # 发型屋的门店系统（前后端含运行教程）
 
+#### 介绍
+给外面美发店做的门店系统（管理平台）
+主要功能：会员卡管理、客户管理、权限角色管理、项目管理、消费记录管理、营业记录管理、营业额管理、薪水管理、员工管理、用户管理等
+
+**部分截图：**
 ![输入图片说明](https://github.com/yzx66-net/accout_mange/blob/master/img/1.png "屏幕截图.png")
 ![输入图片说明](https://github.com/yzx66-net/accout_mange/blob/master/img/2.png "屏幕截图.png")
 ![输入图片说明](https://github.com/yzx66-net/accout_mange/blob/master/img/3.png "屏幕截图.png")
 ![输入图片说明](https://github.com/yzx66-net/accout_mange/blob/master/img/4.png "屏幕截图.png")
+![输入图片说明](https://github.com/yzx66-net/accout_mange/blob/master/img/7.png "屏幕截图.png")
 ![输入图片说明](https://github.com/yzx66-net/accout_mange/blob/master/img/5.png "屏幕截图.png")
 ![输入图片说明](https://github.com/yzx66-net/accout_mange/blob/master/img/6.png "屏幕截图.png")
 
 
-#### 介绍
-给外面美发店做的门店系统（管理平台）
-主要功能：会员卡管理、客户管理、权限角色管理、项目管理、消费记录管理、营业记录管理、营业额管理、薪水管理、员工管理、用户管理等
 
 #### 软件架构
 以SpringBoot为基础的三层架构
