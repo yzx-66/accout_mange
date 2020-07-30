@@ -2,13 +2,15 @@
 
 #### 介绍
 给外面发型屋做的门店系统（管理平台）
-主要功能：客户管理、权限角色管理、项目管理、优惠卡管理、消费记录管理、营业记录管理、营业额管理、薪水管理、用户管理等等 还有许多二级功能
+* 主要功能：客户管理、权限角色管理、项目管理、优惠卡管理、消费记录管理、营业记录管理、营业额管理、薪水管理、用户管理等
+* 还有其他的二级和三级功能
 
-**部分截图：**
+**部分一级菜单截图：**
 ![输入图片说明](https://github.com/yzx66-net/accout_mange/blob/master/img/1.png "屏幕截图.png")
 ![输入图片说明](https://github.com/yzx66-net/accout_mange/blob/master/img/2.png "屏幕截图.png")
 ![输入图片说明](https://github.com/yzx66-net/accout_mange/blob/master/img/3.png "屏幕截图.png")
-![输入图片说明](https://github.com/yzx66-net/accout_mange/blob/master/img/4.png "屏幕截图.png")
+![输入图片说明](https://github.com/yzx66-net/accout_mange/blob/master/img/4_.png "屏幕截图.png")
+![输入图片说明](https://github.com/yzx66-net/accout_mange/blob/master/img/4_5.png "屏幕截图.png")
 ![输入图片说明](https://github.com/yzx66-net/accout_mange/blob/master/img/7.png "屏幕截图.png")
 ![输入图片说明](https://github.com/yzx66-net/accout_mange/blob/master/img/5.png "屏幕截图.png")
 ![输入图片说明](https://github.com/yzx66-net/accout_mange/blob/master/img/6.png "屏幕截图.png")
