@@ -30,7 +30,7 @@
 
 启动前端
 * 前端使用nginx作为静态资源服务器，修改前端文件夹路径
-![输入图片说明](https://images.gitee.com/uploads/images/2020/0728/192329_45a28292_5494607.png "屏幕截图.png")
+![输入图片说明](https://gitee.com/yzx66/accout-mange/blob/master/img/8.png "屏幕截图.png")
 
 
 访问：http://localhost/login.html
