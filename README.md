@@ -62,6 +62,7 @@
   * Shiro+JWT整合（二）：https://blog.csdn.net/weixin_43934607/article/details/103060208
 * 跨域问题（Cors方式）：https://blog.csdn.net/weixin_43934607/article/details/102299264
 * swagger2生成离线 pdf、html 接口文档：https://blog.csdn.net/weixin_43934607/article/details/103060022
+* Redis反序列化或前后端传参时关于Date相关类的序列化和反序列化：https://blog.csdn.net/weixin_43934607/article/details/103154703
 * Jenkins自动化部署项目（SpringBoot到Docker）：https://blog.csdn.net/weixin_43934607/article/details/104217800）
 
 说明
