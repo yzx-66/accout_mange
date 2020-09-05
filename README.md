@@ -43,13 +43,18 @@
 * 老板：boss admin
 * 员工：staff admin
 
-##### 代码说明
-代码在关键处都有注释，每个类也都有注释，并且每个controller作用及入参都有说明。
+##### 说明
+表说明
+
+![输入图片说明](https://github.com/yzx66-net/accout_mange/blob/master/img/table.png "屏幕截图.png")
+
+代码说明（内部注释也较详细）
+
 ![输入图片说明](https://github.com/yzx66-net/accout_mange/blob/master/img/code.png "屏幕截图.png")
 
 
 #### 参考
-上面后端用到的技术可以参考我写过的博客
+上面后端用到的技术如果有不了解的可以参考我写过的博客
 * SpringBoot
   * SpringBoot整合与使用（一）：https://blog.csdn.net/weixin_43934607/article/details/100055620
   * SpringBoot整合与使用（二）：https://blog.csdn.net/weixin_43934607/article/details/100111858
@@ -71,4 +76,7 @@
 * 已经关闭swaggerUI 因为会影响打包 如果还想用其生成api文档 可以参考我的blog 然后取消注释
 * 已经关闭redis缓存 如果还想用其做springboot cache 可以参考我的blog 然后取消注释
 
-
+#### 项目补充说明
+* 项目周期主要为2019.11月~12月初，之后由于有别的事情所以搁置了。原先预计2020年后3月份拿这个一期项目去给店老板展示，然后再进一步改进优化，但是由于疫情原因，一直拖到了2020年8月份，所以这个项目也就搁置了，可能也就没有二期了。
+* 放到github的目的也是这个项目完成度较高，通用性较强，并且技术难度不大，所以如果不想造轮子，可以把这个项目拿去再改改。目前的情况是代码运行没有明显bug，主要问题可能还是前端做的不够好，不过前端用的技术简单，所以也很好理解，改动也挺简单。
+* 如果真的有谁用到了这套代码，欢迎随时在issue向我提问。
