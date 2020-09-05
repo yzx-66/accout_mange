@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>start</title>
+		<link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="./lib/bootstrap-validator/css/bootstrapValidator.min.css">
+		<link rel="stylesheet" href="./css/start.css">
+		<script src="./lib/jquery/jquery.min.js"></script>
+		<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+		<script src="lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
+		<script src="./lib/artTemplate/template-web.js"></script>
+		<script src="./lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
+		<script src="./lib/layDate/laydate/laydate.js"></script>
+		<script src="./js/card.js"></script>
+
+		<link rel="stylesheet" href="lib/jquery-confirm/jquery-confirm.min.css">
+		<script src="./lib/jquery-confirm/jquery-confirm.min.js"></script>
+
+		<link rel="stylesheet" href="./css/base.css">
+		<link rel="stylesheet" href="./css/common.css">
+	</head>
+	<body>
+
+		<!--左边栏-->
+		<div class="left_aside">
+
+			<div class="brand">门店系统</div>
+
+			<div class="user">
+				<div class="user_img">
+					<img src="./image/default.png" alt="">
+				</div>
+				<div class="user_name">
+					<span>导航栏</span>
+				</div>
+
+				<div class="user_name">
+
+				</div>
+			</div>
+
+			<div class="nav">
+
+				<ul>
+					<li class="first">
+						<a href="./customer.html">
+							<i class="glyphicon glyphicon-user"></i>
+							<span>客户管理</span>
+						</a>
+					</li>
+				</ul>
+
+
+				<ul>
+					<li class="first">
+						<a href="./staff.html">
+							<i class="glyphicon glyphicon-user"></i>
+							<span>员工管理</span>
+						</a>
+					</li>
+				</ul>
+
+
+				<ul>
+					<li class="first">
+						<a href="./project.html">
+							<i class="glyphicon glyphicon-tags"></i>
+							<span>项目管理</span>
+						</a>
+					</li>
+				</ul>
+
+				<ul>
+					<li class="first current">
+						<a href="./card.html">
+							<i class="glyphicon glyphicon-tags"></i>
+							<span>优惠卡管理</span>
+						</a>
+					</li>
+				</ul>
+
+				<ul>
+					<li class="first">
+						<a href="./salary.html">
+							<i class="glyphicon glyphicon-jpy"></i>
+							<span>薪水管理</span>
+						</a>
+					</li>
+				</ul>
+
+				<ul>
+					<li class="first">
+						<a href="./consum.html">
+							<i class="glyphicon glyphicon-list"></i>
+							<span>消费记录</span>
+						</a>
+					</li>
+				</ul>
+
+				<ul>
+					<li class="first">
+						<a href="./turnover.html">
+							<i class="glyphicon glyphicon-list"></i>
+							<span>营业额记录</span>
+						</a>
+					</li>
+				</ul>
+
+			</div>
+
+		</div>
+
+		<!--右边主体-->
+		<div class="item_main">
+
+			<!--    头部导航栏-->
+			<div class="main_top">
+				<a href="#" class="pull-left" id="top_btn_left"><i class="glyphicon glyphicon-align-justify"></i></a>
+				<a href="#" class="pull-right" id="top_btn_right"><i class="glyphicon glyphicon-log-out"></i></a>
+			</div>
+
+			<!--    主体内容-->
+			<div class="main_body container-fluid">
+				<!--        路径导航-->
+				<ol class="breadcrumb">
+					<li><a href="#" style="color: #2aabd2">首页</a></li>
+					<li class="active">优惠卡管理</li>
+				</ol>
+				<!--        添加按钮-->
+				<button class="btn btn-primary" type="submit" id="add_btn">添加优惠卡</button>
+
+
+				<!--        搜索框-->
+				<div class="row  col-lg-7" style="display: inline-block">
+					<div class="col-lg-10">
+						<div class="input-group">
+							<table class="table table-hover">
+
+								<tr>
+									<!--  卡名字选择-->
+									<td>
+										<div class="input-group">
+											<input type="text" class="form-control" placeholder="按卡名搜索" id="search_byName">
+										</div>
+									</td>
+									<!--   项目选择-->
+									<td>
+										<div class="form-group" style="margin-bottom: 10px">
+											<div class="dropdown" id="search_dropdown">
+												<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+													<span id="dropdownMenu_inner">项目</span>
+													<span class="caret"></span>
+												</button>
+												<ul class="dropdown-menu" aria-labelledby="dropdownMenu" id="dropdownMenu">
+													<!--     下拉框显示在这儿-->
+												</ul>
+											</div>
+
+											<!--                            隐藏表单域-->
+											<input type="hidden" name="projectId" id="search_choice_input">
+										</div>
+									</td>
+									<!--   卡状态选择-->
+									<td>
+										<div class="form-group" style="margin-bottom: 10px">
+											<div class="dropdown" id="search_status_dropdown">
+												<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+													<span id="dropdownMenu_status_inner">状态</span>
+													<span class="caret"></span>
+												</button>
+												<ul class="dropdown-menu" aria-labelledby="dropdownMenu" id="dropdownMenu_status">
+													<li><a href="#" data-id=1>正常</a> </li>
+													<li><a href="#" data-id=0>冻结</a> </li>
+													<li><a href="#" data-id=2>全选</a></li>
+												</ul>
+											</div>
+
+											<!--                            隐藏表单域-->
+											<input type="hidden" name="projectId" id="search_status_input">
+										</div>
+									</td>
+									<!--   开始时间选择-->
+									<td>
+										<div class="form-group">
+											<label for="search_startTime">起始时间</label>
+											<input type="text" class="form-control" placeholder="请输入起始时间" name="startTime" id="search_startTime">
+										</div>
+									</td>
+									<!--  结束时间选择-->
+									<td>
+										<div class="form-group">
+											<label for="search_endTime">过期时间</label>
+											<input type="text" class="form-control" placeholder="请输入过期时间" name="startTime" id="search_endTime">
+										</div>
+									</td>
+									<td>
+										<span class="input-group-btn">
+											<button class="btn btn-success" type="button" id="search_byId_btn">搜索</button>
+										</span>
+									</td>
+								</tr>
+							</table>
+						</div><!-- /input-group -->
+					</div><!-- /.col-lg-6 -->
+				</div><!-- /.row -->
+
+				<!--        对数据渲染的位置-->
+				<div class="list_table">
+
+					<!--        插在此处    -->
+
+				</div>
+
+
+				<!--        分页部分    -->
+				<ul id="page_classify"></ul>
+
+			</div>
+			<!--        模态框-->
+
+			<!--     添加优惠卡模态框-->
+			<div class="modal fade" tabindex="-1" role="dialog" id="myModal_add">
+
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+							<h4 class="modal-title">添加优惠卡</h4>
+						</div>
+						<form id="form_add">
+							<div class="modal-body">
+
+								<div class="form-group">
+									<input type="text" class="form-control" placeholder="请输入优惠卡名称" name="name" id="add_card_name">
+								</div>
+
+								<div class="form-group">
+									<input type="text" class="form-control" placeholder="请输入优惠卡金额" name="price">
+								</div>
+
+								<div class="form-group">
+									<input type="text" class="form-control" placeholder="请输入提成" name="percentage">
+								</div>
+
+								<div class="form-group">
+									<input type="text" class="form-control" placeholder="请输入介绍" name="introduction">
+								</div>
+
+								<div class="form-group">
+									<label for="startTime">起始时间</label>
+									<input type="text" class="form-control" placeholder="请输入起始时间" name="startTime" id="startTime">
+								</div>
+
+								<div class="form-group">
+									<label for="endTime">过期时间</label>
+									<input type="text" class="form-control" placeholder="请输入过期时间" name="endTime" id="endTime">
+								</div>
+
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+								<button type="submit" class="btn btn-primary" id="submit_btn">添加</button>
+							</div>
+						</form>
+
+					</div>
+				</div>
+			</div>
+
+
+			<!--     修改优惠卡项目模态框-->
+			<div class="modal fade" tabindex="-1" role="dialog" id="myModal_changeCardPro">
+
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close delcnt" data-dismiss="modal"><span>&times;</span></button>
+							<h4 class="modal-title">修改优惠卡项目</h4>
+						</div>
+						<form id="form_changeCardPro">
+							<div class="modal-body">
+								<table class="table table-bordered table-striped table-hover text-center" id="dictTbl">
+									<tr>
+										<td>编号</td>
+										<td>项目名称</td>
+										<td>项目次数</td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>
+											<!--   div   id  dropdown-1   （点击时需要）
+                                           ul    id  dropdownMenu-1（模态框需要）
+                                           span  id  dropdownMenu-1_inner（动态生成数据需要）
+                                           input id  add_choice_input-1  （表单收集用）-->
+											<div class="form-group" style="margin-bottom: 10px">
+												<div class="dropdown" id="1">
+													<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+														<span id="dropdownMenu-1_inner">项目</span>
+														<span class="caret"></span>
+													</button>
+													<ul class="dropdown-menu" aria-labelledby="dropdownMenu1" id="dropdownMenu-1">
+														<!--     下拉框显示在这儿-->
+													</ul>
+												</div>
+
+												<!--                            隐藏表单域-->
+												<input type="hidden" name="projectId" id="add_choice_input-1">
+											</div>
+
+										</td>
+										<td>
+											<div class="form-group">
+												<input type="text" class="form-control" placeholder="请输入项目次数" id="times-1" name="Times-1">
+											</div>
+										</td>
+									</tr>
+								</table>
+								<button type="button" class="btn btn-primary btn-sm" id="addPro_btn">添加项目</button>
+								<button type="button" class="btn btn-primary btn-sm" id="delPro_btn">删除项目</button>
+
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default delcnt" data-dismiss="modal">取消</button>
+								<button type="submit" class="btn btn-primary" id="changeCardPro_submit_btn">添加</button>
+							</div>
+						</form>
+
+					</div>
+				</div>
+			</div>
+
+			<!--     修改优惠卡模态框-->
+			<div class="modal fade" tabindex="-1" role="dialog" id="myModal_changeCard">
+
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+							<h4 class="modal-title">修改优惠卡</h4>
+						</div>
+						<form id="form_changeCard">
+							<div class="modal-body">
+
+								<div class="form-group">
+									<input type="text" class="form-control" placeholder="请输入优惠卡名称" name="Name" id="change_card_name">
+								</div>
+
+								<div class="form-group">
+									<input type="text" class="form-control" placeholder="请输入优惠卡金额" name="Price">
+								</div>
+
+								<div class="form-group">
+									<input type="text" class="form-control" placeholder="请输入提成" name="Percentage">
+								</div>
+
+								<div class="form-group">
+									<input type="text" class="form-control" placeholder="请输入介绍" name="Introduction">
+								</div>
+
+								<div class="form-group">
+									<label for="startTime">起始时间</label>
+									<input type="text" class="form-control" placeholder="请输入起始时间" name="startTime" id="change_card_startTime">
+								</div>
+
+								<div class="form-group">
+									<label for="endTime">过期时间</label>
+									<input type="text" class="form-control" placeholder="请输入过期时间" name="endTime" id="change_card_endTime">
+								</div>
+
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+								<button type="submit" class="btn btn-primary" id="change_card_btn">修改</button>
+							</div>
+						</form>
+
+					</div>
+				</div>
+			</div>
+
+			<!--     数据渲染-->
+			<script type="text/html" id="tql">
+				<table class="table table-bordered table-hover table-striped">
+            <tr><td colspan="10"><button class="btn btn-default" type="button" id="hide_frozen">不显示冻结的优惠卡</button></td></tr>
+            <tr>
+                <th>优惠卡名称</th>
+                <th>优惠卡项目列表</th>
+                <th>优惠卡金额</th>
+                <th>提成</th>
+                <th>起始时间</th>
+                <th>过期时间</th>
+                <th>介绍</th>
+                <th>优惠卡状态</th>
+                <th>操作</th>
+            </tr>
+
+            {{each data.records v i}}
+            <tr>
+
+                <td data-id="{{v.name}}">{{v.name}}</td>
+
+
+                <td>
+                    <ul data-id="{{v.deatils.length}}">
+                        {{each v.deatils as tag i}}
+                        <li hidden data-id="{{tag.projectId}}"></li>
+                        <li hidden data-id="{{tag.projectName}}"></li>
+                        <li hidden data-id="{{tag.times}}"></li>
+                        <li>{{tag.projectName}}：{{tag.times}} 次</li>
+                        {{/each}}
+                    </ul>
+                </td>
+
+                <td data-id="{{v.price}}">{{v.price}}</td>
+                <td data-id="{{v.percentage}}">{{v.percentage}}</td>
+                <td data-id="{{v.startTime}}">{{v.startTime}}</td>
+                <td data-id="{{v.endTime}}">{{v.endTime}}</td>
+                <td data-id="{{v.introduction}}">{{v.introduction}}</td>
+
+                {{if v.status==1}}
+                <td>正常</td>
+                <td data-id="{{v.id}}">
+                    <button class="btn btn-default change_card">修改优惠卡</button>
+                    <button class="btn btn-default change_cardPro">修改优惠卡的项目</button>
+                    <button class="btn btn-danger btn_delete">删除优惠卡</button>
+                    <button class="btn btn-danger btn_freeze">冻结优惠卡</button>
+                </td>
+                {{else}}
+                <td><b>冻结</b></td>
+                <td data-id="{{v.id}}">
+                    <button class="btn btn-default disabled opacity">修改优惠卡</button>
+                    <button class="btn btn-default disabled opacity">修改优惠卡的项目</button>
+                    <button class="btn btn-danger btn_delete">删除优惠卡</button>
+                    <button class="btn btn-success btn_freeze">解冻优惠卡</button>
+                </td>
+                {{/if}}
+            </tr>
+            {{/each }}
+        </table>
+
+			<!--   不显示冻结卡渲染-->
+			<script type="text/html" id="hide">
+				<table class="table table-bordered table-hover table-striped">
+            <tr><td colspan="10"><button class="btn btn-default" type="button" id="show_frozen">显示冻结的优惠卡</button></td></tr>
+            <tr>
+                <th>优惠卡名称</th>
+                <th>优惠卡项目列表</th>
+                <th>优惠卡金额</th>
+                <th>提成</th>
+                <th>起始时间</th>
+                <th>过期时间</th>
+                <th>介绍</th>
+                <th>优惠卡状态</th>
+                <th>操作</th>
+            </tr>
+
+            {{each data.records v i}}
+            {{if v.status==1}}
+            <tr>
+                <td data-id="{{v.name}}">{{v.name}}</td>
+
+
+                <td>
+                    <ul data-id="{{v.deatils.length}}">
+                        {{each v.deatils as tag i}}
+                        <li hidden data-id="{{tag.projectId}}"></li>
+                        <li hidden data-id="{{tag.projectName}}"></li>
+                        <li hidden data-id="{{tag.times}}"></li>
+                        <li>{{tag.projectName}}：{{tag.times}} 次</li>
+                        {{/each}}
+                    </ul>
+                </td>
+
+                <td data-id="{{v.price}}">{{v.price}}</td>
+                <td data-id="{{v.percentage}}">{{v.percentage}}</td>
+                <td data-id="{{v.startTime}}">{{v.startTime}}</td>
+                <td data-id="{{v.endTime}}">{{v.endTime}}</td>
+                <td data-id="{{v.introduction}}">{{v.introduction}}</td>
+
+                <td>正常</td>
+                <td data-id="{{v.id}}">
+                    <button class="btn btn-default change_card">修改优惠卡</button>
+                    <button class="btn btn-default change_cardPro">修改优惠卡的项目</button>
+                    <button class="btn btn-danger btn_delete">删除优惠卡</button>
+                    <button class="btn btn-danger btn_freeze">冻结优惠卡</button>
+                </td>
+            </tr>
+            {{/if}}
+            {{/each }}
+        </table>
+
+
+
+			<!--   修改项目下拉框数据渲染-->
+			<script type="text/html" id="DpD">
+				{{each data v i}}
+        <li><a href="#" data-id={{v.id}}>{{v.name}}</a> </li>
+        {{/each}}
+    </script>
+
+			<script type="text/html" id="SpD">
+				{{each data v i}}
+        <li><a href="#" data-id={{v.id}}>{{v.name}}</a> </li>
+        {{/each}}
+        <li><a href="#" data-id=1000000>全选</a></li>
+    </script>
+
+			<script src="js/common.js"></script>
+	</body>
+
+</html>

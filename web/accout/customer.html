@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>页面首页</title>
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./lib/bootstrap-validator/css/bootstrapValidator.min.css">
+    <link rel="stylesheet" href="./lib/nprogress/nprogress.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/first.css">
+</head>
+<body>
+
+<!--左边栏-->
+<div class="left_aside">
+
+    <div class="brand">门店系统</div>
+
+    <div class="user">
+        <div class="user_img">
+            <img src="./image/default.png" alt="">
+        </div>
+        <div class="user_name">
+            <span>导航栏</span>
+        </div>
+
+        <div class="user_name">
+
+        </div>
+    </div>
+
+    <div class="nav">
+
+		 <ul> 
+            <li class="first current">
+                <a href="./customer.html">
+                    <i class="glyphicon glyphicon-user"></i>
+                    <span>客户管理</span>
+                </a>
+            </li>
+        </ul>
+
+
+        <ul>
+            <li class="first">
+                <a href="./staff.html">
+                    <i class="glyphicon glyphicon-user"></i>
+                    <span>员工管理</span>
+                </a>
+            </li>
+        </ul>
+
+
+		 <ul>
+            <li class="first">
+                <a href="./project.html">
+                    <i class="glyphicon glyphicon-tags"></i>
+                    <span>项目管理</span>
+                </a>
+            </li>
+        </ul>
+
+        <ul>
+            <li class="first">
+                <a href="./card.html">
+                    <i class="glyphicon glyphicon-tags"></i>
+                    <span>优惠卡管理</span>
+                </a>
+            </li>
+        </ul>
+
+		<ul>
+            <li class="first">
+                <a href="./salary.html">
+                    <i class="glyphicon glyphicon-jpy"></i>
+                    <span>薪水管理</span>
+                </a>
+            </li>
+        </ul>
+
+        <ul>
+            <li class="first">
+                <a href="./consum.html">
+                    <i class="glyphicon glyphicon-list"></i>
+                    <span>消费记录</span>
+                </a>
+            </li>
+        </ul>
+
+		<ul>
+            <li class="first">
+                <a href="./turnover.html">
+                    <i class="glyphicon glyphicon-list"></i>
+                    <span>营业额记录</span>
+                </a>
+            </li>
+        </ul>
+
+    </div>
+
+</div>
+
+<!--右边主体-->
+<div class="item_main">
+
+    <!--    头部导航栏-->
+    <div class="main_top">
+        <a href="#" class="pull-left" id="top_btn_left"><i class="glyphicon glyphicon-align-justify"></i></a>
+        <a href="#" class="pull-right" id="top_btn_right"><i class="glyphicon glyphicon-log-out"></i></a>
+    </div>
+
+    <!--    主体内容-->
+    <div class="main_body container-fluid">
+        <!--        路径导航-->
+        <ol class="breadcrumb">
+            <li><a href="./index1.html" style="color: #2aabd2">首页</a></li>
+            <li class="active">客户管理</li>
+        </ol>
+
+        <!--        添加按钮-->
+        <button class="btn btn-default" type="submit" id="add_btn">添加用户</button>
+
+
+        <!--        搜索框-->
+        <div class="row col-lg-6" style="display: inline-block">
+            <div class="col-lg-5">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="按用户名进行搜索" id="search_byname">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button" id="search_byname_btn">Go!</button>
+                    </span>
+                </div><!-- /input-group -->
+            </div><!-- /.col-lg-6 -->
+
+            <div class="col-lg-5">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="按用户电话进行搜索" id="search_byphone">
+                    <span class="input-group-btn">
+        <button class="btn btn-default" type="button" id="search_byphone_btn">Go!</button>
+      </span>
+                </div><!-- /input-group -->
+            </div><!-- /.col-lg-6 -->
+        </div><!-- /.row -->
+
+        <button class="btn btn-default" type="submit" id="consume_btn" style="position: relative;top: -10px">现金消费
+        </button>
+
+        <!--        对数据渲染的位置-->
+        <div class="list_table">
+
+            <!--        插在此处    -->
+
+        </div>
+
+        <!--分页部分-->
+        <ul id="page_classify"></ul>
+
+    </div>
+
+
+</div>
+
+<!--模态框-->
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" id="myModal">
+
+    <div class="modal-dialog  modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                <h4 class="modal-title">温馨提示</h4>
+            </div>
+            <div class="modal-body">
+                <p style="color: #A94442;">
+                    <i class="glyphicon glyphicon-info-sign"></i>
+                    <span id="logout_notify">你确定要退出门店系统吗</span>
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary" id="logout_btn">退出</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--现金消费模态框-->
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" id="myModal_consume">
+
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                <h4 class="modal-title">现金消费</h4>
+            </div>
+            <form id="form_consume">
+                <div class="modal-body">
+
+
+                    <!--                员工表单-->
+                    <div class="form-group staff_box" style="margin-bottom: 10px">
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button"
+                                    data-toggle="dropdown">
+                                <span class="staff_id">员工姓名</span>
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu staff_list" aria-labelledby="dropdownMenu1">
+                                <!--                            员工姓名-->
+                            </ul>
+                            <span class="staff_alert" style="display: none">请选择员工</span>
+                        </div>
+
+                        <!--                            隐藏表单域-->
+                        <input type="hidden" name="staffId" class="staff_id_input increase_staffId"
+                               id="consume_cash_staffid" value="0">
+                    </div>
+
+                    <!--                    项目名称-->
+                    <div class="form-group" style="margin-bottom: 10px">
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button"
+                                    data-toggle="dropdown">
+                                <span class="project_choice">项目种类</span>
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu project_box">
+                                <!--                                插在此处-->
+                            </ul>
+                        </div>
+
+                        <!--                            隐藏表单域-->
+                        <input type="hidden" name="cash_project" class="decrease_project_input">
+                    </div>
+
+
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="请输入实际支付金额-选填"
+                               name="price" id="consume_cash_price">
+                    </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="submit" class="btn btn-primary" id="cash_consume_btn"> 确定</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<!--添加模态框-->
+<div class="modal fade" tabindex="-1" role="dialog" id="myModal_add">
+
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                <h4 class="modal-title">添加用户</h4>
+            </div>
+            <form id="form_add">
+                <div class="modal-body">
+
+                    <div class="form-group" style="margin-bottom: 10px">
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1"
+                                    data-toggle="dropdown">
+                                <span id="dropdownMenu1_inner">性别</span>
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                <li><a href="#" data-id="1">男</a></li>
+                                <li><a href="#" data-id="2">女</a></li>
+                            </ul>
+                        </div>
+
+                        <!--                            隐藏表单域-->
+                        <input type="hidden" name="sex" id="add_choice_input">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="请输入用户名称"
+                               name="name" id="add_user_name">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="请输入用户手机号"
+                               name="phone">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="请输入用户微信号"
+                               name="weixin">
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="submit" class="btn btn-primary" id="submit_btn">添加</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<!--增加余额模态框-->
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" id="myModal_increase">
+
+    <div class="modal-dialog  modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                <h4 class="modal-title">添加用户</h4>
+            </div>
+            <form id="form_increase">
+                <div class="modal-body">
+                    <!--                员工表单-->
+                    <div class="form-group staff_box" style="margin-bottom: 10px">
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button"
+                                    data-toggle="dropdown">
+                                <span class="staff_id">员工姓名</span>
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu staff_list" aria-labelledby="dropdownMenu1">
+                                <!--                            员工姓名-->
+                            </ul>
+                            <span class="staff_alert" style="display: none">请选择员工</span>
+                        </div>
+
+                        <!--                            隐藏表单域-->
+                        <input type="hidden" name="staffId" class="increase_staffId" id="increase_staffId" value="0">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="请输入充值的金额"
+                               name="changeBlance" id="changeBlance">
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="submit" class="btn btn-primary" id="increase_submit_btn">添加</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<!--减少余额模态框-->
+<div class="modal fade" tabindex="-1" role="dialog" id="myModal_decrease">
+
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                <h4 class="modal-title">用户消费</h4>
+            </div>
+            <form id="form_decrease">
+                <div class="modal-body">
+
+                    <div class="form-group" style="margin-bottom: 10px">
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button"
+                                    data-toggle="dropdown">
+                                <span id="decrease_choice">支付方式</span>
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                <li><a href="#" data-id="3">现金消费</a></li>
+                                <li><a href="#" data-id="2">扣除余额</a></li>
+                            </ul>
+                        </div>
+
+                        <!--                            隐藏表单域-->
+                        <input type="hidden" name="consumType" id="decrease_choice_input">
+                    </div>
+
+                    <!--                员工表单-->
+                    <div class="form-group staff_box" style="margin-bottom: 10px">
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button"
+                                    data-toggle="dropdown">
+                                <span class="staff_id">员工姓名</span>
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu staff_list" aria-labelledby="dropdownMenu1">
+                                <!--                            员工姓名-->
+                            </ul>
+                            <span class="staff_alert" style="display: none">请选择员工</span>
+                        </div>
+
+                        <!--                            隐藏表单域-->
+                        <input type="hidden" name="increase_staffId" class="increase_staffId" value="0"
+                               id="decrease_staffId">
+                    </div>
+
+                    <!--                    项目名称-->
+                    <div class="form-group" style="margin-bottom: 10px">
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button"
+                                    data-toggle="dropdown">
+                                <span class="project_choice"id="project_choice">项目种类</span>
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu project_box">
+                                <!--                                插在此处-->
+                            </ul>
+                        </div>
+
+                        <!--                            隐藏表单域-->
+                        <input type="hidden" name="projectId" class="decrease_project_input">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="请输入实际消费的金额--选填"
+                               name="changeBalance" id="decrease_balance">
+                    </div>
+
+                    <div class="form-group">
+                        <p>备注</p>
+                        <textarea name="remark" id="remark" cols="30" rows="10" class="form-control"></textarea>
+                    </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="submit" class="btn btn-primary" id="decrease_submit_btn">确定</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<!--办卡模态框-->
+<div class="modal fade" tabindex="-1" role="dialog" id="myModal_makecard">
+
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                <h4 class="modal-title">用户办卡</h4>
+            </div>
+            <form id="form_makecard">
+                <div class="modal-body">
+
+                    <div class="form-group" style="margin-bottom: 10px">
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button"
+                                    data-toggle="dropdown">
+                                <span id="makecard_project_choice">选择卡种类</span>
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1" id="dropdownMenu3">
+
+                                <!--                                在此处渲染-->
+
+                            </ul>
+                        </div>
+
+                        <!--                            隐藏表单域-->
+                        <input type="hidden" name="cardclass" id="makecard_project_input">
+                    </div>
+
+                    <div class="form-group" style="margin-bottom: 10px">
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button"
+                                    data-toggle="dropdown">
+                                <span id="makecard_choice">支付方式</span>
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1" id="dropdownMenu2">
+                                <li><a href="#" data-id="2">余额扣除</a></li>
+                                <li><a href="#" data-id="3">现金支付</a></li>
+                            </ul>
+                        </div>
+
+                        <!--                            隐藏表单域-->
+                        <input type="hidden" name="consumType" id="makecard_choice_input">
+                    </div>
+
+                    <div class="form-group staff_box" style="margin-bottom: 10px">
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button"
+                                    data-toggle="dropdown">
+                                <span class="staff_id">员工姓名</span>
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu staff_list" aria-labelledby="dropdownMenu1">
+                                <!--                            员工姓名-->
+                            </ul>
+                            <span class="staff_alert" style="display: none">请选择员工</span>
+                        </div>
+
+                        <!--                            隐藏表单域-->
+                        <input type="hidden" name="staffId" class="staff_id_input increase_staffId"
+                               id="makecard_staffId" value="0">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="请输入充值的金额"
+                               name="changeBalance" id="makecard_balance">
+                    </div>
+
+
+                    <div class="form-group">
+                        <p>备注</p>
+                        <textarea name="remark" id="makecard_remark" cols="30" rows="10"
+                                  class="form-control"></textarea>
+                    </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="submit" class="btn btn-primary" id="makecard_submit_btn">确定</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<!--卡显示模态框-->
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" id="myModal_show_card">
+
+    <div class="modal-dialog  modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                <h4 class="modal-title">用户的卡</h4>
+
+                <!--                员工表单-->
+                <div class="form-group staff_box" style="margin-bottom: 10px">
+                    <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button"
+                                data-toggle="dropdown">
+                            <span class="staff_id">员工姓名</span>
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu staff_list" aria-labelledby="dropdownMenu1">
+                            <!--                            员工姓名-->
+                        </ul>
+                        <span class="staff_alert" style="display: none">请选择员工</span>
+                    </div>
+
+                    <!--                            隐藏表单域-->
+                    <input type="hidden" name="consumType" class="staff_id_input" value="0">
+                </div>
+
+                <div class="big_box">
+                    <div class="leftbox">
+                        <!--                        左边栏插入位置-->
+                    </div>
+
+                    <div id="delete_mark">
+                        <div class="rightbox">
+                            <!--右边栏插入位置-->
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<!--模板引擎模板-->
+<script type="text/html" id="tql">
+    <table class="table table-bordered table-hover">
+        <tr>
+            <th style="width: 5%;">序号</th>
+            <th>性别</th>
+            <th>用户名</th>
+            <th>手机号</th>
+            <th>注册时间</th>
+            <th>账户余额</th>
+            <th>用户状态</th>
+        </tr>
+
+        {{each data.records v i}}
+        <tr>
+            <td>{{v.id}}</td>
+            <!--            对性别进行判断-->
+            {{if v.sex==1}}
+            <td>男</td>
+            {{else}}
+            <td>女</td>
+            {{/if}}
+
+            <td>{{v.name}}</td>
+            <td>{{v.phone}}</td>
+            <td>{{v.registeTime}}</td>
+            <td>{{v.balance}}</td>
+
+            {{if v.status==1}}
+            <td data-id="{{v.id}}">
+                <button class="btn btn-default change_findcark">查看优惠卡</button>
+                <button class="btn btn-default change_makecard">办卡</button>
+                <button class="btn btn-default change_increase">充值</button>
+                <button class="btn btn-default change_decrease">消费</button>
+                <button class="btn btn-danger btn_change">冻结</button>
+            </td>
+            {{else}}
+            <td data-id="{{v.id}}">
+                <button class="btn btn-default change_findcard">查看优惠卡</button>
+                <button class="btn btn-default change_makecard">办卡</button>
+                <button class="btn btn-default change_increase">充值</button>
+                <button class="btn btn-default change_decrease">消费</button>
+                <button class="btn btn-success btn_change">解冻</button>
+            </td>
+            {{/if}}
+        </tr>
+        {{/each }}
+
+    </table>
+</script>
+
+<!--对卡种类进行选择-->
+<script type="text/html" id="card_tql">
+    {{each data v i}}
+    <li><a href="#" data-id="{{v.id}}" class="project_choice">{{v.name}}</a></li>
+    {{/each}}
+</script>
+
+<!--查询用户-->
+<script type="text/html" id="leftbox_tql">
+    {{each data v i}}
+    <p class="line" data-num="{{i}}"><a href="#">{{v.cardName}}</a></p>
+    {{/each}}
+</script>
+
+<!--卡的详细信息-->
+<script type="text/html" id="rightbox_tql">
+    <div class="pull-right">
+        <button class="btn-danger btn card_delete">删除此卡</button>
+    </div>
+    <p class="rightbox_time">办卡时间：<span>{{openingTime}}</span></p>
+    <p class="rightbox_time">截至时间：<span>{{deadTime}}</span></p>
+
+    <!--                        卡项目盒子-->
+    <div class="rightbox_item row" data-cardid="{{id}}">
+        {{each deatils v i}}
+        <div class="col-lg-12">
+            <p>项目名称：<span>{{v.projectName}}</span></p>
+
+            <div class="row">
+                <div class="col-lg-4">
+                    <span>剩余次数：</span>
+                    <span class="last_num">{{v.residualTimes}}</span></div>
+                <div class="col-lg-8">
+
+                    <span>将次数调整为：</span>
+                    <span class="card_change_result">{{v.residualTimes}}</span>
+
+                    <button type="button" class="btn btn-default change_card" data-projectId="{{v.projectId}}"
+                            data-choice="1">-
+                    </button>
+
+                    <button type="button" class="btn btn-default change_card" data-projectId="{{v.projectId}}"
+                            data-choice="2">+
+                    </button>
+
+                    <button type="button" class="btn btn-default change_card" data-projectId="{{v.projectId}}"
+                            data-choice="3">+10
+                    </button>
+
+                    <button class="btn btn btn-primary pull-right card_decide">确认</button>
+                </div>
+            </div>
+
+        </div>
+        {{/each}}
+    </div>
+</script>
+
+<script type="text/html" id="staff_tql">
+    {{each data v i}}
+    <li><a href="#" data-id="{{v.id}}" class="staff_choice">{{v.name}}</a></li>
+    {{/each}}
+</script>
+
+<script type="text/html" id="project_tql">
+    {{each data v i}}
+    <li><a href="#" data-id="{{v.id}}" class="project_choice">{{v.name}}</a></li>
+    {{/each}}
+</script>
+
+
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
+<script src="./lib/nprogress/nprogress.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
+<script src="js/common.js"></script>
+<script src="./js/customer.js"></script>
+</body>
+</html>
